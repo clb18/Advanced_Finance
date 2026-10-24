@@ -5,12 +5,23 @@ project:
 book:
   title: "Advanced Financial Management"
   author: "Chris Barker"
-  date: "10/23/2026"
+#  date: "10/23/2026"
+  site-url: "https://clb18.github.io/Advanced_Finance"
+  repo-url: "https://github.com/clb18/Advanced_Finance"
+  search: true
+  
   chapters:
     - index.qmd
     - intro.qmd
     - summary.qmd
-    - references.qmd
+    - part: "Foundation"
+      chapters:
+      - chapters/01-Finance_function.qmd
+#      - chapters/02-statement_analysis.qmd
+#    - part: "Values and Investment"
+#      chapters:
+#      - chapters/03-cost_of_capital.qmd
+#    - references.qmd
 
 bibliography: references.bib
 
