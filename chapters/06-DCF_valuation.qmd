@@ -1,3 +1,1011 @@
----
-title: "DCF Valuation"
----
+# Discounted Cash Flow Valuation {#sec-dcf}
+
+This chapter teaches you to value a company from the cash it is expected to produce: how to measure free cash flow, choose a discount rate, forecast growth that is paid for with reinvestment, close the model with a terminal value, and turn enterprise value into a value per share. Sources are credited in footnotes and listed at the end of the chapter. "Example Co." figures are invented for teaching and continue the running example from @sec-fsa.
+
+| **Section** | **Topic** | **Main question** |
+|---------------|--------------------------|-------------------------------|
+| 1 | The logic of DCF valuation | What is value, and which cash flow goes with which discount rate? |
+| 2 | Free cash flow to the firm | How much cash does the business produce for all of its investors? |
+| 3 | The discount rate | What return do investors require for the risk in those cash flows? |
+| 4 | Growth, reinvestment and the forecast | How fast can the firm grow, and what must it spend to get there? |
+| 5 | Terminal value | What is the firm worth after the forecast ends? |
+| 6 | From enterprise value to value per share | What belongs to the common shareholder? |
+| 7 | Sensitivity, implied expectations and common errors | How far can the answer be trusted? |
+
+Sections 1 to 3 set up the three ingredients (cash flow, discount rate, horizon), Sections 4 and 5 supply the forecast and its end point, Section 6 completes the valuation of Example Co., and Section 7 tests it. Each section ends with review questions and a note on the related CFA readings. The Forecasting chapter supplies the operating forecast that feeds this chapter, and the Cost of Capital chapter supplies the discount rate; Sections 3 and 4 show where the three fit together.
+
+## Section 1. The Logic of DCF Valuation {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- State what intrinsic value is and why it depends on the size, timing and risk of cash flows.
+
+- Name the four inputs of every DCF model.
+
+- Distinguish firm (enterprise) valuation from equity valuation and say when each is the better choice.
+
+- Apply the consistency principle: match the cash flow to the discount rate.
+
+- Explain why a valuation is a story that has been turned into numbers.
+
+### 1.1 Value comes from cash flows {.unnumbered}
+
+The intrinsic value of an asset that produces cash is the present value of the cash it is expected to produce over its life, discounted at a rate that reflects the risk of receiving it:^[Aswath Damodaran, "Intrinsic Valuation," valuation course slides, Session 2, NYU Stern, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session2.pdf>; and "Basics of DCF Valuation," equity valuation notes, <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/basics.pdf>.]
+
+$$
+\text{Value} = \sum_{t=1}^{n} \frac{E(CF_t)}{(1+r)^t}
+$$
+
+Two propositions follow. An asset has value only if its expected cash flows are positive at some point in its life, and early losses are acceptable if later cash flows are large enough. Between two assets, the one that pays sooner is worth more, although a later stream can make up for the delay by being larger or growing faster. If an action changes neither the expected cash flows nor their risk, it cannot change value.
+
+Risk can enter the model in two ways: by raising the discount rate above the risk-free rate (the approach used in this chapter), or by replacing each expected cash flow with a smaller certainty equivalent and discounting at the risk-free rate. Uncertainty is not a reason to skip the estimate. It is the reason the estimate must come with a range.
+
+### 1.2 The four inputs {.unnumbered}
+
+Every DCF model, however elaborate, needs four things:^[Damodaran, "Basics of DCF Valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/basics.pdf>.]
+
+| **Input** | **Question** | **Where it is built** |
+|--------------------|------------------------------|--------------------|
+| Cash flows | How much cash does the business produce after taxes and after reinvestment? | Section 2 |
+| Discount rate | What return do the providers of capital require? | Section 3 |
+| Expected growth | How fast do the cash flows grow, and how is that growth funded? | Section 4 |
+| Closure | What happens after the explicit forecast ends? | Section 5 |
+
+A firm may live forever, but nobody can forecast forever. Practice therefore splits value into a **forecast period** (typically five to ten years of explicit cash flows) and a **terminal value** that captures everything after it:
+
+$$
+\text{Value} = \sum_{t=1}^{N} \frac{CF_t}{(1+r)^t} + \frac{\text{Terminal value}_N}{(1+r)^N}
+$$
+
+### 1.3 Firm valuation and equity valuation {.unnumbered}
+
+The cash flows can be measured before or after payments to lenders, and the discount rate must follow:
+
+| **Approach** | **Cash flow** | **Discount rate** | **Result** |
+|------------------|-------------------|------------------|------------------|
+| Dividend discount | Dividends (or dividends plus buybacks) | Cost of equity | Value of equity |
+| Free cash flow to equity (FCFE) | Cash left after taxes, reinvestment and net debt flows | Cost of equity | Value of equity |
+| Free cash flow to the firm (FCFF) | Cash before debt payments, after taxes and reinvestment | Cost of capital (WACC) | Value of the firm's operating assets |
+
+The firm approach values all claims at once and then subtracts the claims that are not equity. It is the better choice when leverage is unusually high or low, when it is expected to change over time, or when the whole business is being valued, as in a merger or a buyout. The equity approach is simpler when leverage is stable. The dividend approach works when dividends track free cash flow to equity over time, and is hard to replace for banks, where debt is raw material rather than financing and free cash flow is hard to define.^[Damodaran, valuation course slides, Spring 2023, Session 11, "Discounted Cash Flow Valuation," <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>.] This chapter uses FCFF, which is also the approach in the capstone project.
+
+#### The consistency principle {.unnumbered}
+
+> **Never mix cash flows and discount rates.** Cash flows after debt payments are discounted at the cost of equity. Cash flows before debt payments are discounted at the cost of capital.
+
+The following illustration shows what a mismatch does. A firm has a cost of equity of 13.625%, equity worth \$1,073 and debt of \$800 with an after-tax cost of 5%. Its WACC is 13.625% × (1,073 ÷ 1,873) + 5% × (800 ÷ 1,873) = 9.94%.^[Damodaran, "Basics of DCF Valuation," worked example, <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/basics.pdf>.]
+
+| **Method** | **Value of firm or equity** | **Value of equity** | **Error** |
+|------------------|------------------|------------------|------------------|
+| Equity cash flows at the cost of equity (13.625%) | n/a | \$1,073 | None |
+| Firm cash flows at WACC (9.94%), less debt of \$800 | \$1,873 | \$1,073 | None |
+| Equity cash flows at WACC (wrong) | n/a | \$1,248 | Overstated by \$175 |
+| Firm cash flows at the cost of equity (wrong), less debt | \$1,613 | \$813 | Understated by \$260 |
+
+Both consistent methods give the same equity value. Discounting equity cash flows at the lower WACC overstates value, and discounting firm cash flows at the higher cost of equity understates it.
+
+### 1.4 The enterprise value balance sheet {.unnumbered}
+
+A useful picture of what is being valued is the **enterprise value balance sheet**, which rearranges the accounting balance sheet so that the operating items sit on one side and the financing items on the other.^[Simon Benninga, *Financial Modeling*, 4th ed. (MIT Press, 2014), ch. 2, pp. 53–59.]
+
+| **Operating side (valued by DCF)** | **Financing side (observed or estimated)** |
+|-----------------------------|--------------------------------------------|
+| Net working capital, fixed assets, goodwill and other operating assets | Net financial debt, other liabilities, minority interest, equity |
+
+Enterprise value (EV) is the value of the left-hand side. On the book values, Caterpillar's 2011 enterprise value is \$59.5 billion. Using the market value of its equity (624.7 million shares at \$90.60, or \$56.6 billion) and adding net debt of \$31.5 billion, other liabilities of \$14.5 billion and minority interest brings the right-hand side to \$102.7 billion, which means the operating assets are being valued by the market at far more than their book value.^[Benninga, *Financial Modeling*, ch. 2, pp. 58–59.] A DCF valuation is a way of asking whether that market value is justified by the cash the operating assets can produce.
+
+### 1.5 A valuation is a story turned into numbers {.unnumbered}
+
+The inputs in the following sections are not independent. Revenue growth, the operating margin, the amount of capital needed to support growth and the risk of the business all describe one business. A good valuation starts with a narrative about that business (how big the market is, what share the firm can win, why competitors cannot copy it, how profitable it can become) and then translates each sentence into an input. Every number must trace back to a sentence in the story, and every sentence about the future should show up in a number.^[Damodaran, valuation course slides, Spring 2023, Session 10, "Estimating Growth and Reinvestment," <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session10slides.pdf>.]
+
+### 1.6 Example Co.: the starting point {.unnumbered}
+
+Example Co. is valued in Sections 2 to 6. Its base year (from @sec-fsa) is:
+
+| **Example Co. base year (\$)** | **Amount** | **Note** |
+|---------------------------------|------------|-------------------------|
+| Revenues | 1,000 | |
+| Operating income (EBIT) | 150 | 15.0% operating margin |
+| Tax rate | 30% | |
+| After-tax operating income (NOPAT) | 105 | 150 × (1 – 0.30) |
+| Debt | 400 | Book value, used as a proxy for market value |
+| Cash | 100 | |
+| Shareholders' equity (book) | 600 | |
+| Invested capital | 900 | Debt + equity – cash |
+| Return on invested capital (ROIC) | 11.7% | 105 ÷ 900 |
+
+### Check your understanding {.unnumbered}
+
+1.  Why is a dollar of cash flow received in year 1 worth more than a dollar received in year 8, and what could make up for the delay?
+
+2.  A firm pays 40% of its free cash flow to equity as dividends. Which of the three approaches in 1.3 is least likely to be reliable?
+
+3.  An analyst discounts free cash flow to the firm at the cost of equity and then subtracts debt. Does she over- or understate equity value? (Answer: understates it, because the cost of equity is higher than WACC. In the example above the error is \$260.)
+
+4.  For which kinds of company would you prefer firm valuation to equity valuation, and why?
+
+5.  Caterpillar's market-based enterprise value is \$102.7 billion against \$59.5 billion on book values. Name two reasons the two might differ that have nothing to do with market mispricing.
+
+#### CFA connection {.unnumbered}
+
+Maps to the Equity Valuation readings on discounted dividend and free cash flow models (the choice among dividend, FCFE and FCFF approaches, and the relationship between enterprise and equity value). Check the current curriculum before relying on this mapping.
+
+## Section 2. Free Cash Flow to the Firm {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Compute free cash flow to the firm from the income statement and from the cash flow statement.
+
+- Explain why operating income is taxed as if the firm had no debt.
+
+- Define reinvestment and the reinvestment rate.
+
+- Adjust reported operating income for leases, research spending and one-time items.
+
+- Choose between the effective and marginal tax rate, including firms with tax-loss carryforwards.
+
+- Distinguish FCFF from FCFE and explain why FCFF can be positive while FCFE is negative.
+
+### 2.1 The definition {.unnumbered}
+
+**Free cash flow to the firm** is the cash the operating business produces for all of its capital providers, measured before any payment to lenders or shareholders and after the investment needed to sustain the business:^[Damodaran, *The Little Book of Valuation*, companion page "Cash Flows," <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/cashflows.htm>; Benninga, *Financial Modeling*, ch. 2, pp. 60–62.]
+
+$$
+\text{FCFF} = \text{EBIT}(1-t) - (\text{Capital expenditures} - \text{Depreciation} + \Delta\text{Non-cash working capital})
+$$
+
+The bracket is **reinvestment**: net capital expenditure plus the change in operating working capital. Dividing it by after-tax operating income gives the **reinvestment rate**, so that
+
+$$
+\text{FCFF} = \text{EBIT}(1-t)\,(1 - \text{Reinvestment rate})
+$$
+
+The reinvestment rate can be above 100% for a firm investing heavily and negative for one that is shrinking its asset base.
+
+The same number can be reached from the net income side. Starting with profit after tax, add back depreciation and other non-cash expenses, subtract the increase in operating current assets and capital expenditure, add the increase in operating current liabilities, and then **add back after-tax net interest** so that financing does not affect the answer:
+
+| **Income statement route** | **EBIT route** |
+|---------------------------|--------------------------|
+| Profit after taxes | EBIT × (1 – tax rate) |
+| + Depreciation and other non-cash expenses | + Depreciation and other non-cash expenses |
+| – Increase in operating current assets | – Increase in operating current assets |
+| + Increase in operating current liabilities | + Increase in operating current liabilities |
+| – Capital expenditure | – Capital expenditure |
+| + After-tax interest on debt, – after-tax interest on cash | |
+
+"Operating" matters. Cash, marketable securities, short-term debt and the current portion of long-term debt are financing items, not working capital, and are left out of the working capital change.^[Benninga, *Financial Modeling*, ch. 2, pp. 61–62.] A rise in receivables is a cash drain that the income statement ignores, and a rise in payables is a source of cash.
+
+#### Why operating income is taxed as if there were no debt {.unnumbered}
+
+FCFF is computed on EBIT taxed at the full rate, as though the firm had no debt. The tax saving from interest is not in the cash flow. It is in the discount rate, through the after-tax cost of debt in WACC (Section 3). Counting it in both places would double count it.^[Damodaran, "Cash Flows," <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/cashflows.htm>.]
+
+#### Illustration {.unnumbered}
+
+A firm has EBIT of 200, a tax rate of 25%, capital expenditure of 80, depreciation of 50 and a 10 increase in working capital. After-tax operating income is 200 × 0.75 = 150. Reinvestment is 80 – 50 + 10 = 40, so FCFF = 150 – 40 = 110. The reinvestment rate is 40 ÷ 150 = 26.7%, and 150 × (1 – 0.267) = 110.
+
+### 2.2 Taxes {.unnumbered}
+
+Two rates are available: the **effective** rate (taxes paid divided by taxable income) and the **marginal** rate (the rate on the next dollar of income). For a firm with high-tax and low-tax income the effective rate can be well below the marginal rate for years, and it can be erratic. A well-known example is Merck, whose reported tax rate was 14.8% in 2009, 40.6% in 2010 and 12.8% in 2011. The 2010 spike came in a low-income year in which tax planning evidently failed to work, so a forecast based on the two good years would use a rate near 13% to 15%.^[Benninga, *Financial Modeling*, ch. 3, pp. 75–76.]
+
+The practical rule is to start the forecast at the effective rate and move it toward the marginal rate over the forecast period, so that the terminal value is taxed at the marginal rate. Using the marginal rate from the start understates early after-tax income; carrying the effective rate forever overstates later value, because tax advantages do not last forever.^[Damodaran, valuation course slides, Spring 2023, Session 8, "Estimating Cash Flows," <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>.]
+
+#### Firms with tax-loss carryforwards {.unnumbered}
+
+Take a firm with \$1,000 million of net operating losses carried forward, EBIT of \$500 million a year for three years and a 40% marginal rate. The carryforward shelters all \$500 million in years 1 and 2, so taxes are zero and after-tax operating income is \$500 million. By year 3 the carryforward is used up, so the full \$500 million is taxed at 40%: taxes are \$200 million and after-tax operating income is \$300 million. The benefit is real, but it is temporary and must be removed from the terminal value.^[Damodaran, Session 8 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>.]
+
+### 2.3 Reinvestment {.unnumbered}
+
+Growth is not free. To grow, a firm must add working capital, plants, equipment and, for many firms today, less tangible assets. Net capital expenditure is capital expenditure minus depreciation. It depends on growth, so it cannot be forecast independently of the growth assumption (Section 4). Two cautions apply when looking at history:
+
+- **Normalize the base year.** One year of capital expenditure can be unrepresentative. A firm that spent very little in the base year will show a flattering FCFF that cannot be sustained, and a firm that made a large acquisition will show the opposite. In both cases, average over several years or build the figure from the growth plan.^[Damodaran, "Common errors in DCF valuation," 2011 NYIF presentation, <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.]
+
+- **Include acquisitions when growth depends on them.** Net capital expenditure for a firm that grows by buying other firms is net capex plus acquisitions, less the amortization of past acquisitions, normalized over time.^[Damodaran, Session 8 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>.]
+
+### 2.4 Cleaning the operating income {.unnumbered}
+
+Accounting statements are the starting point for valuation, but they classify some items in ways that distort operating income and invested capital. The main adjustments are:
+
+| **Item** | **Accounting treatment** | **Valuation treatment** |
+|-----------------|------------------------|------------------------------|
+| Operating leases | Since 2019, recorded as a lease liability and an asset (see @sec-fsa) | Treat the lease liability as debt, discounted at the firm's pre-tax cost of debt; add the interest component back to operating income |
+| Research and development | Expensed as incurred | Capitalize: treat as an investment, amortize over its useful life and add the resulting asset to invested capital |
+| Stock-based compensation | Expensed, then added back in the cash flow statement because no cash leaves | Treat as a real expense; do not add it back |
+| One-time items | Reported separately, sometimes recurring every year | Remove only if truly one time; a charge that recurs every few years is part of normal earnings |
+| Cyclical or distressed margins | Reflect the current year | Normalize toward the average through the cycle, or toward the industry average for firms with structural problems |
+
+#### Leases {.unnumbered}
+
+If lease payments are fixed commitments much like interest, a lease is financing, and the part of the lease expense that is effectively interest should be removed from operating expenses. The treatment is to discount the future commitments at the firm's pre-tax cost of unsecured debt, treat that present value as debt, and add the lease expense back to operating income. (The simple method adds the current-year lease expense to EBIT; a fuller method adds back only the imputed interest and the depreciation of the leased asset.) Leaving operating leases off the balance sheet lowered EBIT by the whole lease expense but left debt and capital understated, so return on capital and return on equity looked too high and the debt ratio looked too low.^[Damodaran, "Dealing with Operating Leases and R&D in Valuation," valuation Q&A, <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/opler&d.htm>; and Session 8 slides (2023), <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>.]
+
+#### Research and development {.unnumbered}
+
+Accounting expenses R&D immediately even though it is meant to produce future revenue. To capitalize it, pick an amortizable life (two to ten years), gather R&D for that many past years, and count the unamortized portion of each year's spending. With a five-year life the current year counts at 100%, the prior year at 80%, and so on down to 20% for four years ago.^[Damodaran, Session 8 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>.]
+
+SAP illustrates the effect (€ millions, five-year life):
+
+| **SAP, € millions** | **As reported** | **R&D capitalized** |
+|--------------------------|------------------|-------------------|
+| R&D expense in the year | 1,020 | (reclassified) |
+| Amortization of the research asset | — | 903 |
+| Operating income | 2,025 | 2,142 (= 2,025 + 1,020 – 903) |
+| Research asset added to book equity | — | 2,914 |
+| Return on capital | about 30% | about 19% |
+
+Adding back the R&D and subtracting the amortization raises operating income by €117 million, but net capital expenditure rises by the same amount, so FCFF is unchanged. What changes is the picture of the business: invested capital is much larger, return on capital is lower, and the reinvestment rate needed to explain growth is higher.
+
+#### Stock-based compensation {.unnumbered}
+
+The operating section of the cash flow statement adds back stock-based pay because no cash leaves the firm. The shortcut of accepting the operating cash flows as reported therefore keeps that add-back.^[Benninga, *Financial Modeling*, ch. 2, pp. 63–64.] This chapter does not: shares or options given to employees are a cost borne by existing shareholders, so the expense stays in operating income.
+
+#### Normalizing {.unnumbered}
+
+Replace a one-time charge only if it is truly one time. For earnings that move with commodity prices or recessions, use an average across the cycle. For a young company, target the margin that mature firms in the business earn and move toward it. For a company with structural problems, target the industry average and move toward it as the problems are fixed.^[Damodaran, Session 8 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>.] The warning signs listed in @sec-fsa (income from unspecified sources, falling SG&A or R&D as a share of revenue, accrual earnings running ahead of cash earnings) apply here too, because a distorted base year distorts every year that follows.
+
+### 2.5 From the cash flow statement to FCFF {.unnumbered}
+
+The consolidated statement of cash flows already contains most of what is needed. The procedure is:^[Benninga, *Financial Modeling*, ch. 2, pp. 63–66, and ch. 4, pp. 121–122.]
+
+1.  Accept the operating cash flows as reported (after the stock-based pay adjustment above).
+
+2.  Keep investing cash flows tied to operations (capital expenditure, proceeds from selling equipment) and delete purchases and sales of financial securities.
+
+3.  Ignore all financing cash flows (debt issued or repaid, stock issued or repurchased, dividends).
+
+4. Remove items that will not recur.
+
+5.  Add back after-tax net interest, so that financing does not affect the result.
+
+ABC Corp., a teaching example, shows the conversion (in thousands of dollars):
+
+| **ABC Corp.** | **2008** | **2009** | **2010** | **2011** | **2012** |
+|-----------------|----------|----------|----------|----------|----------|
+| Net cash provided by operating activities | 470,116 | 611,160 | 574,747 | 592,844 | 616,505 |
+| Purchases of property, plant and equipment | (48,944) | (70,326) | (89,947) | (37,044) | (88,426) |
+| Proceeds from disposing of property, plant and equipment | 197 | 6,956 | 22,942 | 6,179 | 28,693 |
+| Free cash flow before interest adjustment | 416,369 | 492,790 | 507,742 | 561,979 | 556,772 |
+| Add back after-tax net interest | 54,537 | 61,658 | 44,271 | 36,620 | 36,504 |
+| **Free cash flow (FCF)** | **470,906** | **554,448** | **552,013** | **598,599** | **593,276** |
+
+(Short-term investments are removed from the investing section, as they are financial.) The five-year history shows FCF in a fairly stable range, which is a useful guide for a short-term projection, though a firm whose history is erratic needs a model built from its drivers (Section 4).
+
+### 2.6 FCFF and FCFE compared {.unnumbered}
+
+| **Feature** | **FCFE** | **FCFF** |
+|----------------|-------------------|-------------------|
+| Starting point | Net income (after interest) | After-tax operating income (before interest) |
+| Taxes | Already in net income | Computed as if the firm had no debt |
+| Debt flows | Net debt repaid or issued is subtracted or added | Not included |
+| Claimants | Equity only | All capital providers |
+| Discount rate | Cost of equity | Cost of capital |
+| Can be negative? | Yes: losses, heavy reinvestment, or debt repayment | Yes, but not because of debt repayment |
+
+A highly levered firm that is paying down debt can show positive FCFF and negative FCFE at the same time. FCFE is, in effect, FCFF minus after-tax interest minus net debt repayment. When FCFF is negative the firm must raise new capital, in a mix set by the weights in the cost of capital.^[Damodaran, "Cash Flows," <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/cashflows.htm>.]
+
+### 2.7 Example Co.: base year free cash flow {.unnumbered}
+
+Example Co. has NOPAT of 105. Its invested capital is 900 and its revenue is 1,000, so each dollar of invested capital supports 1,000 ÷ 900 = \$1.11 of sales. Section 4 turns this relationship into a reinvestment forecast. For now, note two things: after-tax operating income is 10.5% of revenue, and a firm earning 11.7% on capital must reinvest about two-thirds of its after-tax operating income (8% ÷ 11.7% ≈ 68%) to grow at 8%.
+
+### Check your understanding {.unnumbered}
+
+1.  Why are cash and short-term debt excluded from the working capital change in FCFF?
+
+2.  A firm has EBIT of 300, a 30% tax rate, capital expenditure of 140, depreciation of 90 and a 20 rise in working capital. Compute FCFF and the reinvestment rate. (Answer: after-tax operating income = 210; reinvestment = 140 – 90 + 20 = 70; FCFF = 140; reinvestment rate = 70 ÷ 210 = 33.3%.)
+
+3.  A firm's interest tax shield is included in the after-tax cost of debt. Why is operating income still taxed as if there were no debt?
+
+4.  A software firm spends 500 a year on R&D. Which two figures change when R&D is capitalized, and which one does not? (Answer: operating income and invested capital change; FCFF does not.)
+
+5.  A firm has 600 of net operating losses and EBIT of 400 a year with a 40% marginal rate. What are after-tax operating income in years 1 and 2? (Answer: year 1 has no tax, so 400. In year 2, 200 of losses remain, so taxable income is 200, tax is 80 and after-tax operating income is 320.)
+
+6.  Why must a terminal value not include the benefit of a tax-loss carryforward?
+
+7.  A firm's FCF history is 470, 554, 552, 599 and 593. What would you check before projecting forward from this range?
+
+#### CFA connection {.unnumbered}
+
+Maps to the Equity Valuation readings on free cash flow (FCFF and FCFE, and their calculation from net income, EBIT and operating cash flow). Lease and R&D adjustments go beyond what the Level I reading requires. Check the current curriculum before relying on this mapping.
+
+## Section 3. The Discount Rate {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Compute WACC from market-value weights and defend each input.
+
+- Explain why the tax rate in WACC is the marginal rate and why the cost of debt is today's rate, not the coupon.
+
+- Estimate beta bottom-up and say why a single regression beta is unreliable.
+
+- Explain why a fixed debt ratio is a hidden assumption and how WACC should change after the forecast period.
+
+- Avoid double counting risk and avoid putting macro views into the discount rate.
+
+### 3.1 The weighted average cost of capital {.unnumbered}
+
+The WACC is the risk-adjusted rate that discounts free cash flow to the firm. It is a weighted average of the cost of equity and the after-tax cost of debt, with weights taken from market values:^[Benninga, *Financial Modeling*, ch. 3, p. 71; Damodaran, "Basics of DCF Valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/basics.pdf>.]
+
+$$
+\text{WACC} = r_E\,\frac{E}{D+E} + r_D\,(1-t)\,\frac{D}{D+E}
+$$
+
+where *E* is the market value of equity, *D* the market value of debt, *t* the tax rate, *r~E~* the cost of equity and *r~D~* the pre-tax cost of debt. The Cost of Capital chapter builds each component in detail. This section covers what a valuation needs from it and the places where valuations go wrong. Estimating a cost of capital takes judgment, and the estimate should always be tested with a sensitivity analysis rather than treated as precise.^[Benninga, *Financial Modeling*, ch. 3, p. 77, note 2.]
+
+### 3.2 The components {.unnumbered}
+
+| **Component** | **How to estimate it** | **Common error** |
+|---------------|--------------------------|------------------------------|
+| Weights | Market value of equity (shares × price) and market value of debt; for an unlisted firm or a firm whose leverage will change, use a target ratio | Using book values; using today's ratio when the firm will move toward a different one |
+| Risk-free rate | A default-free rate in the same currency and with the same (nominal) basis as the cash flows | Using a government bond that carries default risk without subtracting the default spread |
+| Equity risk premium | The premium for the markets where the firm earns its revenue; it varies over time | Using a stale number; adding separate small-cap, private-company and illiquidity premiums that overlap |
+| Beta | Bottom-up: the average unlevered beta of the industry, relevered at the firm's debt-to-equity ratio | Relying on a single regression with a large standard error |
+| Cost of debt | Current long-term rate: risk-free rate plus a default spread for the firm's rating | Interest expense divided by book debt, which mixes old debt, short-term debt and non-debt items |
+| Tax rate | Marginal rate, because interest saves tax at the margin | Using a low effective rate that the firm cannot count on |
+
+Three of these deserve a closer look.
+
+#### Debt and cash {.unnumbered}
+
+Debt in the weights is financial debt: bank loans, bonds and, now that they are on the balance sheet, lease liabilities. Pensions, deferred taxes and other debt-like obligations are real claims, but it is hard to attach a cost to them, so they are usually taken out of equity value in the bridge (Section 6) instead. Some analysts net cash against debt in the weights, and a firm with more cash than debt then has negative net debt; the equity bridge must then be consistent with that choice. This chapter keeps cash out of the weights and adds it back in the bridge.^[Benninga, *Financial Modeling*, ch. 3, pp. 74–75, and ch. 5, pp. 140–141.]
+
+#### Beta {.unnumbered}
+
+A regression of a stock's returns on market returns gives a beta with a wide standard error, and for some companies the answer is nonsense: in one standard example a small bagel chain shows a beta of –0.64, which would imply that its cost of equity is below the risk-free rate.^[Benninga, *Financial Modeling*, ch. 3, p. 111.] The bottom-up approach averages the unlevered betas of firms in the same business, which cancels out much of the noise, and then relevers the result for the target firm's capital structure:
+
+$$
+\beta_L = \beta_U\,\left[1 + (1-t)\,\frac{D}{E}\right]
+$$
+
+#### The dividend-growth shortcut {.unnumbered}
+
+The dividend growth model backs out a cost of equity from the current price and a growth rate. It breaks easily, because one-off payouts distort the growth rate. Ford's dividends fell from \$3.00 in 1989 to \$1.64 in 1997 (about –7.3% a year), but a special dividend of \$21.09 in 1998 turned the 1989–1998 growth rate into +25.3%. Excluding the special dividend, four-year growth is 6.6% and the implied cost of equity is 9.8%. The CAPM-based cost of equity in this chapter avoids the problem.^[Benninga, *Financial Modeling*, ch. 3, pp. 109–110.]
+
+### 3.3 Mistakes that change the answer {.unnumbered}
+
+- **The cost of debt is not the coupon.** Old debt reflects past rates. Use today's long-term rate for the firm's rating.^[Damodaran, "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.] The yield on a bond is also a promised return, which exceeds the expected return when default is possible. This is a known imprecision, usually accepted in practice.^[Benninga, *Financial Modeling*, ch. 3, pp. 76–78.]
+
+- **A fixed debt ratio is an assumption.** Leverage changes beta, the cost of equity and the risk of default. In one worked case, the WACC of a food company falls from 7.00% at no debt to 6.57% at 30% debt and then rises to 8.38% at 60% debt. Use a debt ratio the firm can sustain over time.^[Damodaran, "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.]
+
+- **Do not stack premiums.** Small-cap, private-company and illiquidity premiums overlap, and each is estimated with a large standard error.
+
+- **Keep macro views out of the discount rate.** A disagreement with the market about interest rates or growth should appear as a different view of the company's cash flows, not as a tweaked discount rate.
+
+- **Change the rate when the business changes.** As the firm matures, beta should move toward 1.0, the cost of debt toward that of a safer borrower, and the debt ratio toward the industry norm, so the cost of capital used for the terminal value should reflect a mature firm, not the firm as it is today.^[Damodaran, "Closure in valuation" and terminal value slides, Session 9, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>.]
+
+### 3.4 Example Co.: the discount rate {.unnumbered}
+
+The inputs below are assumptions for teaching, not current market data. Check the current Treasury yield and equity risk premium before using them for a real company.
+
+| **Example Co.** | **Input** | **Result** |
+|--------------------------|-----------------------|-------------------|
+| Risk-free rate | 4.0% (assumed) | |
+| Beta | 1.10 (assumed industry beta, relevered) | |
+| Equity risk premium | 5.0% (assumed) | |
+| Cost of equity | 4.0% + 1.10 × 5.0% | 9.5% |
+| Pre-tax cost of debt | 6.0% (assumed current rate for its rating) | |
+| After-tax cost of debt | 6.0% × (1 – 0.30) | 4.2% |
+| Weights | 70% equity, 30% debt (target) | |
+| **WACC** | 0.70 × 9.5% + 0.30 × 4.2% | **7.91%** |
+
+The 30% debt weight is a target, not today's book ratio. Debt of 400 against a market equity value that has not yet been estimated cannot be used for the weight without a circular calculation. A firm valued with market weights would iterate until the equity value used in the weights matches the value the DCF produces, or would simply use a target.
+
+### Check your understanding {.unnumbered}
+
+1.  A firm has a cost of equity of 12%, a pre-tax cost of debt of 7%, a marginal tax rate of 25% and 40% debt in its capital structure. Compute WACC. (Answer: 0.60 × 12% + 0.40 × 7% × 0.75 = 7.2% + 2.1% = 9.3%.)
+
+2.  The industry's unlevered beta is 0.90. Relever it for a firm with debt-to-equity of 0.5 and a 30% tax rate. (Answer: 0.90 × [1 + 0.70 × 0.5] = 1.215.)
+
+3.  Why is the marginal tax rate the right rate for the cost of debt, even if the firm's effective rate is lower?
+
+4.  A firm's interest expense is \$20 million and its book debt is \$400 million. What is wrong with using 5% as the cost of debt?
+
+5.  An analyst adds a small-cap premium of 3%, a private-company premium of 3% and an illiquidity premium of 2% to a CAPM cost of equity. What is the problem?
+
+6.  Why should WACC in the terminal period usually differ from WACC in the high-growth years?
+
+#### CFA connection {.unnumbered}
+
+Maps to the Corporate Issuers and Equity Valuation readings on the cost of capital (WACC, CAPM, relevering beta, cost of debt). The detailed treatment is in the Cost of Capital chapter. Check the current curriculum before relying on this mapping.
+
+## Section 4. Growth, Reinvestment and the Forecast {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- State and apply the rule that growth equals reinvestment times the return on capital.
+
+- Build a top-down forecast from revenue growth, the operating margin and sales-to-invested-capital.
+
+- Describe a bottom-up (three-statement) forecast and how its free cash flow reaches the DCF.
+
+- Reconcile the two forecasts so that growth, margins and capital needs are consistent.
+
+- Set how long high growth lasts and how it fades.
+
+### 4.1 Growth must be earned {.unnumbered}
+
+A firm can only grow its operating income by investing. The link is:^[Damodaran, Spring 2023 Session 10 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session10slides.pdf>.]
+
+$$
+g = \text{Reinvestment rate} \times \text{Return on invested capital (ROIC)}
+$$
+
+where the reinvestment rate is (net capital expenditure + change in working capital) ÷ after-tax operating income, and ROIC is after-tax operating income ÷ (book equity + book debt – cash). For a given growth rate, the better the investments, the less capital is needed.
+
+| **Firm** | **Reinvestment rate** | **ROIC** | **Implied growth** |
+|-----------------|----------------|----------------|----------------|
+| Cisco (1999) | 106.81% | 34.07% | 36.39% |
+| Tata Motors (2010) | 70% (excluding acquisitions) | 17.16% | 12.01% |
+
+A forecast of 36% growth for Cisco should have raised questions: was ROIC overstated, was reinvestment driven by acquisitions, and can a firm that size keep growing at that pace?^[Damodaran, Session 10 slides (Cisco); "Common errors in DCF valuation," 2011 (Tata Motors), <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.] If ROIC itself is changing, growth also includes the proportional change in ROIC, and the simple formula becomes less reliable.
+
+The equity version of the same idea is growth in earnings per share equals the retention ratio times return on equity. Return on equity includes the effect of leverage: ROE = ROIC + (D/E) × [ROIC – after-tax cost of debt]. Borrowing at a rate below the return on capital raises ROE without making the business any better.
+
+### 4.2 Two ways to forecast {.unnumbered}
+
+| **Route** | **Top-down (drivers)** | **Bottom-up (three-statement pro forma)** |
+|----------------|------------------------|--------------------------------|
+| Starting point | Revenue growth, operating margin, sales-to-invested-capital | Sales growth plus each balance sheet and income statement item as a ratio to sales or a policy |
+| Output | NOPAT, reinvestment and FCFF directly | Full statements; FCFF derived from them |
+| Strength | Few inputs, easy to link to a story, works for young firms with losses | Shows financing needs, interest, covenants and balance-sheet consequences |
+| Risk | Can hide inconsistency between capital needs and the balance sheet | Many inputs; a model can balance and still be economically unreasonable |
+
+Both routes end in the same table: one FCFF figure per year. The top-down route is the one used for the valuation of Example Co. later in this section. The Forecasting chapter builds the bottom-up route, and the DCF takes its free cash flow from there.
+
+#### The top-down route {.unnumbered}
+
+1.  **Revenue growth.** Estimate the size of the total market and the share the firm can win. Lower the growth rate as the firm gets larger, and check that absolute revenue is still plausible against the market.
+
+2.  **Operating margin.** Set a target margin (the margin mature firms in the business earn, or the firm's own long-run margin) and move the current margin toward it each year.
+
+3.  **Reinvestment.** Convert revenue growth into capital needs with **sales-to-invested-capital** (revenue ÷ invested capital):
+
+$$
+\text{Reinvestment}_t = \frac{\text{Revenue}_t - \text{Revenue}_{t-1}}{\text{Sales-to-capital}}
+$$
+
+For example, if revenue rises by \$1,000 million and sales-to-capital is 2.0, reinvestment is \$500 million. A firm with a low ratio needs more capital for each dollar of growth. Use the firm's own history and the industry average as guides, because a ratio far above the firm's history assumes growth can be had cheaply.^[Damodaran, Session 10 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session10slides.pdf>.]
+
+#### The bottom-up route {.unnumbered}
+
+A sales-driven pro forma model makes most items a function of sales: current assets and liabilities as a percentage of sales, net fixed assets as a percentage of sales, costs of goods sold as a percentage of sales, depreciation as a percentage of the asset base. Financing items are policy decisions, and one balance sheet item is the **plug** that closes the model. The plug can be cash and marketable securities, debt or stock, and it is a statement about how the firm finances itself.^[Benninga, *Financial Modeling*, ch. 5, pp. 127–130.]
+
+Free cash flow comes from the statements, not the plug, so the choice of plug should change interest and net income but leave FCFF unchanged.
+
+A compact example (money in thousands) shows how the statements turn into FCFF. The firm has sales of 1,000 growing at 10% a year, current assets at 15% of sales, current liabilities at 8% of sales, net fixed assets at 77% of sales, cost of goods sold at 50% of sales, a 40% tax rate and a 20% WACC. Its projected free cash flow is:^[Benninga, *Financial Modeling*, ch. 5, pp. 127–142.]
+
+| **Year** | **1** | **2** | **3** | **4** | **5** |
+|-------------------|-------|-------|-------|-------|-------|
+| Profit after tax | 246 | 270 | 295 | 323 | 352 |
+| + Depreciation | 117 | 137 | 161 | 189 | 220 |
+| – Increase in current assets | (15) | (17) | (18) | (20) | (22) |
+| + Increase in current liabilities | 8 | 9 | 10 | 11 | 12 |
+| – Increase in fixed assets at cost | (194) | (222) | (254) | (291) | (333) |
+| + After-tax interest on debt | 19 | 19 | 19 | 19 | 19 |
+| – After-tax interest on cash | (5) | (9) | (12) | (16) | (20) |
+| **Free cash flow** | **176** | **188** | **201** | **214** | **228** |
+
+Valued with a 20% WACC and 5% long-term growth, the enterprise value is 1,348, equity value is 1,108 after adding cash of 80 and subtracting debt of 320, and the value per share is \$11.08 (100 shares).^[Benninga, *Financial Modeling*, ch. 5, pp. 140–142.]
+
+#### More growth does not always mean more value {.unnumbered}
+
+In this model, raising sales growth first raises equity value and then lowers it: equity is worth 1,093 at 0% growth, peaks near 1,117 at 6%, is 1,108 at 10% and falls to 1,049 at 16%. The pattern is consistent with the model's heavy capital needs: net fixed assets are 77% of sales, so each extra dollar of sales requires a large investment, and at a 20% discount rate that investment eventually costs more than the cash flow it brings.^[Benninga, *Financial Modeling*, ch. 5, pp. 144–145.] This is the same principle as in 4.1: growth creates value only when new investment earns more than its cost of capital.
+
+### 4.3 How long does high growth last? {.unnumbered}
+
+Most firms find it hard to keep growing quickly, especially while earning more than their cost of capital, because competitors enter. The length of the high-growth period depends on size (large firms find it harder), current growth, and how durable the barriers to entry are. A firm with strong, lasting advantages can create value from growth for longer, and such firms are rare. After the high-growth period, let the growth rate fade steadily toward the stable rate rather than dropping to it in one year, and take the forecast out to ten years when the firm is young or growing quickly.^[Damodaran, Spring 2023 Session 11 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>; "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.]
+
+::: {.callout-note title="Bridge to the Forecasting chapter"}
+The model built in the Forecasting chapter supplies the first years of the DCF. To connect the two:
+
+1.  **Take FCFF from the forecast, not net income.** For each year, NOPAT = EBIT × (1 – tax rate), and reinvestment = net capital expenditure + change in operating working capital. This is the same as the change in invested capital.
+
+2.  **Check ROIC and sales-to-capital in every forecast year.** Compute ROIC = NOPAT ÷ invested capital and sales-to-capital = revenue ÷ invested capital from the forecast balance sheet. If sales-to-capital rises sharply, the forecast is assuming growth is cheap.
+
+3.  **Extend the forecast to ten years.** If the forecast covers five years, continue to year 10 with a fading growth rate, a margin path and the same sales-to-capital logic, so that growth reaches the stable rate by year 10.
+
+4.  **Leave financing out of FCFF.** The plug, interest and dividend policy shape net income and the balance sheet, but they do not change FCFF. They matter in Section 3 (through the debt weight) and Section 6 (through debt in the bridge).
+
+5.  **Run scenarios on the drivers.** The base, upside and downside cases should change revenue growth, margin and sales-to-capital together, so the DCF output can be shown by scenario.
+:::
+
+### 4.4 Example Co.: the forecast {.unnumbered}
+
+Example Co. is forecast top-down over ten years:
+
+| **Driver** | **Assumption** |
+|-------------------------|-------------------------------------------------|
+| Revenue growth | 8% in years 1–5, then fading by one point a year to 3% in year 10 |
+| Operating margin | 15% throughout (held at the base-year level) |
+| Tax rate | 30% throughout |
+| Sales-to-invested-capital | 1.1 on incremental revenue (the base year is 1,000 ÷ 900 = 1.11) |
+| Reinvestment | Change in revenue ÷ 1.1 |
+
+| **Year** | **Growth** | **Revenue** | **EBIT** | **NOPAT** | **Reinvestment** | **FCFF** | **Discount factor at 7.91%** | **PV of FCFF** |
+|------|------|--------|------|------|--------|------|--------|------|
+| 1 | 8% | 1,080.0 | 162.0 | 113.4 | 72.7 | 40.7 | 0.927 | 37.7 |
+| 2 | 8% | 1,166.4 | 175.0 | 122.5 | 78.5 | 43.9 | 0.859 | 37.7 |
+| 3 | 8% | 1,259.7 | 189.0 | 132.3 | 84.8 | 47.4 | 0.796 | 37.8 |
+| 4 | 8% | 1,360.5 | 204.1 | 142.9 | 91.6 | 51.2 | 0.737 | 37.8 |
+| 5 | 8% | 1,469.3 | 220.4 | 154.3 | 98.9 | 55.3 | 0.683 | 37.8 |
+| 6 | 7% | 1,572.2 | 235.8 | 165.1 | 93.5 | 71.6 | 0.633 | 45.3 |
+| 7 | 6% | 1,666.5 | 250.0 | 175.0 | 85.8 | 89.2 | 0.587 | 52.4 |
+| 8 | 5% | 1,749.8 | 262.5 | 183.7 | 75.8 | 108.0 | 0.544 | 58.7 |
+| 9 | 4% | 1,819.8 | 273.0 | 191.1 | 63.6 | 127.5 | 0.504 | 64.2 |
+| 10 | 3% | 1,874.4 | 281.2 | 196.8 | 49.6 | 147.2 | 0.467 | 68.7 |
+| **Sum of PV, years 1–10** | | | | | | | | **478.2** |
+
+Early free cash flow is small because growth of 8% takes about two-thirds of NOPAT in reinvestment. As growth fades, the reinvestment needed falls and free cash flow rises, even though growth is slowing. Most of the value will come from the years beyond year 10 (Section 5).
+
+### Check your understanding {.unnumbered}
+
+1.  A firm has a reinvestment rate of 40% and a ROIC of 15%. What is its expected growth? (Answer: 6%.)
+
+2.  The firm in question 1 wants to grow at 9% with the same ROIC. What reinvestment rate does it need? (Answer: 9% ÷ 15% = 60%.)
+
+3.  Revenue rises by 300 and sales-to-capital is 1.5. What is reinvestment? What happens to it if sales-to-capital is 3.0 instead? (Answer: 200; 100. The firm needs half the capital.)
+
+4.  In the sales-driven model, why does equity value fall when sales growth rises from 10% to 16%?
+
+5.  Why should a bottom-up forecast be checked against a sales-to-capital ratio even when its balance sheet balances?
+
+6.  In Example Co., FCFF is 40.7 in year 1 and 147.2 in year 10, even though growth slows. Explain why.
+
+7.  Why does a forecast that fades growth over several years lead to a better terminal value than one that drops to stable growth in a single step?
+
+#### CFA connection {.unnumbered}
+
+Maps to the Equity Valuation readings on forecasting free cash flow and sustainable growth, and to the Financial Statement Analysis readings on forecasting. The sales-to-capital method and the fade period go beyond the Level I reading. Check the current curriculum before relying on this mapping.
+
+## Section 5. Terminal Value {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Compare the three ways to close a DCF model and say why the stable growth model is preferred.
+
+- Compute a terminal value with the growing perpetuity formula and explain the limit on the growth rate.
+
+- Link stable growth to reinvestment and return on capital, and explain when growth adds no value.
+
+- Say what should change about risk, leverage and returns after the forecast period.
+
+- Explain why terminal value is a large share of enterprise value and what that does and does not imply.
+
+- Apply the mid-year convention.
+
+### 5.1 Three ways to close the model {.unnumbered}
+
+| **Method** | **How it works** | **When it fits** | **Caution** |
+|--------------|------------------------|------------------------|------------------------|
+| Stable growth | Cash flow grows at a constant rate forever | Going concerns | Needs judgment on when and at what return the firm becomes stable |
+| Multiple of EBITDA, earnings or revenue | Apply a pricing multiple to a terminal-year figure | Quick cross-check | Turns an intrinsic valuation into a relative one; multiples change with growth, risk and reinvestment, and are defined differently by different users |
+| Liquidation value | Sell the assets | Separable, marketable assets; firms built around a key person or a time-limited advantage such as a patent | Ignores going-concern value |
+
+Other variants appear in practice: terminal value equal to the book value of debt plus equity, a market-to-book multiple of that figure, a P/E ratio times terminal-year profit plus debt, or an EBITDA multiple times terminal-year EBITDA.^[Benninga, *Financial Modeling*, ch. 5, p. 140; Damodaran, "Closure in valuation" and terminal value slides, Session 9, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>; Spring 2023 Session 10 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session10slides.pdf>.] The stable growth model is technically the soundest of the three, and an exit multiple is best kept as a cross-check, because a multiple applied at the end of the forecast imports today's market pricing into the answer.
+
+### 5.2 The growing perpetuity {.unnumbered}
+
+If free cash flow grows at a constant rate *g* forever, its value one year before the first cash flow is:
+
+$$
+TV_N = \frac{FCFF_{N+1}}{WACC - g} = \frac{FCFF_N\,(1+g)}{WACC - g}
+$$
+
+The formula is valid only if WACC is greater than *g*; otherwise the value is undefined.^[Benninga, *Financial Modeling*, ch. 4, pp. 119–120, and ch. 5, p. 140.] A business expected to earn \$120 million after tax next year, with no growth and a 10% required return, is worth 120 ÷ 0.10 = \$1,200 million. If its earnings grow 2% a year forever, it is worth 120 ÷ (0.10 – 0.02) = \$1,500 million.^[Damodaran, "Closure in valuation" slides, <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valclose.pdf>.] Because small changes in the gap between WACC and *g* have a large effect, the choice of *g* is the most dangerous input in the whole model.
+
+### 5.3 How high can the stable growth rate be? {.unnumbered}
+
+> **Stable growth cannot exceed the growth rate of the economy in which the firm operates, and the risk-free rate is a practical ceiling for it.**
+
+A firm that grew faster than the economy forever would eventually become larger than the economy. The cap is on nominal growth when cash flows and discount rates are nominal. The risk-free rate is a reasonable proxy: the risk-free rate is expected inflation plus the expected real interest rate, and nominal economic growth is expected inflation plus expected real growth, so in the long run the two are close.^[Damodaran, Session 9 slides, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>; Spring 2023 Session 10 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session10slides.pdf>.] Two consequences follow:
+
+- Stable growth can be lower than the cap, and can be negative for a business that is shrinking, in which case the firm gradually disappears.
+
+- The risk-free rate and growth must be consistent. A low risk-free rate implies low nominal growth. Assuming high growth with a low risk-free rate overvalues the business; assuming low growth with a high risk-free rate undervalues it.
+
+### 5.4 What should change in stable growth {.unnumbered}
+
+Once the firm is stable it should look like other stable firms:^[Damodaran, Session 9 slides, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>; Spring 2023 Session 11 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>.]
+
+- **Beta** moves toward 1.0.
+
+- **Cost of debt** reflects a safer profile, such as an investment-grade rating.
+
+- **Debt ratio** moves toward a sustainable or industry-average level.
+
+- **Return on capital** moves toward a sustainable level relative to the cost of capital.
+
+- **Taxes** move to the marginal rate, and tax-loss benefits end.
+
+The timing depends on size, current growth, and the durability of the firm's advantages (Section 4.3).
+
+### 5.5 Growth has to be paid for {.unnumbered}
+
+In a stable firm, growth of *g* requires reinvestment of *g* ÷ ROIC of after-tax operating income, so
+
+$$
+TV_N = \frac{NOPAT_{N+1}\,\left(1 - \dfrac{g}{ROIC}\right)}{WACC - g}
+$$
+
+This formula makes the value far less sensitive to *g* than the simple formula, because a higher *g* needs more reinvestment, which offsets part or all of the gain. Whether the net effect is positive depends on the return the firm earns on new investment:^[Damodaran, "Reinvestment, Growth and Terminal Value," valuation Q&A, <https://pages.stern.nyu.edu/adamodar/New_Home_Page/valquestions/termvalueexreturns.htm>; Session 9 slides, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>.]
+
+- If ROIC is above WACC, raising *g* raises value.
+
+- If ROIC equals WACC, growth adds nothing, and the terminal value reduces to NOPAT ÷ WACC, the no-growth value.
+
+- If ROIC is below WACC, raising *g* destroys value.
+
+The next table applies this to Example Co.: terminal value at the end of year 10, given year-11 NOPAT of 202.7 and WACC of 7.91%.
+
+| **Stable growth, g** | **ROIC = WACC (7.91%)** | **ROIC = 10%** | **ROIC = 15%** | **ROIC = 20%** |
+|---------------|---------------|---------------|---------------|---------------|
+| 1% | 2,563 | 2,640 | 2,738 | 2,787 |
+| 2% | 2,563 | 2,744 | 2,973 | 3,087 |
+| 3% | 2,563 | 2,890 | 3,303 | 3,509 |
+| 4% | 2,563 | 3,111 | 3,802 | 4,148 |
+
+In the first column the terminal value does not move at all, whatever the growth rate. In the others, the value rises with growth, and the gain is larger the higher the ROIC.
+
+#### The sleight of hand to avoid {.unnumbered}
+
+A common shortcut sets capital expenditure equal to depreciation in the terminal year and assumes no extra working capital. That means zero net reinvestment, which, given *g* = reinvestment rate × ROIC, implies zero growth unless the return on new capital is infinite. Positive growth in the terminal value needs positive reinvestment.^[Damodaran, Spring 2023 Session 11 slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>.]
+
+#### Can excess returns last forever? {.unnumbered}
+
+Some practitioners assume ROIC equals the cost of capital in stable growth, on the view that competition eliminates excess returns. Others point out that firms with strong brands, patents or cost advantages can earn excess returns for a very long time. A defensible choice is to let ROIC decline toward the cost of capital over the forecast, and to set a terminal ROIC that is at most modestly above it for firms with durable advantages. Whatever the choice, state it, because it drives the answer.
+
+### 5.6 How much of the value is terminal value? {.unnumbered}
+
+Terminal value is usually well over half of enterprise value, and often much more. In Example Co. it is 74%. In the Caterpillar model in Section 7 it is about 90%. A large share is not by itself a reason to distrust a DCF. The terminal value depends on the earnings and growth of the forecast years, so the near-term assumptions are not irrelevant, and for any long-lived asset a large share of the return comes from the value at the end.^[Damodaran, Session 9 slides, <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>.] The share is a warning in a different way: it tells you where the answer comes from, so it is where the justification must be strongest. Report it every time.
+
+Two further points:
+
+- **Terminal value is not a cash machine.** Cash flows after the forecast are only as secure as the firm. A going-concern assumption can overstate the value of a firm with a real chance of failure. In one case, a casino company's cumulative probability of distress over ten years was estimated at 76.66%, and allowing for it cut the estimated value from \$8.12 to about \$1.92 a share.^[Damodaran, "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.] The case dates from 2011.
+
+- **Build the terminal cash flow from NOPAT.** Take terminal-year NOPAT and apply the stable reinvestment rate (*g* ÷ ROIC). Simply growing the last forecast year's FCFF at *g* carries that year's reinvestment rate into perpetuity, which rarely matches the stable growth rate (Section 7.3).
+
+### 5.7 Timing: end-of-year and mid-year {.unnumbered}
+
+The formulas so far assume each year's cash flow arrives on the last day of the year. Most corporate cash flows arrive throughout the year, so it is more accurate to discount as though the average cash flow arrives in mid-year. Because every cash flow, including the terminal value, is moved half a year closer, the enterprise value is the end-of-year value multiplied by (1 + WACC)^0.5:^[Benninga, *Financial Modeling*, ch. 4, pp. 120–121, and ch. 5, p. 141.]
+
+$$
+EV = \left[\sum_{t=1}^{N}\frac{FCFF_t}{(1+WACC)^t} + \frac{TV_N}{(1+WACC)^N}\right](1+WACC)^{0.5}
+$$
+
+In a spreadsheet, take the NPV of the cash flows (with the terminal value added to year *N*) and multiply by (1 + WACC)^0.5. At a WACC of 7.91%, the adjustment adds about 3.9% to enterprise value. Either convention is defensible. Pick one, say which, and use it throughout. Where the valuation date does not fall at the start of a fiscal year (for example, a December year-end valued in September), discount using actual dates, as with Excel's XNPV function.^[Benninga, *Financial Modeling*, ch. 4, p. 118.] The Example Co. valuation in Section 6 uses end-of-year discounting and shows the mid-year result alongside.
+
+### 5.8 Example Co.: terminal value {.unnumbered}
+
+| **Example Co. terminal value** | **Input or result** |
+|------------------------------|--------------------------------------------|
+| Stable growth, g | 3.0% (below the assumed 4.0% risk-free rate) |
+| Terminal ROIC | 10.0% (the marginal ROIC in the forecast is 0.105 × 1.1 = 11.6%, fading toward WACC of 7.91%) |
+| Terminal reinvestment rate | 3.0% ÷ 10.0% = 30% |
+| Year-11 NOPAT | 196.8 × 1.03 = 202.7 |
+| Year-11 FCFF | 202.7 × (1 – 0.30) = 141.9 |
+| **Terminal value at year 10** | 141.9 ÷ (0.0791 – 0.03) = **2,890** |
+| Present value of terminal value | 2,890 ÷ (1.0791)^10 = **1,350** |
+
+### Check your understanding {.unnumbered}
+
+1.  Why must the WACC exceed the growth rate in the perpetuity formula, and what happens to the value as *g* approaches WACC?
+
+2.  A firm's year-11 NOPAT is 100, WACC is 9% and *g* is 3%. Compute the terminal value if ROIC equals WACC and if ROIC is 12%. (Answer: ROIC = WACC: 100 × (1 – 3% ÷ 9%) ÷ 0.06 = 1,111, which equals 100 ÷ 0.09. ROIC = 12%: 100 × (1 – 0.25) ÷ 0.06 = 1,250.)
+
+3.  An analyst assumes a 6% perpetual growth rate with a 3% risk-free rate for a mature manufacturer. What is wrong with the assumption?
+
+4.  Why does the terminal value formula that sets capex equal to depreciation overstate value when growth is positive?
+
+5.  Terminal value is 85% of a firm's enterprise value. A colleague says the DCF is worthless. How do you respond?
+
+6.  What would you change in the discount rate used for the terminal value of a young, highly levered growth firm?
+
+7.  At a WACC of 8%, mid-year discounting raises enterprise value by what percentage? (Answer: 1.08^0.5 – 1 = 3.9%.)
+
+#### CFA connection {.unnumbered}
+
+Maps to the Equity Valuation readings on terminal value (the Gordon growth model, exit multiples, and the choice of the terminal growth rate). The ROIC-based terminal value and the mid-year convention go beyond the Level I reading. Check the current curriculum before relying on this mapping.
+
+## Section 6. From Enterprise Value to Value per Share {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Bridge from the value of operating assets to the value of common equity.
+
+- Treat cash, cross holdings, minority interests, debt-like claims and employee options correctly.
+
+- Explain why cash can be added as positive value or netted against debt, and why the choice must be consistent.
+
+- Complete a full DCF valuation of Example Co. and read a published valuation as a bridge.
+
+### 6.1 The bridge {.unnumbered}
+
+The present value of FCFF is the value of the firm's **operating assets**. It excludes everything that operating income does not capture and subtracts nothing for claims other than shareholders'. To reach value per share, adjust for each:^[Damodaran, *The Little Book of Valuation*, companion page "Value per Share," <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/valuepershare.htm>; "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.]
+
+$$
+\begin{aligned}
+\text{Equity value} ={}& \text{Operating assets} + \text{Cash and marketable securities} + \text{Value of non-operating holdings} \\
+& - \text{Debt (including leases)} - \text{Minority interests} - \text{Other claims} - \text{Value of employee options}
+\end{aligned}
+$$
+
+and value per share is equity value divided by the shares outstanding.
+
+| **Item** | **Treatment** |
+|----------------|--------------------------------------------------------|
+| Cash and marketable securities | Add. Operating income excludes the income on cash, so it has not been valued yet. A low return on cash is not a reason to discount it, since riskless assets earn low returns. Discount it only if managers are likely to waste it on poor projects |
+| Minority holdings in other firms (under 50%) | Add at estimated market value. Their income sits below operating income and has not been valued |
+| Minority interests in consolidated subsidiaries | Subtract at estimated market value, not book value, because the firm consolidates 100% of the subsidiary's operating income |
+| Debt | Subtract the debt included in the cost of capital, including lease liabilities, at market value where possible and book value as a proxy |
+| Other claims not in the cost of capital | Subtract underfunded pension and health care obligations and expected litigation costs |
+| Employee options | Subtract the value of outstanding options, estimated with an option pricing model. Adjusting the share count for dilution is an inferior shortcut |
+| Preferred stock | Subtract |
+| Shares | Divide by shares outstanding, not by an average |
+
+#### Cash as negative debt {.unnumbered}
+
+Some analysts treat cash as negative debt, so that equity value is enterprise value minus net debt (debt less cash). This is equivalent to adding cash to enterprise value and subtracting gross debt, as long as the cash is a surplus that could be paid out without affecting the firm's operations, and as long as the same choice is made in the cost of capital weights.^[Benninga, *Financial Modeling*, ch. 5, pp. 140–141.]
+
+#### Illustration: the bridge {.unnumbered}
+
+A firm's operating assets are worth \$100 million. It holds \$15 million of cash, owes \$20 million, has minority interests (estimated market value) of \$10 million and owns 5% of another firm whose equity has a market value of \$200 million (the holding's book value is \$5 million). Equity value is 100 + 15 – 20 – 10 + (5% × 200) = **\$95 million**. If the firm also faces a lawsuit that could cost \$100 million, the expected payout, weighted by its probability, must come off as well.^[Damodaran, "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>; "Closure in valuation" slides, <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valclose.pdf>.]
+
+#### Illustration: dilution {.unnumbered}
+
+Equity of \$200 million divided by 10 million shares is \$20 a share. If employees hold 2 million options with a \$20 strike and five years to expiry, those options are worth something to their holders and cost existing shareholders. Their value, found with an option pricing model, comes off equity value before dividing by the 10 million shares. It depends on the volatility of the stock and the time to expiry, so it cannot be read from a simple share count.
+
+#### Control, distress and illiquidity {.unnumbered}
+
+A control premium is not automatic. Add one only if there is a specific improvement that a new owner could make, and value that improvement. Likewise, adjust for distress risk where the chance of failure is real (Section 5.6), and for illiquidity in a private company.
+
+### 6.2 A template valuation {.unnumbered}
+
+A compact way to value a firm with four parameters is: current FCF, a short-term growth rate for years 1–5, a long-term growth rate, and WACC. ABC Corp. (from Section 2, with FCF of 593,276 in 2012) shows the full chain with growth of 8% for five years, long-term growth of 5% and WACC of 10.70% (thousands of dollars, one million shares):^[Benninga, *Financial Modeling*, ch. 2, p. 67, and ch. 4, pp. 117–118. The same ABC Corp. valuation appears in both chapters; the figures here use the chapter 2 presentation.]
+
+| **ABC Corp. template valuation** | **Amount** |
+|------------------------------|----------------------------------|
+| FCF, years 1 to 5 | 640,738; 691,997; 747,357; 807,145; 871,717 |
+| Terminal value at year 5 | 871,717 × 1.05 ÷ (0.107 – 0.05) = 16,057,940 |
+| Enterprise value (mid-year) | 13,063,055 |
+| + Cash and marketable securities | 73,697 |
+| – Financial liabilities | (1,379,106) |
+| **Equity value** | **11,757,646** |
+| **Per share** | **\$11.76** |
+
+The template is quick and good for a first pass. Its weakness is that growth is a free parameter: nothing in it ties an 8% or 5% growth rate to the capital that growth would require. Section 7.3 shows what that can cost.
+
+### 6.3 Example Co.: the valuation {.unnumbered}
+
+Using the cash flows from Section 4, the terminal value from Section 5 and end-of-year discounting at 7.91%:
+
+| **Example Co. valuation (\$)** | **Amount** | **Share of enterprise value** |
+|------------------------------|-------------------|--------------------|
+| PV of FCFF, years 1–5 | 188.8 | 10.3% |
+| PV of FCFF, years 6–10 | 289.4 | 15.8% |
+| PV of terminal value | 1,349.9 | 73.8% |
+| **Enterprise value (operating assets)** | **1,828.1** | 100% |
+| + Cash | 100.0 | |
+| – Debt | (400.0) | |
+| **Equity value** | **1,528.1** | |
+| Shares outstanding (assumed) | 100 | |
+| **Value per share** | **\$15.28** | |
+
+Three cross-checks. First, equity value is about 2.5 times book equity of 600, which fits a firm earning 11.7% on invested capital against a cost of capital of 7.9%. Second, enterprise value is 12.2 times base-year EBIT (1,828 ÷ 150) and 17.4 times base-year NOPAT. Whether those multiples are reasonable depends on comparable firms, a comparison covered in the next stage of the course. Third, with mid-year discounting the enterprise value is 1,899.0 (3.9% higher) and the value per share is \$15.99.
+
+::: {.callout-tip title="Companion workbook: Example Co. DCF"}
+Download the Excel version of this valuation: [Example_Co_DCF.xlsx](downloads/Example_Co_DCF.xlsx){download="Example_Co_DCF.xlsx"}.
+
+It holds the inputs, the ten-year FCFF forecast, the terminal value and bridge (end-of-year and mid-year), the sensitivity tables from Section 7, a reverse DCF, and a checks sheet. Change a blue input cell and every table updates. The risk-free rate, beta, equity risk premium and the \$18 market price are teaching assumptions, not market data.
+:::
+
+### 6.4 Case: reading a published valuation (Heineken, September 2019) {.unnumbered}
+
+The same steps appear in a published valuation of the Dutch brewer Heineken, as of September 1, 2019 (in € millions):^[Damodaran, Spring 2023 Session 11 slides, "Discounted Cash Flow Valuation," <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>.]
+
+| **Input** | **Value** |
+|-------------------------|-------------------------------------------------|
+| Base revenue (last twelve months) | 23,119 |
+| Revenue growth | 3.22% a year for years 1–5, fading to –0.5% in year 10 |
+| Operating margin | 14.4% in year 1, 14.0% in year 10 |
+| Sales-to-capital | 0.79 (five-year average) |
+| Tax rate | 29.7% in years 1–5, fading to 25% by year 10 |
+| WACC | 5.04%: cost of equity 7.66%, after-tax cost of debt 1.13%, weights 59.9% equity and 40.1% debt |
+| Terminal growth and ROIC | –0.5% growth, 5% ROIC, so terminal reinvestment is –0.5% ÷ 5% = –10% of NOPAT |
+| Terminal value | 2,972 ÷ (0.05 + 0.005) = 54,036 |
+
+| **Valuation bridge (€ millions)** | **Amount** |
+|----------------------------------|----------------|
+| PV of terminal value | 36,391 |
+| PV of cash flows, years 1–10 | 15,300 |
+| **Value of operating assets** | **51,691** |
+| – Debt | (19,710) |
+| – Minority interests | (1,069) |
+| + Cash | 1,752 |
+| + Non-operating assets | 1,401 |
+| **Value of equity** | **34,065** |
+| Shares (millions) | 571.1 |
+| **Value per share** | **€59.65** (against a market price of €93.25) |
+
+Notice what the case shows. Negative terminal growth produces a *negative* reinvestment rate: a shrinking business releases capital. Its WACC is very low because euro interest rates were then near or below zero. Terminal value is 70% of the value of operating assets. And the bridge takes four items from outside the operating cash flows (debt, minority interests, cash and non-operating assets) to reach equity. The case is dated, and the inputs reflect September 2019 market conditions, so it is an example of method, not a current estimate for the company.
+
+### Check your understanding {.unnumbered}
+
+1.  A firm's operating assets are worth 500. It holds cash of 40, has debt of 150, a minority interest with a market value of 30, and a 10% stake in a firm whose equity is worth 120. Compute equity value. (Answer: 500 + 40 – 150 – 30 + 12 = 372.)
+
+2.  Why is the market value of a minority interest better than its book value in the bridge?
+
+3.  Equity value is \$300 million, with 20 million shares and 4 million options with a \$15 strike. Why is \$15 a share not the correct answer?
+
+4.  A company has more cash than debt. Show that treating cash as negative debt and adding cash to enterprise value give the same equity value. (Answer: EV – (D – C) = EV + C – D.)
+
+5.  In Example Co., what share of enterprise value comes from years 1–5, years 6–10 and the terminal value? What does the split say about where the argument over value should focus?
+
+6.  Heineken's terminal growth is negative, so its terminal reinvestment rate is negative. Explain what a negative reinvestment rate means.
+
+7.  Why does the ABC Corp. template make it easy to overvalue a firm?
+
+#### CFA connection {.unnumbered}
+
+Maps to the Equity Valuation readings on moving from enterprise value to equity value (net debt, non-operating assets, noncontrolling interests, dilution). Option-based dilution adjustments go beyond Level I. Check the current curriculum before relying on this mapping.
+
+## Section 7. Sensitivity, Implied Expectations and Common Errors {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Build and read a two-way sensitivity table, including cells where the model breaks down.
+
+- Run a reverse DCF to find the expectations built into a market price.
+
+- Explain why a free growth parameter in a template is risky and how reinvestment discipline fixes it.
+
+- Use a checklist of common DCF errors on your own model.
+
+### 7.1 Sensitivity analysis {.unnumbered}
+
+No DCF value is a point. Test the model by varying the inputs that matter most, usually the discount rate and the terminal growth rate, and report a range. The table below shows Example Co.'s value per share (\$) as WACC and terminal growth change, keeping the reinvestment rate at *g* ÷ ROIC, with terminal ROIC at 10%:
+
+| **WACC** | **g = 1%** | **g = 2%** | **g = 3%** | **g = 4%** |
+|----------|------------|------------|------------|------------|
+| 6.91% | 17.58 | 18.83 | 20.67 | 23.70 |
+| 7.41% | 15.58 | 16.45 | 17.66 | 19.54 |
+| **7.91%** | 13.87 | 14.47 | **15.28** | 16.45 |
+| 8.41% | 12.42 | 12.82 | 13.35 | 14.07 |
+| 8.91% | 11.15 | 11.42 | 11.75 | 12.17 |
+
+A one-point change in WACC moves value per share by about \$3.5 to \$5.4 around the base case, far more than a one-point change in growth (about \$0.8 to \$1.2). Where WACC is at or below *g* the formula has no answer, and a spreadsheet table must show that explicitly, for example with an IF test that returns "nmf" (not meaningful) when WACC does not exceed growth.^[Benninga, *Financial Modeling*, ch. 4, p. 123, and ch. 5, pp. 144–145.] Growth of 4% equals the assumed risk-free rate, the practical ceiling from Section 5.3.
+
+### 7.2 Implied expectations: the reverse DCF {.unnumbered}
+
+A DCF can be run backwards. Instead of asking what a company is worth, ask what the market price implies about growth or the discount rate. The template described in Section 6.2 can extract the growth and WACC expectations built into the market price.^[Benninga, *Financial Modeling*, ch. 4, pp. 124–126.] Suppose Example Co. were listed at \$18 a share, against a value of \$15.28. Holding everything else constant, the price implies either revenue growth of about 12.3% a year in years 1–5 (fading to 3% by year 10) or a WACC of about 7.35% instead of 7.91%. A price of \$12 implies growth of only about 1%. The question for the investor is then whether 12.3% growth is believable for a firm with Example Co.'s capital needs and margins. In a spreadsheet, Goal Seek solves for the input that sets the DCF value equal to the price.
+
+### 7.3 The cost of a free growth parameter {.unnumbered}
+
+Two methods of setting terminal free cash flow differ in what they assume about reinvestment. The simple template grows last year's FCFF at *g*, which holds the reinvestment rate at last year's level whatever *g* is. The consistent method sets reinvestment to *g* ÷ ROIC. For Example Co., whose year-10 reinvestment rate is 25%:
+
+| **Terminal growth** | **Reinvestment, consistent method** | **Value per share, simple template (\$)** | **Value per share, consistent method (\$)** |
+|------------|------------|------------|------------|
+| 1% | 10% | 11.83 | 13.87 |
+| 2% | 20% | 13.65 | 14.47 |
+| 3% | 30% | 16.20 | 15.28 |
+| 4% | 40% | 20.07 | 16.45 |
+| 5% | 50% | 26.59 | 18.37 |
+
+The template undervalues the firm at low growth, because it assumes more reinvestment than needed, and overvalues it at high growth, because it assumes too little. The consistent method also keeps the estimate from running away as *g* approaches the cap.
+
+#### A cautionary case {.unnumbered}
+
+A published model of Caterpillar for 2011 uses a WACC of 10.84% and long-term free cash flow growth of 9%. Its terminal value is \$107.5 billion, about 90% of the \$75.5 billion enterprise value, and it produces a value of \$44.74 per share against a market price of \$90.60.^[Benninga, *Financial Modeling*, ch. 6, pp. 177–178.] The sensitivity table shows how fragile such a value is. Values per share in dollars:
+
+| **WACC** | **Growth 6%** | **Growth 7%** | **Growth 8%** |
+|----------|--------------|--------------|--------------|
+| 8.5% | 23.24 | 79.40 | 360.22 |
+| 9.0% | 7.97 | 42.51 | 146.14 |
+| 9.5% | (2.94) | 20.37 | 74.75 |
+| 10.0% | (11.14) | 5.59 | 39.04 |
+
+At a WACC of 8.5%, one point of terminal growth moves the value from about \$23 to \$79, and two points to \$360. In some cells equity is worth less than nothing, meaning that debt exceeds the value of the operating assets. A perpetual growth rate of 6% to 9% also far exceeds the ceiling set in Section 5.3. When the answer swings this much, the problem is not the arithmetic. It is that the growth rate is carrying the whole valuation without being tied to reinvestment or to a limit.
+
+### 7.4 A checklist of common errors {.unnumbered}
+
+The recurring DCF mistakes can be grouped into nine layers. Check each against your model:^[Damodaran, "Closure in valuation" slides ("layers" exercise), <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valclose.pdf>; "Common errors in DCF valuation," <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>.]
+
+| **Layer** | **Error** | **Check** |
+|-----|------------------------|------------------------------------------|
+| 1 | Base-year fixation and accounting distortions | Is the base year normal? Are leases and R&D treated as financing and investment? |
+| 2 | Ignoring taxes | Does the tax rate move from effective to marginal? Are loss carryforwards used up and excluded from the terminal value? |
+| 3 | Wrong length of high growth | Is growth tied to durable advantages? Does it fade? |
+| 4 | Misunderstanding the discount rate | Same currency as cash flows? Current cost of debt? Bottom-up beta? No stacked premiums? |
+| 5 | Treating terminal value as a cash machine | Is *g* at or below the risk-free rate? Is reinvestment *g* ÷ ROIC? Is there a risk of failure? |
+| 6 | Paying for growth without checking its cost | Does revenue growth match reinvestment, and does ROIC make sense? |
+| 7 | Assuming a fixed debt ratio | Does the debt ratio the model assumes match what the firm can sustain? |
+| 8 | Forgetting claims on the firm | Cash, cross holdings, minority interests, pensions, lawsuits in the bridge? |
+| 9 | Per-share errors | Options valued and subtracted? Current share count? |
+
+Two consistency checks cut across the layers. First, the pieces of the forecast (revenue growth, margin, reinvestment, ROIC) must describe the same business. Second, the cost of capital should be consistent through time, adjusted as leverage and risk change, rather than held at today's level indefinitely. And keep perspective: it is only a valuation, and the inputs that matter most are the ones about the business, not the ones about the spreadsheet.
+
+### 7.5 Building it in Excel {.unnumbered}
+
+| **Task** | **Technique** |
+|----------------------|----------------------------------------------------|
+| Discount a row of FCFF (end of year) | `=NPV(WACC, FCFF_1:FCFF_N)` with the terminal value added to year *N* |
+| Mid-year discounting | Multiply the NPV by `(1+WACC)^0.5` |
+| Terminal value | `=FCFF_N+1/(WACC-g)`, where FCFF~N+1~ = NOPAT~N+1~ × (1 – g/ROIC) |
+| Valuation date not at a fiscal year-end | `=XNPV(WACC, cash flows, dates)` |
+| Two-way sensitivity | Data table with an IF test: `=IF(WACC>g, value, "nmf")` |
+| Reverse DCF | Goal Seek: set value per share equal to the market price by changing growth or WACC |
+| Model hygiene | Inputs on one sheet, blue for inputs and black for formulas; no numbers hard-coded inside formulas; balance and bridge checks |
+
+The companion workbook for this chapter, [Example_Co_DCF.xlsx](downloads/Example_Co_DCF.xlsx){download="Example_Co_DCF.xlsx"}, applies each of these techniques to Example Co. (its sensitivity tables use plain formulas rather than data tables).
+
+### 7.6 What a valuation write-up should contain {.unnumbered}
+
+For the capstone, the valuation section of the memo should state: the story in a few sentences; the four drivers (revenue growth, margin, sales-to-capital, WACC) and where each comes from; the value per share by scenario against the market price; the share of enterprise value from the terminal value; the two or three inputs the answer is most sensitive to; and what the market price implies about growth. A reader should be able to see which belief about the future the answer depends on.
+
+### 7.7 Bottom line {.unnumbered}
+
+- A DCF value is the present value of free cash flow to the firm, discounted at WACC, plus a terminal value, less claims other than common equity.
+
+- Match the cash flow to the discount rate. Cash flow before debt service goes with WACC; cash flow after debt service goes with the cost of equity.
+
+- Growth is not free. Growth equals reinvestment times ROIC, and the stable rate cannot exceed the risk-free rate.
+
+- With ROIC equal to WACC, terminal growth adds no value, and a high terminal growth rate matters only when it comes with high returns on new capital.
+
+- Terminal value is usually more than half of enterprise value. State the share, and spend the most effort where the value comes from.
+
+- Report a range, not a point, and ask what the market price implies.
+
+### Check your understanding {.unnumbered}
+
+1.  In the Example Co. sensitivity table, why does a one-point change in WACC have a much larger effect than a one-point change in terminal growth?
+
+2.  Example Co. is quoted at \$22. Without recomputing, would you expect the implied year 1–5 growth to be above or below the 12.3% implied by \$18? (Answer: above. A higher price needs more growth to justify it. The model gives about 17.3% at \$22.)
+
+3.  What does "nmf" in a sensitivity table mean, and when does it appear?
+
+4.  Using the table in 7.3, why does the simple template overvalue Example Co. at 5% terminal growth?
+
+5.  A model of a mature industrial firm uses 8% growth forever and a 10% WACC and reports a value of \$150 against a price of \$90. Which of the nine layers does this violate, and what would you change first?
+
+6.  Select a company from your capstone shortlist and list the three inputs for which you have the least support. How would you test each?
+
+7.  List the items needed to move from the value of operating assets to value per share, and say which sections of the 10-K contain each.
+
+#### CFA connection {.unnumbered}
+
+Maps to the Equity Valuation readings on sensitivity analysis, implied expectations in market prices and the limits of DCF models. The nine-layer checklist and the reverse DCF go beyond the Level I reading. Check the current curriculum before relying on this mapping.
+
+## Sources and further reading {.unnumbered}
+
+#### Core sources {.unnumbered}
+
+- Benninga, Simon. *Financial Modeling*, 4th ed. MIT Press, 2014. Chapters 2–6 (corporate valuation overview, WACC, valuation from the cash flow statement, pro forma statement modeling, the Caterpillar case).
+
+- Damodaran, Aswath. *Investment Valuation*, 3rd ed. Wiley, 2012; and *The Little Book of Valuation*. Wiley, 2011.
+
+#### Damodaran online materials (NYU Stern) {.unnumbered}
+
+- "Intrinsic Valuation," valuation course slides, Session 2: <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session2.pdf>
+
+- "Terminal Value," valuation course slides, Session 9: <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>
+
+- Spring 2023 valuation slides, Session 8 (estimating cash flows): <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session8slides.pdf>
+
+- Spring 2023 valuation slides, Session 10 (growth and reinvestment): <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session10slides.pdf>
+
+- Spring 2023 valuation slides, Session 11 (DCF and the Heineken case): <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>
+
+- "Basics of DCF Valuation," equity valuation notes: <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/basics.pdf>
+
+- "Closure in valuation" slides: <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/valclose.pdf>
+
+- "Common errors in DCF valuation," 2011 presentation: <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/TenErrorsNYIF2011.pdf>
+
+- *The Little Book of Valuation*, "Cash Flows": <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/cashflows.htm>; "Value per Share": <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/littlebook/valuepershare.htm>
+
+- Valuation Q&A, "Dealing with Operating Leases and R&D in Valuation": <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/valquestions/opler&d.htm>
+
+- Valuation Q&A, "Reinvestment, Growth and Terminal Value": <https://pages.stern.nyu.edu/adamodar/New_Home_Page/valquestions/termvalueexreturns.htm>
+
+- Damodaran Online data (industry betas, equity risk premiums, margins, sales-to-capital by industry; updated each year): <https://pages.stern.nyu.edu/~adamodar/>
+
+::: {.callout-note title="Dated items to keep in mind"}
+Several examples are from older periods: the Heineken valuation (September 2019), the common-errors presentation (2011), and the Caterpillar (2011) and ABC Corp. cases The method is current; the inputs, interest rates, equity risk premiums and prices are not. Before using any number from a case for a real valuation, get the current risk-free rate, equity risk premium and industry data from the sources above.
+:::
