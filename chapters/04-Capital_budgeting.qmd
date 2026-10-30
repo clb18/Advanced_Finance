@@ -1,3 +1,777 @@
----
-title: "Capital Budgeting"
----
+# Capital Budgeting {#sec-capbud}
+
+This chapter shows how a firm decides which long-term investments to make. It starts with the rules used to judge a project, builds the incremental cash flows those rules need, explains why the rules sometimes disagree, and ends with the side effects and uncertainty that a single number can hide. The same company, Example Co. from @sec-fsa, is used throughout. "Example Co." figures are invented for teaching. Worked examples from outside sources are footnoted.
+
+| **Section** | **Topic** | **Main question** |
+|-----------------|-------------------------|------------------------------|
+| 1 | The capital budgeting decision | What is a good investment, and how is it measured? |
+| 2 | Investment decision rules | How do accounting returns, payback, NPV, IRR, MIRR and PI work? |
+| 3 | Building incremental cash flows | Which cash flows belong in the analysis? |
+| 4 | When the rules disagree | How do we choose between projects? |
+| 5 | Side costs, synergies and options | What does a stand-alone analysis miss? |
+| 6 | Uncertainty and consistency | How do we test and protect the answer? |
+| 7 | Putting it together: Example Co. | What does a full analysis look like? |
+
+Sections 1 and 2 define the rules, Section 3 supplies their inputs, Section 4 compares them, Section 5 widens the analysis beyond the project itself, Section 6 stress-tests it and Section 7 applies everything to one project. Each section ends with review questions and a note on the related CFA readings. The discount rate used throughout comes from the cost-of-capital chapter.
+
+## Section 1. The Capital Budgeting Decision {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Explain why capital budgeting is among the most important decisions in corporate finance.
+
+- Define a good investment in terms of value created, not profit reported.
+
+- Describe the hurdle rate and why it should match the risk of the project.
+
+- Distinguish the firm's view (cash flows to all capital providers) from the equity view (cash flows after debt payments).
+
+- State the principles that every capital budgeting analysis must follow.
+
+### 1.1 Why it matters {.unnumbered}
+
+Capital budgeting is the process of deciding which long-term investments to undertake. Fixed assets are long-lived and hard to reverse, so these choices set the nature of a firm's business for years. An airline is an airline because it operates aircraft, however it finances them. How the firm finances itself and how it manages short-term cash are important too, but the investment decision defines what the firm is.[^04-capital_budgeting-1]
+
+[^04-capital_budgeting-1]: Ross, S., Westerfield, R., and Jordan, B., *Essentials of Corporate Finance*, McGraw Hill, Chapter 8, "Net Present Value and Other Investment Criteria," pp. 242–243.
+
+### 1.2 What makes an investment good {.unnumbered}
+
+An investment is worth making if it creates value for its owners, meaning it is worth more than it costs. The difference between an investment's value and its cost is its **net present value (NPV)**. The textbook illustration is a house bought for \$75,000, renovated for another \$75,000 and sold for \$170,000: management has added \$20,000 of value. The real task is to estimate that gap *before* committing the money.[^04-capital_budgeting-2]
+
+[^04-capital_budgeting-2]: Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 243–244 (the "fixer-upper" example and the definition of NPV).
+
+A good investment earns more than the return required on capital of comparable risk. That required return is the **hurdle rate**:
+
+- For cash flows to the whole firm (before debt payments), the hurdle rate is the **cost of capital**.
+
+- For cash flows to equity investors (after debt payments), the hurdle rate is the **cost of equity**.
+
+A good project therefore shows a positive NPV, an internal rate of return above the hurdle rate and accounting returns above the corresponding cost of capital or equity.[^04-capital_budgeting-3]
+
+[^04-capital_budgeting-3]: Damodaran, A., *Corporate Finance* course, Session 15 slides, "Measuring Investment Returns II" (2021), slide 291. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 1.3 Two views of the same project {.unnumbered}
+
+| **View** | **Cash flows** | **Hurdle rate** | **Accounting return** |
+|-----------------|------------------|-----------------|---------------------|
+| Firm (all capital providers) | After-tax operating cash flow, before any debt payments | Cost of capital | Return on capital |
+| Equity (owners only) | Cash flow left after interest and principal payments | Cost of equity | Return on equity |
+
+The two views should give the same answer for a well-built analysis. The key is **consistency**: the cash flows and the discount rate must be defined the same way (Section 6).[^04-capital_budgeting-4]
+
+[^04-capital_budgeting-4]: Damodaran, A., *Corporate Finance* course (undergraduate), Session 14 slides, "To NPV and beyond" (Spring 2016), slides 250 and 253. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+### 1.4 Principles to follow {.unnumbered}
+
+1.  **Use cash flows, not accounting profit.** Depreciation and other non-cash charges distort profit.
+
+2.  **Use incremental cash flows.** Compare the firm with the project against the firm without it.
+
+3.  **Use after-tax cash flows.**
+
+4.  **Keep investment and financing separate** in a firm-level analysis. Financing costs are in the hurdle rate, not in the cash flows.
+
+5.  **Keep cash flows and discount rate consistent** in currency, inflation basis and perspective.
+
+### Check your understanding {.unnumbered}
+
+1.  Why is the capital budgeting decision usually considered more important than the financing decision for defining a firm's business?
+
+2.  A project's cash flows are measured after interest and principal payments. Which hurdle rate should be used?
+
+3.  Why should financing costs be left out of the cash flows when the project is analyzed from the firm's view?
+
+#### CFA connection {.unnumbered}
+
+This section maps to the introduction to "Capital Investments" in the Corporate Issuers readings (types of capital projects and the principles of cash flow analysis). Check the current curriculum before relying on this mapping.
+
+## Section 2. Investment Decision Rules {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Compute and interpret accounting returns and the average accounting return (AAR).
+
+- Compute payback and discounted payback, and explain their limits.
+
+- Compute NPV and apply the NPV rule.
+
+- Compute IRR, draw an NPV profile and explain what IRR assumes.
+
+- Compute MIRR and the profitability index (PI) and say when each is useful.
+
+- Use Excel's NPV and IRR functions correctly.
+
+### 2.1 The Example Co. expansion project {.unnumbered}
+
+Example Co. is considering a new product line. All figures are invented and in dollars. The project needs \$400 of equipment, depreciated straight-line over four years to zero, and an initial \$50 of working capital. Revenue is \$500, \$550, \$600 and \$600 over the four years. Operating costs (before depreciation) are 55% of revenue, the tax rate is 30%, and working capital is held at 10% of revenue and recovered in full at the end of year 4. The cost of capital for this project is 10%. Section 3 shows how the cash flows below are built.
+
+| **Example Co. project (\$)** | **Year 0** | **Year 1** | **Year 2** | **Year 3** | **Year 4** |
+|--------------|------------|------------|------------|------------|------------|
+| After-tax operating income (NOPAT) |  | 87.5 | 103.25 | 119.0 | 119.0 |
+| \+ Depreciation |  | 100.0 | 100.0 | 100.0 | 100.0 |
+| – Increase in working capital | (50.0) | (5.0) | (5.0) | 0.0 | 60.0 |
+| – Capital expenditure | (400.0) |  |  |  |  |
+| **Cash flow after tax** | **(450.0)** | **182.5** | **198.25** | **219.0** | **279.0** |
+
+Year 4 includes the \$60 of working capital released (a negative investment). The sections below apply each rule to these cash flows.
+
+### 2.2 Accounting returns {.unnumbered}
+
+Accounting returns scale accounting profit by an accounting measure of investment. For a project analyzed from the firm's view:
+
+$$\text{Return on capital} = \frac{\text{After-tax operating income}}{\text{Book value of capital invested}}$$
+
+The project is acceptable if the return on capital exceeds the cost of capital. The equity version uses net income and book equity and is compared with the cost of equity.[^04-capital_budgeting-5]
+
+[^04-capital_budgeting-5]: Damodaran, Session 14 slides (2016), slides 250 and 255–256, which apply return on equity to an iron-ore mine and compare it with the cost of equity. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+The **average accounting return (AAR)** is a common variant: average net income divided by average book value. For Example Co.'s project (using the NOPAT figures above as project net income, with no interest), average income is (87.5 + 103.25 + 119.0 + 119.0) ÷ 4 = \$107.19. Equipment starts at \$400 and ends at zero, so average book value is \$200 and the AAR is 107.19 ÷ 200 = **53.6%**.[^04-capital_budgeting-6]
+
+[^04-capital_budgeting-6]: The average accounting return is defined and illustrated in Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 250–252. The Example Co. numbers are invented.
+
+AAR has three problems. It is not a true rate of return because it ignores the timing of cash flows. There is no objective target to compare it with. And it uses accounting profit and book value, which are poor substitutes for cash flow and market value. Accounting returns are still useful as a check on whether a firm's overall returns exceed its costs, but they should not be the main project rule.
+
+### 2.3 Payback and discounted payback {.unnumbered}
+
+The **payback period** is the time needed for cumulative cash flows to recover the initial investment. The rule accepts a project if payback is shorter than a chosen cutoff.
+
+| **Example Co. (\$)** | **Year 0** | **Year 1** | **Year 2** | **Year 3** | **Year 4** |
+|-------------|------------|------------|------------|------------|------------|
+| Cash flow | (450.0) | 182.5 | 198.25 | 219.0 | 279.0 |
+| Cumulative cash flow | (450.0) | (267.5) | (69.25) | 149.75 | 428.75 |
+| Present value at 10% | (450.0) | 165.9 | 163.8 | 164.5 | 190.6 |
+| Cumulative present value | (450.0) | (284.1) | (120.2) | 44.3 | 234.9 |
+
+- **Payback:** the project recovers its cost between years 2 and 3: 2 + 69.25 ÷ 219.0 = **2.32 years**.
+
+- **Discounted payback** uses present values: 2 + 120.2 ÷ 164.5 = **2.73 years**.
+
+The rule is easy to explain, and it favors liquidity and ignores the riskiest, most distant cash flows. Its flaws are that plain payback ignores the time value of money, the cutoff is arbitrary, and cash flows after the cutoff are ignored entirely, which biases the rule against long-lived projects. To see the problem, compare two projects that each cost \$250. One pays \$100 in year 1 and \$200 in year 2: it pays back in 1.75 years, but at 15% its NPV is –\$11.81. The other pays \$100 a year for four years: its payback is longer (2.5 years), but its NPV is +\$35.50.[^04-capital_budgeting-7]
+
+[^04-capital_budgeting-7]: The "Long" and "Short" projects are from Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 248–249, Table 8.2. NPVs recomputed.
+
+Payback still survives as a quick screen for small decisions, where detailed analysis would cost more than a mistake. It tells you how long money is at risk. A project that fails a payback test deserves a closer look, and one that passes still needs an NPV.
+
+The discounted payback has a further use: it measures how long the project's value takes to arrive, which a single NPV hides. For a large theme-park investment with a positive NPV of about \$3.3 billion, payback was 10.3 years and discounted payback was 16.8 years, so the value arrives late and the cash is at risk for a long time.[^04-capital_budgeting-8]
+
+[^04-capital_budgeting-8]: Damodaran, Session 14 slides (2016), slide 244 (payback of 10.3 years, discounted payback of 16.8 years) and slides 235–236 (NPV of \$3,296 million). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+### 2.4 Net present value {.unnumbered}
+
+NPV is the sum of the present values of all cash flows from the project, including the initial investment, discounted at the hurdle rate:
+
+$$\text{NPV} = \sum_{t=0}^{n} \frac{CF_t}{(1+r)^t}$$
+
+**Rule: accept if NPV \> 0.** A positive NPV is the value the project adds to the firm, in today's dollars.[^04-capital_budgeting-9]
+
+[^04-capital_budgeting-9]: Damodaran, Session 14 slides (2016), slide 233; Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 243–245.
+
+For Example Co.'s project at 10%:
+
+$$\text{NPV} = -450 + \frac{182.5}{1.10} + \frac{198.25}{1.10^2} + \frac{219.0}{1.10^3} + \frac{279.0}{1.10^4} = \$234.85$$
+
+The project adds about \$235 of value and should be accepted. NPV is a dollar surplus: it grows with project size and it has one value for a given set of cash flows and a discount rate.
+
+::: {.callout-warning title="A spreadsheet trap"}
+Excel's `NPV` function discounts a list of cash flows starting one period from now. It does not subtract the initial investment, so it returns a present value, not a net present value. Enter the year-0 cash flow outside the function: `=NPV(rate, CF1:CF4) + CF0`. Writing `=NPV(rate, CF0:CF4)` discounts the initial cost for a year and gives the wrong answer.[^04-capital_budgeting-10]
+:::
+
+[^04-capital_budgeting-10]: The error and its correction are shown in Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, p. 246 (Spreadsheet Strategies box).
+
+### 2.5 Internal rate of return {.unnumbered}
+
+The **internal rate of return (IRR)** is the discount rate that sets NPV equal to zero. It is the percentage return implied by the project's time-weighted incremental cash flows.
+
+**Rule: accept if IRR \> hurdle rate.**
+
+For Example Co.'s project, the IRR is **30.6%**, well above the 10% hurdle, which agrees with the NPV rule. In Excel: `=IRR(CF0:CF4)`, with the year-0 cash flow entered as a negative number.
+
+Plotting NPV against the discount rate gives the **NPV profile**. The profile crosses zero at the IRR. For a conventional project (an outflow followed only by inflows), NPV is positive at every discount rate below the IRR, so the NPV and IRR rules agree.[^04-capital_budgeting-11]
+
+[^04-capital_budgeting-11]: The IRR rule and NPV profile are developed in Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 253–255. See also Damodaran, Session 14 slides (2016), slides 237–238.
+
+| **Discount rate** | **NPV of Example Co. project (\$)** |
+|-------------------|-------------------------------------|
+| 8%                | 267.9                               |
+| 10%               | 234.9                               |
+| 12%               | 204.2                               |
+| 14%               | 175.6                               |
+| 30.6% (IRR)       | 0.0                                 |
+
+IRR has a hidden assumption: it implicitly assumes that intermediate cash flows are reinvested at the IRR, while NPV assumes reinvestment at the hurdle rate. When the IRR is high and the project is long, the IRR overstates the true return. Section 4 returns to this.
+
+### 2.6 Modified IRR {.unnumbered}
+
+The **modified IRR (MIRR)** adjusts the cash flows to remove multiple IRRs and replace the reinvestment assumption with an explicit rate. Three common versions all produce one answer:
+
+- **Discounting approach:** discount all negative cash flows to year 0 at the required return, then compute the IRR.
+
+- **Reinvestment approach:** compound all cash flows except the first to the end of the project at the required return, then compute the IRR.
+
+- **Combination approach:** discount negatives to year 0 and compound positives to the end.
+
+For Example Co., only the first cash flow is negative, so the combination and reinvestment approaches coincide. Compounding the four inflows at 10% to year 4 gives 182.5 × 1.1³ + 198.25 × 1.1² + 219.0 × 1.1 + 279.0 = \$922.1. Then MIRR = (922.1 ÷ 450)\^(1/4) – 1 = **22.2%**, below the 30.6% IRR because it assumes reinvestment at 10%, not 30.6%.
+
+MIRR is controversial. The three versions give slightly different answers for the same cash flows (a three-cash-flow example gives 19.74%, 19.72% and 19.87%), the result depends on an outside rate and so is not truly "internal", and if you already have the discount rate you could just compute the NPV.[^04-capital_budgeting-12]
+
+[^04-capital_budgeting-12]: The three MIRR methods, the 19.74%, 19.72% and 19.87% results, and the critique of MIRR are from Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 260–261. The Example Co. MIRR is recomputed.
+
+### 2.7 Profitability index {.unnumbered}
+
+The **profitability index (PI)** converts the dollar NPV into a relative measure by dividing by the initial investment:
+
+$$\text{PI} = \frac{\text{NPV}}{\text{Initial investment}}$$
+
+Example Co.: 234.85 ÷ 450 = **52.2%**. Some textbooks define PI as the present value of inflows divided by the initial investment (684.85 ÷ 450 = 1.52); this is the same measure plus one, so a PI above 1.0 on that definition is the same test as NPV above zero. PI is most useful when capital is limited (Section 4).[^04-capital_budgeting-13]
+
+[^04-capital_budgeting-13]: Damodaran, Session 15 slides (2021), slide 300, defines PI as NPV divided by initial investment. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 2.8 The rules side by side {.unnumbered}
+
+| **Rule** | **Example Co. result** | **Accept if** | **Main strength** | **Main weakness** |
+|---------------|---------------|---------------|---------------|---------------|
+| Average accounting return | 53.6% | Above target | Easy; data available | Not a true return; ignores timing |
+| Payback | 2.32 years | Below cutoff | Simple; favors liquidity | Ignores time value and later cash flows |
+| Discounted payback | 2.73 years | Below cutoff | Adds time value | Still ignores later cash flows |
+| NPV | \$234.85 | Above zero | Measures value added in dollars | Needs a discount rate; not a percentage |
+| IRR | 30.6% | Above hurdle rate | Intuitive percentage | Multiple IRRs; can misrank projects |
+| MIRR | 22.2% | Above hurdle rate | One answer; explicit reinvestment | Depends on method and outside rate |
+| Profitability index | 52.2% | Above zero (above 1.0 on the ratio form) | Ranks under capital rationing | Misleads when projects differ in scale |
+
+::: {.callout-note title="What firms actually use"}
+A survey of how firms rank their primary decision rule shows a shift over time from IRR toward NPV as firms mature and gain access to capital.[^04-capital_budgeting-14]
+
+| **Primary decision rule** | **1976** | **1986** | **1998** |
+|---------------------------|----------|----------|----------|
+| IRR                       | 53.6%    | 49.0%    | 42.0%    |
+| Accounting return         | 25.0%    | 8.0%     | 7.0%     |
+| NPV                       | 9.8%     | 21.0%    | 34.0%    |
+| Payback period            | 8.9%     | 19.0%    | 14.0%    |
+| Profitability index       | 2.7%     | 3.0%     | 3.0%     |
+
+These figures are dated. Check recent surveys before using them in published work.
+:::
+
+[^04-capital_budgeting-14]: Damodaran, Session 15 slides (2021), slide 311. The slide reports the percentages by year but does not identify the underlying survey in the text extracted here; verify the original source before citing the figures independently.
+
+### Check your understanding {.unnumbered}
+
+1.  A project costs \$500 and returns \$100, \$200 and \$500 in years 1 to 3. What is the payback period? (Answer: 2 + 200 ÷ 500 = 2.4 years.)
+
+2.  A project costs \$1,000 and returns \$400 a year for four years. Compute NPV at 12% and the IRR. (Answer: NPV = \$214.94; IRR = 21.9%.)
+
+3.  Why does a project with a positive NPV always have an IRR above the hurdle rate if its cash flows are conventional?
+
+4.  Example Co.'s project has an IRR of 30.6% and an MIRR of 22.2%. Why is the MIRR lower?
+
+5.  Compute the profitability index of the Example Co. project using both definitions. (Answer: 52.2% and 1.52.)
+
+6.  An analyst enters `=NPV(10%, B2:B7)` where B2 holds the year-0 cash flow. What is wrong?
+
+7.  Why might a payback rule still be sensible for a \$5,000 equipment purchase?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Capital Investments": NPV, IRR, payback and discounted payback, profitability index and the accounting rate of return. MIRR is covered in many textbooks and in some versions of the curriculum. Check the current curriculum before relying on this mapping.
+
+## Section 3. Building Incremental Cash Flows {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Construct after-tax project cash flows from revenues and costs.
+
+- Include working capital, depreciation tax shields, salvage value and terminal value correctly.
+
+- Identify and exclude sunk costs and non-incremental allocated costs.
+
+- Include opportunity costs for resources the firm already owns.
+
+- Treat cannibalization and excess capacity as real costs.
+
+### 3.1 The cash flow template {.unnumbered}
+
+The firm's cash flow from a project in each year is:
+
+$$CF_t = \underbrace{EBIT_t(1-\tau)}_{\text{after-tax operating income}} + \text{Depreciation}_t - \text{Capital expenditure}_t - \Delta\text{Working capital}_t + \text{Salvage}_t$$
+
+The analysis asks what the firm's cash flows are with the project, minus what they would be without it. Only the difference matters.
+
+For Example Co., year 1: revenue \$500 – operating costs \$275 (55%) – depreciation \$100 = EBIT of \$125. Tax at 30% is \$37.50, so after-tax operating income is **\$87.50**. Add back depreciation of \$100 and subtract the \$5 increase in working capital for year 2's higher revenue: 87.5 + 100 – 5 = **\$182.50**, matching the table in Section 2.1.
+
+### 3.2 Depreciation is a tax shield, not a cash cost {.unnumbered}
+
+Depreciation reduces taxable income and therefore taxes, but it is not a cash outflow. It enters the template twice: once as a deduction before tax, and then it is added back. The net effect is the **depreciation tax shield**: depreciation times the tax rate. For Example Co., \$100 × 30% = \$30 a year. Use current tax rules for the depreciation schedule and bonus depreciation, since they change.[^04-capital_budgeting-15]
+
+[^04-capital_budgeting-15]: The cash flow template (after-tax operating income plus depreciation less change in working capital and capital expenditure) follows Damodaran, Session 14 slides (2016) and Session 15 slides (2021), where the online-retailing and theme-park examples are built. See also Damodaran, *Corporate Finance* course, Session 13 slides (Spring 2024). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr24/session13slides.pdf>
+
+### 3.3 Working capital {.unnumbered}
+
+Projects usually need working capital: inventory and receivables net of payables. Investment in working capital is a cash outflow, and any increase in working capital in a year reduces that year's cash flow. When the project ends, the working capital is usually recovered and counted as an inflow. Two points follow. Ignoring working capital makes projects look better than they are, and anything that reduces working capital requirements raises cash flow on every project.[^04-capital_budgeting-16]
+
+[^04-capital_budgeting-16]: Damodaran, Session 13 slides (2024), working-capital section ("Proposition 2": a reduction in working capital requirements raises cash flows on all projects). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr24/session13slides.pdf>
+
+### 3.4 Closing the cash flows: salvage and terminal value {.unnumbered}
+
+- **Finite, short life:** add a **salvage value**, the expected proceeds from selling the investment at the end. It is often set at the book value of fixed assets and working capital. Tax is paid on any gain over book value and refunded on a loss.
+
+- **Very long or infinite life:** forecast explicit cash flows for a reasonable period, then add a **terminal value**, the present value of cash flows beyond that point:
+
+$$\text{Terminal value}_n = \frac{CF_{n+1}}{r - g}$$
+
+For example, if a project is expected to produce \$100 in year 10 and cash flows then grow at 2% a year (the inflation rate) forever, with a 10% cost of capital, the terminal value at year 10 is 100 × 1.02 ÷ (0.10 – 0.02) = \$1,275. This is a year-10 value and must itself be discounted back to the present. Growth should not exceed the long-run growth of the economy.[^04-capital_budgeting-17]
+
+[^04-capital_budgeting-17]: Damodaran, Session 14 slides (2016), slide 234, and Session 13 slides (Spring 2019), which give the terminal value formula and the 2% inflation-rate growth assumption. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr19/session13slides.pdf>
+
+### 3.5 Sunk costs and allocated costs {.unnumbered}
+
+**Sunk costs** are expenditures already made that cannot be recovered whatever the firm decides. A test marketing campaign already run, or research already completed, is sunk. Sunk costs are not incremental and should be ignored, however hard that is in practice.
+
+**Allocated costs** are shares of centralized overhead (such as general and administrative expense) assigned to projects by a formula based on sales or earnings. Only the incremental part belongs in the analysis. If a project's allocated overhead would be paid whether or not the project exists, it is not a cost of the project. If the project causes overhead to rise, the increase is a cost.[^04-capital_budgeting-18]
+
+[^04-capital_budgeting-18]: Damodaran, Session 13 slides (2024), sections on sunk costs ("The sunk cost rule: when analyzing a project, sunk costs should not be considered since they are not incremental") and allocated costs (only the incremental component should appear in project analysis). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr24/session13slides.pdf>
+
+A useful consequence: if every project is charged for sunk costs or non-incremental overhead, the firm will reject projects that add value. The cure is to evaluate only what changes.
+
+### 3.6 Opportunity costs {.unnumbered}
+
+When a project uses a resource the firm already owns, the resource must be priced at its **next best alternative use**:
+
+| **Alternative use** | **Opportunity cost** |
+|-------------------------|-----------------------------------------------|
+| Sell the asset | Expected sale proceeds, net of any tax on the gain |
+| Rent or lease it out | Present value of the after-tax rental income |
+| Use it elsewhere in the firm | Cost of replacing it |
+
+*Example.* A company owns land bought for \$5 million that could be sold for \$40 million. The capital gain is taxed at 20%. If the project uses the land, the opportunity cost is neither the \$5 million book value nor zero. It is the after-tax proceeds foregone: 40 – 0.20 × (40 – 5) = **\$33 million**.[^04-capital_budgeting-19]
+
+[^04-capital_budgeting-19]: Adapted from the land example in Damodaran, Session 15 slides (2021), slides 313–314. The \$33 million result is recomputed. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 3.7 Excess capacity and cannibalization {.unnumbered}
+
+- **Excess capacity is not free.** Using spare capacity brings forward the date when the firm will have to cut production or buy new capacity. Ask when capacity runs out with and without the project. The cost is either the present value of lost after-tax sales, or the difference in present value between buying the new capacity early and buying it later.
+
+- **Cannibalization.** If part of a project's revenue would have gone to the firm's other products anyway (for example, 20% of a new park's visitors would have visited the firm's existing parks), only the incremental revenue counts, with the lost contribution from existing products treated as a cost. The same logic applies when the diverted customers belong to a subsidiary.[^04-capital_budgeting-20]
+
+[^04-capital_budgeting-20]: Damodaran, Session 15 slides (2021), slides 320–322 (the excess capacity framework and the product cannibalization discussion). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 3.8 A worked case: an online venture for a bookstore {.unnumbered}
+
+A small bookstore, Bookscape, considers an online service. Equipment costs \$1 million, depreciated straight-line over four years with no salvage. Revenue is \$1.5 million in year 1 and grows 20% in year 2 and 10% in each of the next two years. Books cost 60% of revenue, labor is \$150,000 in year 1 and grows 10% a year, working capital is 10% of revenue (invested at the start of each year and recovered at the end of year 4), and the tax rate is 40%.
+
+The online venture is riskier than the bookstore, so the cost of capital is re-estimated from the unlevered beta of online retailers (3.02), relevered at the store's debt mix. That gives a levered beta of about 3.41, a cost of equity of about 21.5% and a cost of capital of about **18.1%**, well above the 10.3% for the store itself.
+
+| **Cash flow (\$)** | **Year 0** | **Year 1** | **Year 2** | **Year 3** | **Year 4** |
+|------------|------------|------------|------------|------------|------------|
+| Revenue |  | 1,500,000 | 1,800,000 | 1,980,000 | 2,178,000 |
+| After-tax operating income |  | 120,000 | 183,000 | 216,300 | 252,930 |
+| \+ Depreciation |  | 250,000 | 250,000 | 250,000 | 250,000 |
+| – Change in working capital | (150,000) | (30,000) | (18,000) | (19,800) | 217,800 |
+| – Capital expenditure | (1,000,000) |  |  |  |  |
+| **Cash flow after tax** | **(1,150,000)** | **340,000** | **415,000** | **446,500** | **720,730** |
+
+At 18.1% the NPV is about **\$76,000**: the venture looks acceptable.[^04-capital_budgeting-21]
+
+[^04-capital_budgeting-21]: Adapted from the Bookscape online retailing example in Damodaran, Session 15 slides (2021), slides 315–317. The slide reports an NPV of \$76,375 at an 18.12% cost of capital; recomputing with the cash flows shown gives about \$76,400, and small differences arise from rounding of the cost of capital. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+Two **side costs** were not yet counted. The existing manager's workload rises, so the manager's salary goes from \$100,000 to \$120,000 next year and then grows 5% a year for the remaining years. The venture also takes over an office now used for records, which will be stored in a bank vault for \$1,000 a year. After tax at 40%, these extra costs are \$12,600, \$13,200, \$13,830 and \$14,492 in years 1 to 4 (the salary increase is the extra \$20,000 growing at 5%, taxed at 40%, plus \$600 for storage). Their present value is about \$36,000, so the **adjusted NPV is about \$40,000**. The project remains acceptable but is only half as valuable as it first appeared.[^04-capital_budgeting-22]
+
+[^04-capital_budgeting-22]: Damodaran, Session 15 slides (2021), slides 318–319. The slides report an adjusted NPV of \$40,413; the recomputed figure is about \$40,500. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### Check your understanding {.unnumbered}
+
+1.  A firm spent \$200,000 last year on a market test for a new product and now must decide whether to launch. Should the \$200,000 enter the analysis?
+
+2.  A project is charged \$50,000 a year of allocated corporate overhead. How do you decide how much belongs in the analysis?
+
+3.  Using the land example, what is the opportunity cost if the capital gains tax rate is 30% instead of 20%? (Answer: 40 – 0.30 × 35 = \$29.5 million.)
+
+4.  Example Co.'s depreciation is \$100 a year at a 30% tax rate. What is the annual depreciation tax shield? (Answer: \$30.)
+
+5.  In the Bookscape case, why does re-estimating beta from online retailers matter?
+
+6.  Why is it wrong to treat spare factory capacity as free?
+
+7.  A new product is expected to take 20% of its sales from the firm's existing products. How should the analysis treat that 20%?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Capital Investments": project cash flow components (initial outlay, operating cash flow, terminal cash flow), incremental cash flows, sunk and opportunity costs, and the effect of depreciation and working capital. Check the current curriculum before relying on this mapping.
+
+## Section 4. When the Rules Disagree {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Explain why a project can have several IRRs, or none.
+
+- Choose between mutually exclusive projects when NPV and IRR give different rankings.
+
+- Explain how scale, timing and the reinvestment assumption cause conflicts.
+
+- Compare projects of different lives using replication and equivalent annuities.
+
+- Use the profitability index to rank projects under capital rationing.
+
+### 4.1 Independent and mutually exclusive projects {.unnumbered}
+
+Most textbook examples assume a project is **independent**: accepting it has no effect on other projects. In practice, projects often interact. They may be **mutually exclusive** (taking one makes the other redundant, such as two designs for the same plant), or the firm may have **limited capital** and be unable to take every good project. When a choice must be made, the rules can disagree.[^04-capital_budgeting-23]
+
+[^04-capital_budgeting-23]: Damodaran, Session 15 slides (2021), slides 290–292 (independent versus mutually exclusive investments). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+For mutually exclusive projects with the same life, the NPV rule says to choose the project with the **higher NPV**, because that is the one that adds more value.
+
+### 4.2 Multiple IRRs and no IRR {.unnumbered}
+
+A project has one NPV for a given discount rate, but it can have more than one IRR when its cash flows change sign more than once.
+
+*Example.* Project 1 has cash flows of –1,000, 800, 1,000, 1,300 and –2,200. It has two internal rates of return, 6.60% and 36.55%. Project 2 (–1,000, 200, 300, 400, 500) has a single IRR of about 12.8%.
+
+| **Discount rate** | **NPV of Project 1** | **NPV of Project 2** |
+|-------------------|----------------------|----------------------|
+| 0%                | (100.0)              | 400.0                |
+| 5%                | (18.0)               | 219.5                |
+| 10%               | 27.8                 | 71.8                 |
+| 12%               | 38.7                 | 20.2                 |
+| 20%               | 52.5                 | (152.4)              |
+| 30%               | 28.5                 | (311.5)              |
+| 40%               | (17.3)               | (428.2)              |
+
+Project 1's NPV is positive only between the two IRRs. At a 12% hurdle rate it lies between 6.60% and 36.55%, so the project should be accepted, but the IRR rule gives no clear signal, since one IRR is below the hurdle and one above. NPV gives an unambiguous answer: \$38.7 for Project 1 and \$20.2 for Project 2 at 12%.[^04-capital_budgeting-24]
+
+[^04-capital_budgeting-24]: Project cash flows and IRRs are from Damodaran, Session 15 slides (2021), slides 293–295. NPVs at each rate are recomputed. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+A second case is **no IRR at all**: an investment of \$51 today that pays \$100 in one year and requires \$50 in two years has a negative NPV at every discount rate. A search for its IRR never ends.[^04-capital_budgeting-25]
+
+[^04-capital_budgeting-25]: Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 256–258 (nonconventional cash flows, the strip-mining project with IRRs of 25% and 33.33%, and the \$51 investment with no IRR).
+
+The practical rule: when cash flows are not conventional (an outflow followed by inflows), use NPV.
+
+### 4.3 Scale: NPV versus IRR {.unnumbered}
+
+NPV is a dollar amount and therefore larger for large projects. IRR is a percentage and tends to be higher for small projects.
+
+*Example.* At a 15% hurdle rate:
+
+| **Project** | **Investment** | **NPV**     | **IRR** | **PI (NPV ÷ investment)** |
+|--------------|--------------|--------------|--------------|----------------|
+| A           | \$1,000,000    | \$467,937   | 33.66%  | 46.79%                    |
+| B           | \$10,000,000   | \$1,358,664 | 20.88%  | 13.59%                    |
+
+If the firm can take either one and has the money for both, Project B creates more dollar value. If capital is scarce, Project A gives more value per dollar invested. Which rule to use depends on whether the firm is **capital constrained**.[^04-capital_budgeting-26]
+
+[^04-capital_budgeting-26]: Project cash flows and results from Damodaran, Session 15 slides (2021), slides 296–297 and 300. The extracted slide text does not show the hurdle rate; 15% is the rate that reproduces the NPVs shown (the 12% hurdle used later in the lecture does not). The cash flows for A are \$350,000, \$450,000, \$600,000 and \$750,000; for B, \$3.0, \$3.5, \$4.5 and \$5.5 million. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 4.4 Timing and the reinvestment assumption {.unnumbered}
+
+Even projects of the same scale can be ranked differently. Consider two mutually exclusive investments, each costing \$100:
+
+| **Year** | **Investment A** | **Investment B** |
+|----------|------------------|------------------|
+| 1        | 50               | 20               |
+| 2        | 40               | 40               |
+| 3        | 40               | 50               |
+| 4        | 30               | 60               |
+
+A's IRR is about 24% and B's is about 21%. But B's cash flows are larger in total and arrive later, so B has the higher NPV at low discount rates:
+
+| **Discount rate** | **NPV of A** | **NPV of B** | **Better by NPV** |
+|-------------------|--------------|--------------|-------------------|
+| 0%                | 60.00        | 70.00        | B                 |
+| 5%                | 43.13        | 47.88        | B                 |
+| 10%               | 29.06        | 29.79        | B                 |
+| 15%               | 17.18        | 14.82        | A                 |
+| 20%               | 7.06         | 2.31         | A                 |
+
+The NPV profiles cross at the **crossover rate** of about 11.1%. Below it, B is better despite A's higher IRR. Above it, A is better. The crossover rate is found by computing the IRR of the **difference** in the two projects' cash flows (A minus B: 0, 30, 0, –10, –30).[^04-capital_budgeting-27]
+
+[^04-capital_budgeting-27]: Cash flows, NPVs and the crossover rate from Ross, Westerfield, and Jordan, *Essentials of Corporate Finance*, Chapter 8, pp. 258–260 (Figure 8.7 and the differenced cash flows). Values recomputed.
+
+The reason is the reinvestment assumption. NPV assumes intermediate cash flows are reinvested at the hurdle rate, which is what comparable-risk investments can earn. IRR assumes they are reinvested at the IRR itself, which implies the firm has an unlimited supply of projects earning that rate. When the IRR is high and the project is long, IRR overstates the true return. If you have to choose between projects, remember that the goal is to make the firm richer: a project that makes you \$100 richer is better than one with a higher return that makes you \$50 richer.[^04-capital_budgeting-28]
+
+[^04-capital_budgeting-28]: Damodaran, Session 15 slides (2021), slide 303 (reinvestment rate assumption) and slide 305 (why NPV and IRR may differ even with equal lives). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 4.5 Projects with different lives {.unnumbered}
+
+The NPVs of mutually exclusive projects with different lives cannot be compared directly, because longer projects have more years of cash flow and the NPV is biased toward them. There are two fixes. IRR is unaffected by project life, but it carries the problems above.
+
+*Example.* A hurdle rate of 12%. Project S lasts five years: it costs \$1,000 and returns \$400 a year. Project L lasts ten years: it costs \$1,500 and returns \$350 a year.
+
+| **Measure** | **Project S (5 years)** | **Project L (10 years)** |
+|----|----|----|
+| NPV | \$442 | \$478 |
+| IRR | 28.7% | 19.4% |
+| NPV with replication to 10 years | \$693 | \$478 |
+| Equivalent annual annuity | \$122.6 | \$84.6 |
+
+- **Replication.** Repeat the shorter project until the lives match. Replicating Project S once (a second \$1,000 investment in year 5) gives an NPV of \$693 over ten years, well above Project L's \$478.
+
+- **Equivalent annual annuity.** Convert each NPV into the level annual amount with the same present value: NPV ÷ annuity factor. At 12%, the five-year annuity factor is 3.6048 and the ten-year factor is 5.6502, so Project S is worth \$442 ÷ 3.6048 = \$122.6 a year and Project L \$478 ÷ 5.6502 = \$84.6 a year.
+
+Both fixes favor Project S, if it can be repeated on the same terms. If it cannot, the comparison is not valid and the case for the long project is stronger.[^04-capital_budgeting-29]
+
+[^04-capital_budgeting-29]: Damodaran, Session 15 slides (2021), slides 306–309. The NPV (\$442 and \$478), IRR (28.7% and 19.4%), replicated NPV (\$693) and equivalent annuities (\$122.62 and \$84.60) are reproduced; the labels S and L are added here because the extracted slide text does not make the project labels clear. Recomputed values match to rounding. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 4.6 Capital rationing {.unnumbered}
+
+If a firm cannot fund every positive-NPV project, the NPV rule's dollar measure no longer ranks projects well. The **profitability index** (NPV per dollar of initial investment) ranks them by value created per dollar of scarce capital. In the scale example, Project A (PI of 46.79%) beats Project B (13.59%) if the firm cannot fund both.
+
+Where does rationing come from? A survey of firms found it mostly arose from internal limits on borrowing:[^04-capital_budgeting-30]
+
+[^04-capital_budgeting-30]: Damodaran, Session 15 slides (2021), slides 298–299, which report the sources of capital rationing for a sample of 94 firms. The underlying survey is not named in the extracted text; verify the original source before citing the percentages independently. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+| **Source of capital rationing**                      | **Firms** | **Share** |
+|------------------------------------------------------|-----------|-----------|
+| Limit placed on borrowing by internal management     | 65        | 69.1%     |
+| Maintaining target EPS or P/E ratio                  | 14        | 14.9%     |
+| Debt limit imposed by outside agreement              | 10        | 10.7%     |
+| Debt limit placed by management external to the firm | 3         | 3.2%      |
+| Restrictive policy on retained earnings              | 2         | 2.1%      |
+
+Firms with limited access to capital, many surplus-value projects and uncertain cash flows (small, high-growth and private firms) tend to favor IRR, while firms with ample funds and more certain cash flows tend to favor NPV. As firms go public and grow, they gain more from NPV.
+
+Two cautions. PI works best for divisible projects. For indivisible projects, compare feasible combinations and choose the set with the highest total NPV within the budget. And when a PI and an NPV disagree on two mutually exclusive projects of different size, rank by NPV if capital is not truly scarce.[^04-capital_budgeting-31]
+
+[^04-capital_budgeting-31]: The profitability index and equivalent-annuity treatment follow Damodaran, *Applied Corporate Finance* presentation, "Investment Returns B" (4th ed.). The divisible versus indivisible distinction is standard textbook treatment rather than from that source. <https://pages.stern.nyu.edu/~adamodar/pdfiles/acf4E/presentations/invretB.pdf>
+
+### 4.7 A decision guide {.unnumbered}
+
+| **Situation** | **Best rule** |
+|----------------------------|--------------------------------------------|
+| Independent project, conventional cash flows | NPV; IRR gives the same answer |
+| Unconventional cash flows (several sign changes) | NPV |
+| Mutually exclusive, same scale and life | NPV (IRR may mislead if timing differs) |
+| Mutually exclusive, different scale | NPV if capital is available; PI if capital is limited |
+| Mutually exclusive, different lives | Equivalent annual annuity or replication |
+| Capital rationing | PI to rank; test feasible combinations |
+| Quick screen on a small decision | Payback |
+
+### Check your understanding {.unnumbered}
+
+1.  Why can a project have more than one IRR? When does this happen?
+
+2.  A and B are mutually exclusive, with IRRs of 24% and 21%. The hurdle rate is 10%. Which has the higher NPV? (Answer: B, by a small margin: \$29.79 against \$29.06.)
+
+3.  What does the crossover rate tell you, and how is it computed?
+
+4.  At a 15% hurdle rate, Project A has an NPV of \$467,937 on \$1,000,000 and Project B has an NPV of \$1,358,664 on \$10,000,000. Which would you choose with no capital constraint? With a \$1,000,000 limit? (Answer: B; A.)
+
+5.  Project S has a five-year life and an equivalent annual annuity of \$122.6. Project L has a ten-year life and \$84.6. Why can the two NPVs (\$442 and \$478) not be compared?
+
+6.  An investment of \$51 pays \$100 in year 1 and requires a \$50 payment in year 2. Compute NPV at 10%. Does the project have an IRR? (Answer: NPV = –\$1.41; there is no IRR, because NPV is negative at all rates.)
+
+7.  Why does the IRR rule implicitly assume that a firm has an infinite stream of projects earning the same IRR?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Capital Investments": NPV versus IRR ranking conflicts, multiple IRRs, mutually exclusive projects and capital rationing. Equivalent annual annuity for unequal lives is typically covered in corporate finance textbooks. Check the current curriculum before relying on this mapping.
+
+## Section 5. Side Costs, Synergies and Options {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Explain why a stand-alone analysis can understate or overstate a project's value.
+
+- Value synergies and add them to project NPV.
+
+- Describe the options embedded in projects: delay, expand and abandon.
+
+- Explain why strategic benefits must be valued rather than used to override the numbers.
+
+### 5.1 Side costs and benefits {.unnumbered}
+
+Most projects create effects on the rest of the business. **Side costs** include the use of resources the firm already owns (opportunity costs, Section 3) and revenue lost from other products. **Side benefits** include synergies with other projects and options the project creates. The return on a project should include all of them.[^04-capital_budgeting-32]
+
+[^04-capital_budgeting-32]: Damodaran, Session 15 slides (2021), slide 312 ("Side Costs and Benefits"). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### 5.2 Project synergies {.unnumbered}
+
+A project can provide benefits to other projects. An animated film earns theater revenue, but it also sells merchandise, raises theme park attendance and supports stage shows and television series. In practice, such synergies are often left unquantified and then used to justify investing in projects with negative NPVs. If synergies exist, and they often do, they must be valued and shown in the initial analysis.
+
+*Example.* A café added to a bookstore has a stand-alone NPV of –\$87,571. But the café is expected to raise bookstore revenue by \$500,000 in year 1, growing 10% a year for four more years, at a 10% pre-tax operating margin. After 40% tax this adds \$30,000 of operating income in year 1, growing at 10%, and discounted at the store's 10.3% cost of capital, the present value is about \$135,000. The combined NPV is about **\$47,700**: the stand-alone loss becomes a gain.[^04-capital_budgeting-33]
+
+[^04-capital_budgeting-33]: Damodaran, Session 15 slides (2021), slide 324 (the café example) and slides 325–327 (the acquisition synergy example). The recomputed present value of added profit is about \$135,300, consistent with the slide's \$135,268. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+| **Component**                           | **NPV (\$)** |
+|-----------------------------------------|--------------|
+| Café stand-alone                        | (87,571)     |
+| Present value of added bookstore profit | 135,268      |
+| **Combined NPV**                        | **47,697**   |
+
+The same logic applies to acquisitions: if one firm's technology can be used by the other, the synergy is the present value of the extra after-tax operating income, discounted at a rate that reflects the risk of that income (including country risk where relevant). Even with synergy, a deal is only worth doing if the total value exceeds the price paid.
+
+### 5.3 Project options {.unnumbered}
+
+Traditional NPV analysis is static: it assumes the firm commits now and cannot change course. Real projects embed options that the analysis misses:
+
+| **Option** | **What it allows** | **Example** |
+|-----------------|--------------------------|-----------------------------|
+| Delay | Wait to start a project the firm has exclusive rights to | A mining or drilling license |
+| Expand (follow-on) | Taking this project makes later projects possible | A pilot product or test market |
+| Abandon | Exit if the cash flows disappoint | Closing a plant or selling equipment |
+
+These options add value and can turn a project that looks bad on traditional analysis into a good one. They require special valuation methods, covered with decision trees and simulation in the risk chapter. The point here is to recognize them: ignoring an option undervalues the project, though assigning it an unsupported large value to justify a negative NPV is the opposite error.[^04-capital_budgeting-34]
+
+[^04-capital_budgeting-34]: Damodaran, Session 15 slides (2021), slide 328 ("Project Options"). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr21/session15slides.pdf>
+
+### Check your understanding {.unnumbered}
+
+1.  A project has an NPV of –\$40 million on a stand-alone basis, but management argues it will raise sales of other products. What should the finance team ask for?
+
+2.  The café has a stand-alone NPV of –\$87,571 and synergy benefits of \$135,268. What is the combined NPV and should the café be built? (Answer: \$47,697; yes, if the synergy estimates are credible.)
+
+3.  Name the three options embedded in projects described above. Which one does a pilot plant create?
+
+4.  Why can claims of "strategic value" be dangerous in capital budgeting?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Capital Investments": real options (timing, sizing, flexibility and fundamental options) and project interactions. Check the current curriculum before relying on this mapping.
+
+## Section 6. Uncertainty and Consistency {.unnumbered}
+
+### Learning objectives {.unnumbered}
+
+- Apply the consistency rule for currency and inflation.
+
+- Run a sensitivity analysis and explain its limits.
+
+- Describe scenario analysis and simulation as steps beyond sensitivity analysis.
+
+- Explain how a project is analyzed from the equity view.
+
+### 6.1 The consistency rule {.unnumbered}
+
+The cash flows on a project and the discount rate must be defined in the same terms:
+
+- If cash flows are in a currency, the discount rate must be a rate for that currency.
+
+- If cash flows are nominal (include inflation), the discount rate must be nominal. If they are real, the rate must be real.
+
+If consistency is kept, the conclusions are identical whichever terms are used.[^04-capital_budgeting-35]
+
+[^04-capital_budgeting-35]: Damodaran, Session 14 slides (2016), slide 240 ("The 'Consistency Rule' for Cash Flows"). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+*Example.* A \$ analysis uses 2% US inflation. A reais analysis assumes 9% Brazilian inflation. The \$ cost of capital of 8.46% converts to a reais cost of capital of (1.0846) × (1.09 ÷ 1.02) – 1 = **15.9%**. Cash flows in reais are converted at an expected exchange rate that depreciates by the same inflation differential (1.09 ÷ 1.02 a year). The NPV in reais divided by today's exchange rate equals the \$ NPV (R\$7,745 ÷ 2.35 = \$3,296 million). A real analysis gives the same answer as a nominal one: with 10% nominal and 2% inflation, the real rate is 1.10 ÷ 1.02 – 1 = 7.84%.[^04-capital_budgeting-36]
+
+[^04-capital_budgeting-36]: Damodaran, Session 14 slides (2016), slides 239–242 (the theme park analysis in dollars and in reais), using the Fisher-style conversion shown on slide 241. The real rate calculation is added here as a further application.
+
+### 6.2 Sensitivity analysis {.unnumbered}
+
+Forecasts are uncertain. **Sensitivity analysis** shows how NPV changes when one key assumption changes. For Example Co.'s project:
+
+| **Revenue vs plan** | **NPV (\$)** | **IRR** |
+|---------------------|--------------|---------|
+| 100% (base case)    | 234.9        | 30.6%   |
+| 90%                 | 180.9        | 26.3%   |
+| 80%                 | 126.9        | 21.8%   |
+
+| **Cost of capital** | **NPV (\$)** |
+|---------------------|--------------|
+| 8%                  | 267.9        |
+| 10%                 | 234.9        |
+| 12%                 | 204.2        |
+| 14%                 | 175.6        |
+
+The project stays profitable in all of these cases. Revenue would have to fall to about 56% of plan before NPV reaches zero.
+
+Two cautions apply. First, sensitivity analysis changes one variable at a time and holds all else constant, while in the real world variables move together. Second, the purpose is better decisions, not more tables: not everything is worth varying, and a picture (such as a tornado chart) conveys more than many tables.[^04-capital_budgeting-37]
+
+[^04-capital_budgeting-37]: Damodaran, Session 14 slides (2016), slide 245 (the caveats on sensitivity analysis: variables move together, "less is more", and "a picture is worth a thousand numbers"). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+### 6.3 Scenarios and simulation {.unnumbered}
+
+Two steps follow sensitivity analysis:
+
+- **Scenario analysis** changes several variables together (a recession, a base case, a boom) and weights the results.
+
+- **Simulation** replaces single estimates with probability distributions, then runs thousands of trials and reports the distribution of NPV.
+
+In the theme park example, simulating revenue, operating cost and country risk gave an average NPV of about \$3.4 billion and a median of about \$3.3 billion, close to the base case, with NPV ranging from about –\$1 billion to +\$8.5 billion and negative in roughly 10 to 12% of trials. Simulation does not make the decision. It shows how much risk is being taken, and its output is only as good as the input distributions and correlations (see the risk chapter).[^04-capital_budgeting-38]
+
+[^04-capital_budgeting-38]: Damodaran, Session 14 slides (2016), slides 247–249. Slide 248 reports NPV negative 12% of the time, while slide 249 refers to a 10% probability; both are given here as a range. <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+### 6.4 The equity view {.unnumbered}
+
+A project can be analyzed entirely from the equity investors' view. Cash flows are those left after interest and principal payments on debt used to fund the project, the hurdle rate is the cost of equity, and the accounting return is return on equity.
+
+A mining example shows the pattern. A \$1.25 billion mine is funded with \$0.5 billion of debt, so the equity investment is about \$832 million (the investment plus initial working capital, less the loan). Cash flows to equity are net income plus depreciation, less capital expenditure, less changes in working capital, less debt principal repayments, plus salvage. They are discounted at the cost of equity of about 11.1%. Average return on equity over the life of the mine is about 31%, compared with the cost of equity.[^04-capital_budgeting-39] A firm-level analysis with the cost of capital should give the same decision. The equity view is especially useful for financial firms, where capital and cost of capital are hard to define.
+
+[^04-capital_budgeting-39]: Damodaran, Session 14 slides (2016), slides 250–259 (the Vale iron ore mine). <https://pages.stern.nyu.edu/~adamodar/podcasts/cfUGspr16/Session14.pdf>
+
+### Check your understanding {.unnumbered}
+
+1.  A project's cash flows are estimated in nominal pesos, but the analyst discounts at a dollar cost of capital. What is wrong, and how do you fix it?
+
+2.  Convert a 9% nominal discount rate to a real rate if inflation is 2%. (Answer: 1.09 ÷ 1.02 – 1 = 6.86%.)
+
+3.  Example Co.'s project NPV falls from \$234.9 to \$126.9 when revenue is 20% below plan. Does the decision change? What does this tell you about the margin of safety?
+
+4.  Why can a one-variable-at-a-time sensitivity table mislead?
+
+5.  How does a simulation result differ from a single NPV estimate? Why should a decision-maker not reject a project simply because 10% of trials show a loss?
+
+6.  When is the equity view more convenient than the firm view?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Capital Investments": sensitivity analysis, scenario analysis and simulation, and the treatment of inflation in discount rates. Check the current curriculum before relying on this mapping.
+
+## Section 7. Putting It Together: The Example Co. Expansion {.unnumbered}
+
+This section pulls the chapter together in a short procedure and a worked review of the Example Co. project.
+
+### 7.1 A capital budgeting procedure {.unnumbered}
+
+| **Step** | **What to do** | **Where it comes from** |
+|----------------|---------------------------------|------------------------|
+| 1 | Define the project and the alternatives (independent or mutually exclusive) | Section 4 |
+| 2 | Estimate the hurdle rate for the project's risk, not the firm's | Cost-of-capital chapter |
+| 3 | Build incremental after-tax cash flows: exclude sunk costs, include working capital and opportunity costs | Section 3 |
+| 4 | Add side costs, synergies and options | Section 5 |
+| 5 | Compute NPV, IRR, payback and PI | Section 2 |
+| 6 | Resolve conflicts between rules; use NPV as the tiebreaker | Section 4 |
+| 7 | Test sensitivity, scenarios and (if useful) simulation | Section 6 |
+| 8 | Write a recommendation that states the NPV, the key assumption and what would change the decision | Memo format |
+
+### 7.2 Example Co. results {.unnumbered}
+
+| **Measure** | **Result** | **Reading** |
+|--------------------|-----------------|-----------------------------------|
+| Initial outlay | \$450 | \$400 equipment plus \$50 working capital |
+| NPV at 10% | \$234.85 | Adds value |
+| IRR | 30.6% | Far above the 10% hurdle |
+| MIRR | 22.2% | Still well above the hurdle with reinvestment at 10% |
+| Profitability index | 52.2% (1.52) | Strong value per dollar invested |
+| Payback | 2.32 years | Within a typical two-to-three-year screen |
+| Discounted payback | 2.73 years | Value arrives within three years |
+| AAR | 53.6% | Reported for completeness |
+| Break-even revenue | About 56% of plan | Large margin of safety |
+
+**Recommendation (sample).** Accept. The project adds about \$235 of value at a 10% cost of capital, earns a 30.6% IRR, and remains profitable even if revenue is 20% below plan. The result is most sensitive to revenue, so management should test demand with a staged launch before committing the full \$400 of equipment.
+
+The whole case can be built in Excel in three formulas: `=NPV(rate, CF1:CF4) + CF0`, `=IRR(CF0:CF4)` and a cumulative-sum row for payback.
+
+### Check your understanding {.unnumbered}
+
+1.  Write a two-sentence recommendation for a project with an NPV of –\$30,000, an IRR below the hurdle rate and a stated strategic benefit that has not been valued.
+
+2.  Re-run the Example Co. project with a 14% cost of capital. (Answer: NPV = \$175.6; the decision does not change.)
+
+3.  Which two assumptions would you test first for the Example Co. project, and why?
+
+4.  Choose the best rule for each case: a \$3,000 laptop purchase, two mutually exclusive plants with different lives, and a firm with a fixed \$5 million budget and ten divisible projects.
+
+#### CFA connection {.unnumbered}
+
+This section draws on the whole "Capital Investments" reading. Check the current curriculum before relying on this mapping.
+
+::: {.callout-note title="Dated items to keep in mind"}
+Depreciation and bonus-depreciation rules change often, so use current tax rules when building project cash flows. The decision-rule survey in Section 2 dates from 1998, and the capital-rationing survey in Section 4 is undated in the source slides. Examples drawn from corporate case material (the theme park, the iron ore mine and the bookstore) use the interest rates, tax rates and exchange rates of the period in which they were written and should be re-estimated with current inputs before being used outside a classroom.
+:::
+
+## References {.unnumbered}
+
+- Damodaran, A. *Corporate Finance* course slides (Session 15, "Measuring Investment Returns II," 2021; Session 14, 2016; Session 13, 2019, 2023 and 2024 versions). NYU Stern. <https://pages.stern.nyu.edu/~adamodar/>
+
+- Damodaran, A. *Applied Corporate Finance* (Wiley) and companion presentations, including "Investment Returns B." NYU Stern. <https://pages.stern.nyu.edu/~adamodar/pdfiles/acf4E/presentations/invretB.pdf>
+
+- Ross, S., Westerfield, R., and Jordan, B. *Essentials of Corporate Finance*, Chapter 8, "Net Present Value and Other Investment Criteria." McGraw Hill.

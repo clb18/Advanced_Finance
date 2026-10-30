@@ -1,3 +1,518 @@
----
-title: "Cost of Capital"
----
+# Cost of Capital {#sec-cost-of-capital}
+
+Every investment a company makes must earn at least what its investors could earn elsewhere on assets of similar risk. This chapter shows how to measure that minimum return. It builds the cost of equity, the cost of debt and the weighted average cost of capital (WACC), explains when the WACC is the right discount rate and when it is not, and shows how a small change in the WACC moves a company's value. It also prepares the WACC memo, which is due in Week 4 of the capstone (@sec-finance-function, Section 4). "Example Co." figures are invented for teaching and continue from @sec-fsa and @sec-finance-function.
+
+| **Section** | **Topic** | **Main question** |
+|----|----|----|
+| 1 | What the cost of capital is | Why is the return investors require the company's cost? |
+| 2 | The cost of equity | How do we estimate a return no one announces? |
+| 3 | The cost of debt and preferred stock | Which interest rate counts, and what does the tax shield do? |
+| 4 | The weighted average cost of capital | How are the pieces combined, and which weights are right? |
+| 5 | When the WACC is the wrong rate | How do project and division risk change the discount rate? |
+| 6 | Valuing a company with the WACC | How sensitive is value to the WACC? |
+| 7 | Building the capstone WACC memo | What must the team deliver, and how is it checked? |
+
+Section 1 defines the idea, Sections 2 to 4 build the number, Section 5 shows its limits, Section 6 puts it to work in a valuation and Section 7 turns it into a deliverable. Each section ends with review questions and a note on the related CFA readings.
+
+## Section 1. What the Cost of Capital Is {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- *Essentials of Corporate Finance*, Chapter 12, "Cost of Capital" (Sections 12.1 and 12.4). Cited below by chapter section.
+
+- Damodaran, A. *Applied Corporate Finance*, online class (NYU Stern), as general background on the cost of capital as a hurdle rate. <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastcfonline.htm>
+
+"Example Co." figures are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Explain why the cost of capital depends on the use of funds and not the source.
+
+- Describe the WACC as a required return on the firm's assets.
+
+- Link the WACC to value creation through the spread between return and cost of capital.
+
+### 1.1 A cost to the company, a return to the investor {.unnumbered}
+
+The return an investor requires on a security is the cost of that security to the company that issued it. A lender who wants 6% on a loan is charging the company 6%, and a shareholder who requires 9% is, in effect, charging the company 9%. The required return on a project, the discount rate, the hurdle rate and the cost of capital all mean the same thing in practice: the return the project must beat to leave investors at least as well off as they would be elsewhere.[^1]
+
+The key idea is that the cost of capital depends on the use of the funds, not the source. A company that can borrow at 5% does not have a 5% cost of capital for a risky new product. The product's risk sets the required return, whatever the source of money. A manager who reasons "debt is cheap, so this project is cheap" has mistaken the source for the use [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.1].
+
+[^1]: *Essentials of Corporate Finance*, Ch. 12, Sec. 12.1, which also notes that "cost of money" and "hurdle rate" are used for the same idea.
+
+### 1.2 The WACC {.unnumbered}
+
+A company funds itself with several kinds of capital that cost different amounts. The **weighted average cost of capital (WACC)** averages those costs using the share of each in total financing. Read as a required return, it is what the firm's existing assets must earn to keep the value of the firm from falling. It is also the right discount rate for new investments that have about the same risk as the firm's existing operations [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.4].
+
+This chapter takes the capital structure as given. How a company should choose its mix of debt and equity is the subject of a later chapter.
+
+### 1.3 Return versus cost: value creation {.unnumbered}
+
+If the WACC is the price of capital, then a company creates value only when its return on invested capital exceeds it. Suppose Example Co. earns a return on invested capital (ROIC, @sec-fsa) of 10% and has a WACC of 8.3% (Section 4). The 1.7-point spread, applied to the capital invested, is the economic profit left for owners after every investor is paid. Accounting net income cannot show this, because it deducts the cost of debt (interest) but makes no charge for equity capital. Management measures such as economic value added (EVA) put that charge in and compare operating profit with the full cost of capital.[^2]
+
+[^2]: *Essentials of Corporate Finance*, Ch. 12, Sec. 12.4 ("EVA" box), which also warns that such measures are often built on book values, not market values.
+
+::: {.callout-tip title="Link to earlier chapters"}
+@sec-finance-function (Section 1.3) set the goal as maximizing the value of the owners' stake. The WACC is how that goal gets a number: it is the benchmark every project, division and acquisition has to beat. @sec-fsa (ROIC and the Du Pont breakdown) supplies the return side of the comparison.
+:::
+
+### Check your understanding {.unnumbered}
+
+1.  A company can borrow at 5%. Why is 5% not the cost of capital for a risky new product line?
+
+2.  In your own words, what does it mean if a firm's WACC is 8%?
+
+3.  Example Co. reports net income of 84. Why does that figure not tell you whether it earned its cost of capital?
+
+#### CFA connection {.unnumbered}
+
+The cost of capital and WACC are Level I corporate issuers topics, and CAPM and required return appear under portfolio management and equity valuation. We have not checked the current curriculum outline, so confirm the exact reading titles before listing them for students.
+
+## Section 2. The Cost of Equity {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- *Essentials of Corporate Finance*, Chapter 12, Section 12.2 (dividend growth and security market line approaches).
+
+- Damodaran, A. Online data and course materials (NYU Stern): the equity risk premium update and the cost of capital session of the *Applied Corporate Finance* class (bottom-up betas). Full references are in the notes.
+
+For deeper study, the betas data page lists unlevered betas by industry. Rates and premiums in the examples are round, illustrative numbers and not current market data.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Estimate the cost of equity with the dividend growth model and with CAPM.
+
+- Explain why the equity risk premium used should be a current, forward-looking one.
+
+- Build a bottom-up beta by unlevering and relevering industry betas.
+
+- Describe why estimates from different methods differ and how to choose.
+
+### 2.1 Why equity is hard {.unnumbered}
+
+No one announces the return shareholders require, so it must be estimated. Two approaches are common: the dividend growth model, which backs the required return out of the stock price, and the security market line (CAPM), which builds it from the risk-free rate, market risk and the stock's own risk.
+
+### 2.2 The dividend growth model {.unnumbered}
+
+If dividends grow at a steady rate *g* forever, the price today is *P*~0~ = *D*~1~ ÷ (*R*~E~ − *g*). Solving for the required return gives:
+
+$$R_E = \frac{D_1}{P_0} + g$$
+
+Here *D*~1~ = *D*~0~ × (1 + *g*) is next year's dividend. A utility pays a dividend of 2.00 and sells for 40, with dividends expected to grow 4% a year. Then *D*~1~ = 2.08 and *R*~E~ = 2.08 ÷ 40 + 0.04 = **9.20%** [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.2].
+
+The model is simple, but it has three weaknesses. It applies only to companies that pay dividends and expect steady growth. It is highly sensitive to *g*: raise growth to 5% in the example and the answer jumps to 2.10 ÷ 40 + 0.05 = 10.25%, more than a full point. And it has no explicit term for risk. Growth can come from historical dividends or analysts' forecasts, and the two often disagree, so use several sources.
+
+### 2.3 CAPM {.unnumbered}
+
+The CAPM cost of equity is:
+
+$$R_E = R_f + \beta \times \text{ERP}$$
+
+where *R*~f~ is the risk-free rate, β is the stock's beta (its sensitivity to the market) and ERP is the equity risk premium, the extra return investors require for holding the market portfolio instead of the risk-free asset [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.2]. Each input needs care.
+
+**The risk-free rate.** Use a government bond yield in the same currency as the cash flows you are discounting, with a maturity matching the long horizon of the cash flows. A 10-year Treasury yield is the usual choice for U.S. dollar valuations. The yield on a short-term bill is a poor match for cash flows that last for decades.
+
+**The equity risk premium.** There are two ways to get one. A historical premium averages past returns on stocks above those on Treasuries, but the number depends heavily on the period chosen and carries a large standard error. An implied premium works from today's index level and expected cash flows and finds the return that makes them equal; it is forward looking and changes with the market. The implied premium for the U.S. market was 4.23% at the start of 2026, and it is recalculated monthly because a stale premium can make most companies look cheap or expensive for reasons unrelated to the companies.[^3] Whichever you choose, state it and keep it consistent with the risk-free rate used.
+
+**Beta.** A regression beta for a single company, estimated from past returns, is noisy and often has a wide error band. A bottom-up beta is more reliable and is described next. Betas must also be consistent with the leverage of the company being valued.
+
+[^3]: Damodaran, A. "The Price of Risk: Equity Risk Premium," *Musings on Markets* (March 2026), <https://aswathdamodaran.blogspot.com/2026/03/the-price-of-risk-equity-risk-premium.html>. The premium is an implied estimate relative to the U.S. Treasury bond rate and is updated monthly; check the data page for the current value. Annual data and country premiums: <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/ctryprem.html>.
+
+::: {.callout-note title="Dated items to keep in mind"}
+The equity risk premium moves every month, as do Treasury yields. The 4.23% figure above was the start-of-2026 estimate. Look up the current value on the day of your analysis, record the date, and use the same date for your risk-free rate. Examples in this chapter use a 4.0% risk-free rate and a 4.5% premium for round-number arithmetic only.
+:::
+
+### 2.4 Bottom-up betas {.unnumbered}
+
+Instead of regressing one company's returns, estimate beta from the businesses the company is in. A company's beta reflects the risk of its operations and the leverage it uses on top. Averaging many companies in the same industry cuts the noise, and adjusting for leverage lets you apply the result to the company you are valuing. The steps are:[^4]
+
+1.  Collect levered betas and debt-to-equity (D/E) ratios for comparable companies, and take the median.
+
+2.  Remove the effect of leverage to get the **unlevered beta** (the beta of the business): $\beta_U = \beta_L \div [1 + (1 - t) \times D/E]$.
+
+3.  If the comparables hold a lot of cash, divide by $(1 - \text{Cash} \div \text{Firm value})$ to get the beta of the operating business.
+
+4.  Relever to the target company's own D/E ratio: $\beta_L = \beta_U \times [1 + (1 - t) \times D/E]$.
+
+5.  Put the result into CAPM.
+
+Use market-value D/E ratios in these formulas, not book values, and do not apply them to banks, whose debt and equity are hard to separate.
+
+[^4]: Damodaran, A. *Applied Corporate Finance*, cost of capital session slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr20/session9slides.pdf>. Industry unlevered betas: <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/Betas.html>. The slides also warn against relevering with book D/E, ignoring cash and using single-firm betas for private companies whose owners are undiversified.
+
+**Example Co.** The median comparable has a levered beta of 1.10, a D/E of 20% and a tax rate of 25%.
+
+- Unlevered beta: 1.10 ÷ [1 + 0.75 × 0.20] = 1.10 ÷ 1.15 = **0.957**.
+
+- Example Co.'s market equity is 1,200 and its debt is 400, so D/E = 33.3%. Relevered beta: 0.957 × [1 + 0.75 × 0.333] = 0.957 × 1.25 = **1.196**.
+
+- Cost of equity: 4.0% + 1.196 × 4.5% = **9.38%**.
+
+(Cash is ignored here to keep the arithmetic short. In a capstone model, apply step 3 when the comparables hold large cash balances.)
+
+### 2.5 Choosing among estimates {.unnumbered}
+
+Different methods rest on different assumptions, so they will not agree. Check each estimate for reasonableness. If they are close, a simple average is acceptable. If they are far apart, find out why before averaging, and drop an estimate that rests on a doubtful input.[^5]
+
+[^5]: *Essentials of Corporate Finance*, Ch. 12, Sec. 12.2 and Example 12.1, which average a CAPM and a dividend growth estimate when they are reasonably close. The same chapter's Eastman Chemical illustration shows a gap of about two points between the methods and discusses choosing between them.
+
+### Check your understanding {.unnumbered}
+
+1.  A stock sells for 60 and paid a dividend of 4.00 last year. Dividends are expected to grow 6% a year. What is the cost of equity under the dividend growth model? (Answer: *D*~1~ = 4.24; 4.24 ÷ 60 + 0.06 = 13.07%.)
+
+2.  Why does a one-point rise in expected dividend growth raise the estimated cost of equity by at least one point?
+
+3.  The risk-free rate is 4%, the equity risk premium is 4.5% and beta is 1.3. What is the CAPM cost of equity? (Answer: 4% + 1.3 × 4.5% = 9.85%.)
+
+4.  Why is a bottom-up beta usually more reliable than a single-company regression beta?
+
+5.  Comparable firms have a median levered beta of 1.20 at D/E = 25% and a 20% tax rate. Find the unlevered beta, then relever it for a target with D/E = 50%. (Answer: 1.20 ÷ 1.20 = 1.00; 1.00 × [1 + 0.8 × 0.5] = 1.40.)
+
+#### CFA connection {.unnumbered}
+
+The CAPM and required return on equity are core Level I topics, and the dividend discount model appears under equity valuation. Confirm the current reading titles before listing them.
+
+## Section 3. The Cost of Debt and Preferred Stock {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- *Essentials of Corporate Finance*, Chapter 12, Sections 12.3 and 12.4 (cost of debt, preferred stock and the tax adjustment).
+
+- Damodaran, A. Online data pages (NYU Stern), where published coverage-to-rating tables are kept; see the notes below.
+
+"Example Co." figures are invented, and the default spread is an assumption for the example. Look up the current coverage-to-rating table for your own work.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Estimate a company's pre-tax cost of debt from market yields or a synthetic rating.
+
+- Explain why the coupon rate and the embedded cost of old debt are the wrong measure.
+
+- Apply the tax adjustment correctly.
+
+- Compute the cost of preferred stock.
+
+### 3.1 Cost of debt: the rate today {.unnumbered}
+
+The cost of debt is the rate lenders would charge the company to borrow today. Unlike the cost of equity, it can usually be observed. For a company with traded bonds, use the yield to maturity on those bonds. The coupon rate is irrelevant, because it records what the cost was when the bonds were issued. If a 30-year, 7% bond issued eight years ago trades at 96% of face value, its yield is about 7.37% and that is the cost of debt, not 7% [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.3].
+
+Example Co.'s interest expense of 30 on debt of 400 gives an average rate of 7.5%. That is a historical, embedded cost. If new borrowing today would cost the risk-free rate plus a default spread, the forward-looking number is what belongs in the WACC.
+
+### 3.2 When there are no traded bonds: synthetic ratings {.unnumbered}
+
+Many companies have no traded bonds, and some have only private loans. The standard fix is to estimate a rating from financial ratios, then add the default spread typical of that rating to the risk-free rate. The most common ratio is interest coverage, EBIT divided by interest expense: the higher it is, the stronger the rating and the smaller the spread. Published tables map coverage bands to ratings and spreads, with separate tables for large and small firms.[^6]
+
+[^6]: Damodaran, A. Data pages, including the table of interest coverage ratios, ratings and default spreads: <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html>. Spread levels change with credit markets, so use the table that is current when you do the analysis. Industry cost of debt appears in the cost of capital data by industry at <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.htm>.
+
+**Example Co.** Interest coverage is 150 ÷ 30 = 5.0×. Looking up that band in the current table gives a rating and spread. Suppose the spread is 2.5 points; the pre-tax cost of debt is then 4.0% + 2.5% = **6.5%**, below the 7.5% embedded rate.
+
+Two points apply when computing coverage for the capstone. Include the interest on lease obligations, and treat lease liabilities as debt in the capital structure, as @sec-fsa (Section 5) explains. Debt that you treat as debt must also carry a cost.
+
+### 3.3 The tax adjustment {.unnumbered}
+
+Interest is tax deductible and dividends are not. The government effectively pays part of the interest bill, so the cost to the firm is the after-tax rate:
+
+$$R_D \times (1 - T_c)$$
+
+A firm borrows 1,000,000 at 9% when the tax rate is 21%. Interest is 90,000. The deduction saves 18,900 in tax, leaving 71,100, an after-tax rate of 7.11% [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.4].
+
+Use the marginal tax rate, the rate on the next dollar of income, since the next dollar of interest is deducted at that rate. A U.S. company's marginal rate combines the federal rate with state taxes. Example Co.'s reported tax is 36 on pre-tax income of 120, an effective rate of 30%, but a marginal rate of 25% is used here. The tax shield is real only if the company has taxable income to deduct against; a company with losses or very high interest may not receive it in full. We use 25% for Example Co.: after-tax cost of debt = 6.5% × 0.75 = **4.875%**.
+
+### 3.4 Preferred stock {.unnumbered}
+
+Preferred stock pays a fixed dividend forever, so it is a perpetuity, and its cost is the dividend yield: $R_P = D \div P_0$. A preferred share paying 4.52 a year and selling for 104.70 has a cost of 4.52 ÷ 104.70 = 4.32% [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.3]. Preferred dividends are not deductible, so no tax adjustment applies. If a company has preferred stock, add a third term to the WACC (Section 4).
+
+### Check your understanding {.unnumbered}
+
+1.  Why is the coupon rate on existing bonds a poor measure of the cost of debt?
+
+2.  A company's EBIT is 90 and its interest expense is 15. What is its interest coverage, and why does an analyst compute it when the company has no traded bonds?
+
+3.  A company borrows at 8% and its marginal tax rate is 25%. What is the after-tax cost of debt? (Answer: 6.0%.)
+
+4.  Why do we use the marginal tax rate, and not the effective rate, in this adjustment?
+
+5.  A preferred share pays 3.00 a year and sells for 50. What is its cost? Should the cost be tax adjusted? (Answer: 6.0%; no.)
+
+#### CFA connection {.unnumbered}
+
+Yield to maturity, credit ratings and the tax shield on debt appear in Level I fixed income and corporate issuers topics. Confirm the current readings before listing them.
+
+## Section 4. The Weighted Average Cost of Capital {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- *Essentials of Corporate Finance*, Chapter 12, Section 12.4, including the Eastman Chemical illustration of book and market weights.
+
+- Damodaran, A. Cost of capital by industry data set (NYU Stern), used as a reasonableness check in Section 4.4.
+
+"Example Co." figures are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Compute the WACC with market-value weights.
+
+- Explain why book-value weights understate the WACC for most companies.
+
+- Decide whether to use current or target weights.
+
+### 4.1 The formula {.unnumbered}
+
+$$\text{WACC} = \frac{E}{V} R_E + \frac{D}{V} R_D (1 - T_c)$$
+
+Here *E* is the market value of equity (shares times price), *D* is the market value of debt and *V* = *E* + *D*. With preferred stock, add (*P*/*V*) × *R*~P~. The weights must add to 100% [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.4].
+
+### 4.2 Market-value weights {.unnumbered}
+
+The weights should be market values, because they show what investors have put at risk today. Equity almost always trades above book, and the gap is often large. For debt, market and book values usually differ by little, so book debt is a common stand-in; if there are many bond issues, the market value is the sum over each. For debt that does not trade, discount its payments at the current market rate for similar debt. Include lease liabilities as debt (Section 3.2).
+
+**Example Co.** Equity is worth 1,200 on the market (book value 600) and debt is 400. Total capital is 1,600, so *E*/*V* = 75% and *D*/*V* = 25%.
+
+- WACC with market weights: 0.75 × 9.38% + 0.25 × 4.875% = 7.035% + 1.219% = **8.25%**.
+
+- WACC with book weights (600 and 400, so 60% and 40%): 0.60 × 9.38% + 0.40 × 4.875% = 5.63% + 1.95% = **7.58%**.
+
+The book-weight answer is 0.7 points too low. Book weights overstate debt's share when the market-to-book ratio is above 1, and debt is the cheaper source. The Eastman Chemical illustration in the underlying text shows the same effect, where book weights gave a WACC about a point below the market-weight figure [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.4].
+
+### 4.3 Current mix or target mix? {.unnumbered}
+
+The weights belong to the long-run financing mix, the capital structure the firm aims for, which may differ from today's. A company that has just borrowed heavily for an acquisition does not have a permanently higher debt weight. A target ratio is often taken from the industry average or from management's stated policy. The cost of equity must be consistent with the weights: if you change the debt ratio, the relevered beta and the cost of debt change too (Sections 2.4 and 3.2). A WACC that combines the old beta with a new debt ratio is internally inconsistent.
+
+### 4.4 A reasonableness check {.unnumbered}
+
+Compare your WACC with the figure for the company's industry, which is published by industry in an annual data set, and with the figure that a data provider reports for your company.[^7] A difference of a few tenths of a point is normal. A difference of several points means an input, usually the equity risk premium, the beta or the weights, differs, and you should find which one. Data sites differ on the premium: the Eastman illustration in the underlying text found an estimate about two points different from a data site because of the premium and beta chosen.
+
+[^7]: Damodaran, A. Cost of capital by industry (U.S.): <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/wacc.htm>. The table reports for each industry the beta, cost of equity, cost of debt, tax rate, debt weight and cost of capital. As a rule, industries with stable cash flows, such as utilities, show lower costs of capital than technology industries. The page does not state the data date on its face, so confirm the update date on the data home page before quoting any figure.
+
+### Check your understanding {.unnumbered}
+
+1.  A firm has 200 million of equity at market value and 50 million of debt. What are the weights? (Answer: 80% and 20%.)
+
+2.  Compute the WACC if the cost of equity is 12%, the pre-tax cost of debt is 7%, the tax rate is 25% and the weights are 80% and 20%. (Answer: 9.6% + 1.05% = 10.65%.)
+
+3.  Why does using book values for equity usually understate the WACC?
+
+4.  A company levers up to 60% debt but keeps its old beta and its old cost of debt in the WACC formula. What is wrong?
+
+5.  Your WACC for a company is 5 points below a published industry figure. List three inputs to check.
+
+#### CFA connection {.unnumbered}
+
+WACC and the capital structure weights are Level I corporate issuers topics. Confirm the current readings before listing them.
+
+## Section 5. When the WACC Is the Wrong Rate {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- *Essentials of Corporate Finance*, Chapter 12, Section 12.5 (divisional and project costs of capital, pure play and subjective approaches).
+
+- Damodaran, A. *Applied Corporate Finance*, cost of capital session slides (NYU Stern), for the division-level bottom-up beta.
+
+"Example Co." figures are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- State when the firm's WACC is the correct discount rate for a project.
+
+- Explain the errors that come from using one WACC for all projects.
+
+- Estimate a divisional cost of capital with the pure play approach.
+
+- Apply a subjective risk adjustment and recognize its limits.
+
+### 5.1 The WACC measures the risk of the firm's current business {.unnumbered}
+
+The WACC reflects the risk and financing of the assets the firm has now. It is the right rate only for an investment that resembles those assets, such as a new store for a retailer or added capacity for a manufacturer [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.5]. For a project with different risk, the right rate is the one that the market requires for that kind of risk, whoever the investor is.
+
+### 5.2 The errors {.unnumbered}
+
+Using one company-wide WACC for every project causes two predictable errors. A safe project with a good return gets rejected because its return is below a hurdle set for a riskier firm, and a risky project with a return that is too low for its risk gets accepted because it beats the hurdle. Over time the firm becomes riskier and earns less than it should.
+
+To see this, suppose Example Co. uses a hurdle of 8.25%, and for simplicity treat each project as all-equity financed with the 4.0% risk-free rate and 4.5% premium.
+
+| **Project** | **Beta** | **Required return (SML)** | **Expected return** | **Hurdle test (8.25%)** | **Correct decision** |
+|----|----|----|----|----|----|
+| A (low risk) | 0.70 | 4.0% + 0.70 × 4.5% = 7.15% | 7.8% | Reject | Accept |
+| B (high risk) | 1.50 | 4.0% + 1.50 × 4.5% = 10.75% | 9.5% | Accept | Reject |
+
+Project A beats its own required return but falls short of the firm-wide hurdle, so it is wrongly rejected. Project B passes the hurdle but earns less than its risk demands, so it is wrongly accepted [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.5].
+
+The same problem arises across divisions. If a regulated, low-risk division and a high-risk technology division compete for funds under one hurdle, the riskier division tends to win because its raw returns look higher. Many large companies set separate divisional rates for this reason.
+
+### 5.3 The pure play approach {.unnumbered}
+
+Because a project's own beta cannot be observed, find companies outside the firm that do only that kind of business, called pure plays, and use their risk. Take their betas, unlever them, take the median and relever to the financing mix you plan to use, exactly as in the bottom-up beta method (Section 2.4). Add a cost of debt that fits the new business and weight by the target capital structure for the new business. A restaurant chain entering the hotel business should look at hotel companies, preferably focused on the same segment of the market, not at other restaurants.[^8] If no clean pure play exists, any rate you pick is a judgment, and it is wiser to say so than to default to the company-wide WACC.
+
+[^8]: *Essentials of Corporate Finance*, Ch. 12, Sec. 12.5. The pure play approach is the same logic as the bottom-up beta, in which each business unit gets a beta from comparable single-business firms; see Damodaran, A., *Applied Corporate Finance*, cost of capital session slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr20/session9slides.pdf>, where a multi-business firm's divisions are each given a relevered industry beta.
+
+### 5.4 The subjective approach {.unnumbered}
+
+When data are not available, many firms put projects into a few risk classes and add or subtract a fixed number of points from the WACC. For example, with a WACC of 14%: high-risk projects such as new products add 6 points (20%), expansions of existing lines add nothing (14%), and low-risk equipment replacement subtracts 4 points (10%). Mandatory projects, such as pollution control equipment, are taken regardless [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.5]. The method is crude, since projects within a class still differ, but some risk adjustment is better than none. The adjustments themselves should be reviewed when market conditions change.
+
+### 5.5 Three rules that always apply {.unnumbered}
+
+- **Match currency.** Discount cash flows in a currency at a rate built in the same currency. A rate built in dollars cannot be applied to peso cash flows without adjusting for the inflation difference.[^9]
+
+- **Match tax treatment.** If you discount after-tax cash flows from operations, use an after-tax cost of capital (Section 3.3).
+
+- **Match the use, not the source.** The rate comes from the risk of the project's cash flows, not from how the project is paid for (Section 1.1).
+
+[^9]: Damodaran, A. *Applied Corporate Finance*, cost of capital session slides, <https://pages.stern.nyu.edu/~adamodar/podcasts/cfspr20/session9slides.pdf>. The slides give the conversion (1 + dollar rate) × (1 + local inflation) ÷ (1 + U.S. inflation) − 1.
+
+### Check your understanding {.unnumbered}
+
+1.  A manager says, "We can borrow at 6% for this project, so 6% is the right discount rate." What is wrong with that?
+
+2.  A firm uses one WACC for all projects. Which division tends to get more funding, the safe one or the risky one, and why?
+
+3.  Explain how a pure play estimate is built, starting from a list of comparable companies.
+
+4.  A project has a beta of 0.8, the risk-free rate is 5% and the premium is 6%. Its expected return is 9.5%. Is it acceptable if the firm's WACC is 10%? (Answer: no. Its required return is 5% + 0.8 × 6% = 9.8%, which exceeds the 9.5% expected return.)
+
+5.  Give one reason a subjective risk adjustment is better than none, and one reason it is not as good as a pure play estimate.
+
+#### CFA connection {.unnumbered}
+
+Project-specific discount rates relate to Level I capital budgeting and the CAPM. Confirm the current readings before listing them.
+
+## Section 6. Valuing a Company with the WACC {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- *Essentials of Corporate Finance*, Chapter 12, Section 12.6 (company valuation with the WACC).
+
+"Example Co." figures are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Compute free cash flow to the firm and discount it at the WACC.
+
+- Obtain equity value from enterprise value.
+
+- Show how sensitive value is to the WACC and to terminal assumptions.
+
+### 6.1 Cash flows that match the rate {.unnumbered}
+
+The WACC already includes the benefit of the interest tax shield, in the after-tax cost of debt. The cash flows must therefore be computed before any interest, with taxes calculated as if the firm had no debt. The "adjusted" cash flow from assets (also called free cash flow to the firm, FCFF) is:
+
+$$\text{FCFF} = \text{EBIT}(1 - T_c) + \text{Depreciation} - \Delta\text{NWC} - \text{Capital spending}$$
+
+If you deducted actual interest, or used actual taxes, and then discounted at the WACC, you would count the tax shield twice [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.6].
+
+### 6.2 Enterprise value and equity value {.unnumbered}
+
+For a company growing at a steady rate *g*, enterprise value is $V_0 = \text{FCFF}_1 \div (\text{WACC} - g)$. With an initial high-growth period, discount each year's FCFF and add a terminal value at the end of the period, computed from the next year's cash flow with the same formula. Equity value is enterprise value minus debt (and plus excess cash), and dividing by shares gives a value per share [*Essentials of Corporate Finance*, Ch. 12, Sec. 12.6]. A terminal value can also be found from a multiple, such as a price-to-sales ratio, as a cross-check on the growing-perpetuity result.
+
+Two terminal-value rules keep the result sensible. The growth rate in the terminal period cannot exceed the growth rate of the economy in which the cash flows are earned, and the risk-free rate is a sensible ceiling. And as a company matures, its WACC should drift toward that of a mature company in the industry, rather than staying at a high-growth level forever.[^10]
+
+[^10]: The valuation mechanics and the Feline Fancy illustration are in *Essentials of Corporate Finance*, Ch. 12, Sec. 12.6. The two terminal-value rules are standard practice and are the instructor's addition to that source.
+
+### 6.3 Example Co. and the sensitivity of value {.unnumbered}
+
+Assume Example Co.'s FCFF next year is 84 and grows 3% a year forever. With the WACC of 8.25% from Section 4:
+
+- Enterprise value = 84 ÷ (0.0825 − 0.03) = 84 ÷ 0.0525 ≈ **1,599**.
+
+- Equity value = 1,599 − 400 debt = **1,199**, which matches the market value of 1,200 used for the weights.
+
+Now suppose the WACC is one point higher, 9.25%.
+
+- Enterprise value = 84 ÷ 0.0625 ≈ **1,343**; equity value = **943**.
+
+A one-point rise in the WACC cuts enterprise value by 16% and equity value by 21%. Because debt is a fixed claim, equity bears the whole change. This is why small differences in the equity risk premium, beta or terminal growth can dominate a valuation, and why the choices behind the WACC should be documented and tested.
+
+### Check your understanding {.unnumbered}
+
+1.  Why are cash flows computed with taxes as if there were no debt when you discount at the WACC?
+
+2.  A firm's FCFF next year is 120 and grows 5% a year. The WACC is 9%. What is enterprise value? (Answer: 120 ÷ 0.04 = 3,000.)
+
+3.  The firm in question 2 has debt of 800 and 100 shares outstanding. What is the value per share? (Answer: (3,000 − 800) ÷ 100 = 22.00.)
+
+4.  Why must the terminal growth rate be tied to the growth of the economy?
+
+5.  In the Example Co. valuation, why does equity fall by a larger percentage than enterprise value when the WACC rises?
+
+#### CFA connection {.unnumbered}
+
+Free cash flow to the firm, WACC and the single-stage and multi-stage valuation models appear in Level I equity valuation and corporate issuers. Confirm the current readings before listing them.
+
+## Section 7. Building the Capstone WACC Memo {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Based on the Week 4 milestone in the course plan (@sec-finance-function, Section 4.1) and on Sections 2 to 6 of this chapter. This section is a planning guide and does not rely on outside sources.
+:::
+
+### Learning objectives {.unnumbered}
+
+- List the inputs the memo must document, with a source and date for each.
+
+- Apply a checklist for consistency before submission.
+
+### 7.1 What the memo must contain {.unnumbered}
+
+The WACC memo is due in Week 4, Session 1. It should be short, and every number in it needs a source and a date.
+
+| **Input** | **Where it comes from** | **What to record** |
+|----|----|----|
+| Risk-free rate | Current 10-year Treasury yield | Date and yield |
+| Equity risk premium | Current implied premium (Section 2.3) | Date, value and source |
+| Industry betas | Unlevered betas for the company's industries (Section 2.4) | Source, date and the businesses used |
+| Target D/E and tax rate | Market values from the 10-K and market data (@sec-finance-function, Section 3); marginal tax rate | How D/E was measured, including leases |
+| Cost of debt | Bond yields or synthetic rating (Section 3.2) | Coverage ratio, rating, spread |
+| Weights | Market values (Section 4.2) | Equity and debt values and the date |
+| Result | WACC and a short comparison with the industry figure | The reason for any large gap |
+
+### 7.2 A consistency checklist {.unnumbered}
+
+1.  The risk-free rate, premium and betas have the same date and currency.
+
+2.  Beta was relevered to the same D/E ratio used for the weights.
+
+3.  Debt includes lease liabilities, and interest coverage includes lease interest.
+
+4.  Weights are market values, and any use of book values is explained.
+
+5.  The cost of debt is today's rate, not the coupon on old debt.
+
+6.  The tax adjustment uses the marginal rate.
+
+7.  The WACC is compared with the industry figure, and any gap of more than about a point is explained.
+
+8.  A sensitivity table shows value per share if the WACC is one point higher and one point lower (Section 6.3).
+
+### Check your understanding {.unnumbered}
+
+1.  Which input in the memo is likely to move the WACC most between two reasonable analysts? How can the team limit the damage?
+
+2.  Why does the memo require a date for each market input?
+
+3.  Where in the 10-K do you find the data needed for the debt weight and for the cost of debt?
+
+#### CFA connection {.unnumbered}
+
+The memo is a practice task and does not map directly to a CFA reading. It uses the Level I cost of capital and CAPM topics in a realistic setting.
+
+## Sources {.unnumbered}
+
+Ideas and figures taken from the sources below are cited in the text and notes. Please check the web pages for current values before using any number in a deliverable.
+
+- Ross, S., Westerfield, R., and Jordan, B. *Essentials of Corporate Finance*, Chapter 12, "Cost of Capital." McGraw-Hill Education.
+
+- Damodaran, A. *Applied Corporate Finance*, online class and course slides. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastcfonline.htm>
+
+- Damodaran, A. "The Price of Risk: Equity Risk Premium." *Musings on Markets*, March 2026. <https://aswathdamodaran.blogspot.com/2026/03/the-price-of-risk-equity-risk-premium.html>
+
+- Damodaran, A. Data pages: cost of capital by industry, betas by sector, country and equity risk premiums, and ratings and default spreads. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/>

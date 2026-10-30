@@ -1,3 +1,456 @@
----
-title: "Finance Function"
----
+# The Finance Function, Diagnostic Review, and Reading SEC Filings {#sec-finance-function}
+
+This chapter starts the course. It explains what a corporate finance team does and what it is trying to achieve, checks how much of Managerial Finance you remember, shows you how to find and read the documents public companies file with the SEC, and sets up the capstone project you will work on all semester. Sources are cited in brackets in the text, and each section opens with a "Source basis" note that gives the full references and suggestions for deeper study. "Example Co." figures are invented for teaching and are the same as in @sec-fsa.
+
+| **Section** | **Topic** | **Main question** |
+|----|----|----|
+| 1 | The finance function | What does corporate finance do, and what is it trying to maximize? |
+| 2 | Diagnostic review of Managerial Finance | What do you already know, and what needs refreshing? |
+| 3 | Reading SEC filings | Where do the numbers come from, and which parts matter? |
+| 4 | Setting up the capstone | What will you build this semester, and how does this chapter help? |
+
+Section 1 gives the purpose of the course, Section 2 tests the tools it uses, Section 3 teaches you to find the raw material and Section 4 turns all of it into a project plan. Each section ends with review questions and a note on the related CFA readings.
+
+## Section 1. The Finance Function {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section is a synthesis of two sources, rewritten in original wording:
+
+- Damodaran, A. *Applied Corporate Finance*, course slides and online class (NYU Stern), especially Session 1. Slides: <https://pages.stern.nyu.edu/~adamodar/pdfiles/execs/cf2day2024.pdf>. Online class: <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastcfonline.htm>.
+
+- *Essentials of Corporate Finance*, Chapter 1, "Introduction to Financial Management" (Sections 1.1 to 1.6). Cited below by chapter section.
+
+For deeper study, Damodaran's online class has a session devoted to the objective of the firm, "The Objective in Decision Making I: Utopia and Let Down". Illustrative numbers marked "Example Co." are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Describe what corporate finance covers and the three core decisions a finance team makes.
+
+- State the goal of the firm and explain why profit maximization is a weaker goal.
+
+- Explain what an agency problem is and name the main ways owners try to control it.
+
+- Describe the roles of the CFO, treasurer, controller and the FP&A team.
+
+### 1.1 What corporate finance does {.unnumbered}
+
+Corporate finance is the study of how a business raises, spends and manages money. Almost every business decision affects its finances, so almost every decision is, in part, a finance decision. The name "corporate finance" is narrower than the subject: the ideas apply to any business, and well beyond [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.1].
+
+The subject rests on a small number of first principles that are mostly common sense. Most corporate disasters and market bubbles begin when someone, however capable, breaks one of those principles [Damodaran, *Applied Corporate Finance*, Session 1]. A tool you cannot apply is not worth much, so the test we use throughout this course is whether a team can apply it to a real company's filings.
+
+### 1.2 The three core decisions {.unnumbered}
+
+Imagine starting a business of any kind. You would have to answer three questions: which long-term investments to make, how to pay for them, and how to manage everyday money matters such as collecting from customers and paying suppliers [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.2]. Added to the question of what to do with cash the business does not need, these give the decisions that organize this course.
+
+| **Decision** | **Question** | **Chapters** |
+|----|----|----|
+| Investment | Which long-term assets will earn more than they cost to fund? | 3 to 7 |
+| Financing | What mix of debt and equity should fund the business? | 9 and 10 |
+| Payout | When good investments run short, how much cash goes back to owners, and how? | 10 |
+| Working capital | How do we manage cash, receivables, inventory and short-term borrowing? | 11 |
+
+The investment decision comes first because it sets the bar. Taking investments that earn 9% with money that costs 10% to raise is plainly value-destroying, and nobody would defend it once it is written that way [Damodaran, *Applied Corporate Finance*, Session 1]. Evaluating the size, timing and risk of future cash flows is the core of every investment decision [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.2]. Most of the course applies this idea with more careful measures of "return" and "cost".
+
+### 1.3 The goal of the firm {.unnumbered}
+
+Profit maximization is the goal people name first, but it is imprecise. A firm can lift this year's profit by postponing maintenance, running down inventory or cutting costs in ways that hurt later years. The measure is unclear too, since accounting net income or earnings per share may have little to do with what is good for the firm. And "the long run" does not say how to trade current profit against future profit [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.4].
+
+A better test is whether a decision raises the value of the owners' stake. For a corporation, that means the current value of each share of stock. For a business whose shares do not trade, it means the market value of the owners' equity. This removes the short-run versus long-run puzzle, because market value already reflects expected future cash flows [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.4].
+
+The same idea can be stated as maximizing the value of the business as a whole. Firm value is the value of debt plus equity, so the two statements agree when a decision leaves the value of debt unchanged. Chapter 6 shows how to move from enterprise value to equity value per share [Damodaran, *Applied Corporate Finance*, Session 1].
+
+The goal does not permit illegal or unethical acts. The Sarbanes-Oxley Act of 2002, passed after scandals at companies such as Enron and WorldCom, requires the officers of a public company to review and sign the annual report and to attest that it contains no false statements or material omissions. That makes management personally responsible for the accuracy of the statements [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.4].
+
+**Link to Chapter 2.** The goal uses *market* value, while statements show *book* value and accrual profit. Example Co.'s book equity of 600 is not what its shares are worth. That is why @sec-fsa (Sections 1 and 7) spends so long on what the statements can and cannot tell you.
+
+### 1.4 Agency problems and governance {.unnumbered}
+
+An agency relationship exists whenever one person (the principal) hires another (the agent) to act in the principal's interest. Shareholders are the principals and managers are the agents. The risk is that the agent's interests differ from the principal's. A manager may turn down a risky investment that would raise the share price because a failure could cost the manager a job. A manager may overpay for an acquisition to build a bigger empire, or put survival and independence ahead of shareholder value. The lost value is an **agency cost**. How the agent is paid shapes the problem: a salesperson paid a flat fee has less reason to push for a high price than one paid a commission [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.5].
+
+Whether managers act for owners depends on alignment and on control.
+
+- **Alignment.** Top pay is usually tied to financial performance and often to the share price, for example through stock options. Managers who deliver for shareholders are also in greater demand in the job market.
+
+- **Control.** Shareholders elect the board, and the board hires and fires management. Unhappy shareholders can solicit proxies (the right to vote other shareholders' shares) to replace the board in a *proxy fight*, and a poorly run firm can become a takeover target.
+
+Stakeholders other than owners, such as employees, customers, suppliers and the government, also have a financial interest in the firm, and agency problems arise wherever ownership and management are separate [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.5].
+
+The table links each mechanism to a place where you can see it in a company's filings. Section 3 explains those documents.
+
+| **Mechanism** | **How it aligns managers with owners** | **Where to look** |
+|----|----|----|
+| Pay tied to share value | Managers gain when the share price rises | Proxy statement (executive pay) |
+| Elected board | Owners can replace directors | Proxy statement (director nominees, votes) |
+| Proxy fights and takeovers | Poor performance invites a challenge | Proxy materials, Form 8-K (events) |
+| Audit and certification | Outsiders check the numbers, and officers sign for them | Form 10-K (auditor's report, certifications) |
+
+**Link to Chapter 2.** The incentives that shape pay also shape reporting. @sec-fsa (Section 1, on why statements are not neutral) shows how preparers can use the room accounting gives them. Chapter 15 returns to governance and incentives.
+
+::: {.callout-note title="Dated items to keep in mind"}
+Examples of proxy fights, takeovers and executive pay figures go out of date quickly. Use current proxy statements and 8-Ks (Section 3) for any example you present in class.
+:::
+
+### 1.5 Where finance sits in the organization {.unnumbered}
+
+The top finance officer is usually the **chief financial officer (CFO)** or vice president of finance, who coordinates two offices. The **controller** handles cost and financial accounting, tax payments and management information systems. The **treasurer** manages cash and credit, financial planning and capital expenditures. Most of the topics in this course fall under the treasurer's office. In a small firm one person may play both roles, and exact titles differ from company to company [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.2].
+
+Large firms also have a financial planning and analysis (FP&A) team, which builds budgets and forecasts and supports managers with analysis, and a corporate development team, which works on acquisitions and similar transactions. Reporting lines for these teams vary by company. The mapping below shows where each role appears in this course.
+
+| **Role** | **Typical focus** | **Where it shows up here** |
+|----|----|----|
+| Controller | Accounting, reporting, taxes | Chapter 2 (statements and earnings quality) |
+| FP&A | Forecasts, budgets, valuation models | Chapters 5 to 7 (modeling, DCF, risk) |
+| Treasurer | Cash, financing, payout, liquidity, hedging | Chapters 9 to 11 and 14 |
+| Corporate development | Mergers, acquisitions, restructuring | Chapters 12 and 13 |
+
+### Check your understanding {.unnumbered}
+
+1.  State the three core decisions in your own words, and name the fourth area that supports them.
+
+2.  A firm can raise this year's profit by postponing maintenance. Why does that not necessarily raise the value of its stock?
+
+3.  Example Co.'s book equity is 600. Why is that not the amount the goal of the firm tells managers to maximize?
+
+4.  A manager rejects a risky project that would have raised the share price. Name the problem and who bears the cost.
+
+5.  Give two ways shareholders can discipline managers, and one place in a company's filings where you could see each.
+
+6.  In a small firm the treasurer and the controller may be one person. Which duties of the two roles would that person combine?
+
+#### CFA connection {.unnumbered}
+
+This section maps loosely to the Level I corporate issuers topics on organizational forms, ownership, stakeholders and corporate governance. We have not checked the current curriculum outline, so confirm the exact reading titles before listing them for students.
+
+## Section 2. Diagnostic Review of Managerial Finance {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+The formulas in this section are standard Managerial Finance material, written in original wording. For further review, two free sources are suggested:
+
+- Damodaran, A. *Foundations of Finance*, online class (NYU Stern): short webcasts with slides and post-class tests on the time value of money, what risk is, measuring risk and cash flows. <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/webcastfoundationsonline.htm>
+
+- OpenStax. *Principles of Finance* (CC BY 4.0), chapters on time value of money and on how companies think about investing. <https://openstax.org/books/principles-finance/pages/preface>
+
+Example Co. figures are invented and match @sec-fsa. The quiz uses invented numbers.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Compute future values, present values and annuity values.
+
+- Compute and interpret NPV, IRR and payback, and explain why NPV and IRR can disagree.
+
+- Compute a handful of ratios from the Example Co. statements.
+
+- Use CAPM and a simple weighted average for expected return and WACC.
+
+- Use your quiz result to decide where to spend review time in Chapters 3 and 4.
+
+### 2.1 Time value of money {.unnumbered}
+
+A dollar today is worth more than a dollar later because it can earn a return. Three formulas cover most of what we need. With rate r and n periods:
+
+- **Future value:** FV = PV × (1 + r)^n
+
+- **Present value:** PV = FV ÷ (1 + r)^n
+
+- **Present value of an annuity** (equal payment C at the end of each of n periods): PV = C × [1 – (1 + r)^–n] ÷ r
+
+Example Co.'s interest expense of 30 on debt of 400 implies an average interest rate of about 7.5% (30 ÷ 400); the rate in this section's examples is chosen separately. Take 100 received in each of the next 4 years, discounted at 10%. The present value is 100 × [1 – 1.10^–4] ÷ 0.10 = 316.99. The rate used to discount a cash flow should reflect its risk, which is why cost of capital (Chapter 3) matters so much.
+
+### 2.2 NPV, IRR and payback {.unnumbered}
+
+**Net present value (NPV)** is the present value of a project's future cash flows minus its cost. **Internal rate of return (IRR)** is the discount rate that makes NPV equal to zero. **Payback** is the time needed to recover the initial cost, with no discounting. The decision rules are: accept a project if NPV is positive, or if IRR exceeds the required return.
+
+Worked example (invented project): cost 800 now; cash flows of 300, 350 and 400 in years 1 to 3; required return 10%.
+
+| **Year** | **Cash flow** | **Discount factor at 10%** | **Present value** |
+|----|----|----|----|
+| 0 | –800 | 1.0000 | –800.00 |
+| 1 | 300 | 0.9091 | 272.73 |
+| 2 | 350 | 0.8264 | 289.26 |
+| 3 | 400 | 0.7513 | 300.53 |
+| **NPV** |  |  | **62.51** |
+
+NPV is positive, so accept. The IRR is about 14.2%, above the 10% requirement, which gives the same answer. Payback: 650 is recovered after two years and the last 150 takes 150 ÷ 400 = 0.375 of year 3, so payback is 2.375 years.
+
+**When NPV and IRR disagree.** For mutually exclusive projects the two rules can rank projects differently, most often when projects differ in scale or timing. NPV measures the value added in currency, which is what the goal of the firm (Section 1.3) asks for, so NPV wins. Question 6 of the quiz shows a case. Chapter 4 covers the details, including multiple IRRs and MIRR.
+
+### 2.3 A ratio refresher {.unnumbered}
+
+Ratios scale amounts so firms and years can be compared. The table uses the Example Co. figures from @sec-fsa (Section 6 has the full set and the Du Pont breakdown).
+
+| **Ratio** | **Formula** | **Example Co.** |
+|----|----|----|
+| Net margin | Net income ÷ Revenues | 84 ÷ 1,000 = 8.4% |
+| Return on assets | Net income ÷ Total assets | 84 ÷ 1,100 = 7.6% |
+| Return on equity | Net income ÷ Equity | 84 ÷ 600 = 14.0% |
+| Debt-to-equity | Debt ÷ Equity | 400 ÷ 600 = 66.7% |
+| Interest coverage | EBIT ÷ Interest expense | 150 ÷ 30 = 5.0× |
+
+A ratio is a starting point for a question, not an answer. @sec-fsa (Sections 5 to 7) shows how leases, R&D and accrual choices change these numbers.
+
+### 2.4 Risk and return {.unnumbered}
+
+Investors want to be paid for taking risk. The **capital asset pricing model (CAPM)** says the expected return on a stock equals the risk-free rate plus beta times the equity risk premium: E(R) = rf + β × ERP. Beta measures how strongly the stock moves with the market as a whole. The expected return on a portfolio is the weighted average of its parts' expected returns. Diversification lowers risk, but only the part of risk that does not cancel across stocks is rewarded in CAPM.
+
+A firm's **weighted average cost of capital (WACC)** combines the cost of equity and the after-tax cost of debt, using the weights of each in the firm's financing: WACC = E% × cost of equity + D% × cost of debt × (1 – tax rate). Chapter 3 builds WACC properly, with market-value weights and current yields, and Chapters 4 and 6 use it to discount cash flows.
+
+### 2.5 Diagnostic quiz {.unnumbered}
+
+Allow about 25 minutes. A calculator or Excel is fine. Answers follow in Section 2.6.
+
+1.  What is the future value of 1,000 invested for 5 years at 6% a year?
+
+2.  What is the present value of 500 to be received in 3 years, at 8%?
+
+3.  What is the present value of 100 received at the end of each of the next 4 years, at 10%?
+
+4.  A project costs 900 and returns 400 at the end of each of the next 3 years. At a required return of 10%, what is its NPV? Do you accept?
+
+5.  For the same project, what is the payback period, and is the IRR above or below 10%?
+
+6.  Project A costs 100 and returns 150 in one year. Project B costs 1,000 and returns 1,300 in one year. You can take only one, and the required return is 10%. Compute each IRR and NPV. Which do you choose, and why?
+
+7.  Using the Example Co. figures in Section 2.3, compute ROE and interest coverage.
+
+8.  The risk-free rate is 4%, the equity risk premium is 5% and a stock's beta is 1.2. What is its CAPM expected return? A portfolio is 60% in a stock expected to return 12% and 40% in one expected to return 8%. What is the portfolio's expected return?
+
+9.  A firm is financed 60% with equity costing 10% and 40% with debt costing 6% before tax. The tax rate is 25%. What is the WACC?
+
+10. In one sentence, why is "maximize the market value of the owners' equity" a better goal than "maximize profit"?
+
+### 2.6 Answer key and how to use it {.unnumbered}
+
+1.  1,000 × 1.06^5 = **1,338.23**.
+
+2.  500 ÷ 1.08^3 = **396.92**.
+
+3.  100 × [1 – 1.10^–4] ÷ 0.10 = **316.99**.
+
+4.  PV of inflows = 400 × [1 – 1.10^–3] ÷ 0.10 = 994.74. NPV = 994.74 – 900 = **94.74**. Positive, so accept.
+
+5.  Payback = 900 ÷ 400 = **2.25 years**. The IRR is about **15.9%**, above 10%, so the rules agree.
+
+6.  A: IRR = 150 ÷ 100 – 1 = **50%**; NPV = 150 ÷ 1.10 – 100 = **36.36**. B: IRR = 1,300 ÷ 1,000 – 1 = **30%**; NPV = 1,300 ÷ 1.10 – 1,000 = **181.82**. IRR favors A, NPV favors B. Choose **B**, because it adds more value (181.82 versus 36.36).
+
+7.  ROE = 84 ÷ 600 = **14.0%**. Interest coverage = 150 ÷ 30 = **5.0×**.
+
+8.  CAPM: 4% + 1.2 × 5% = **10.0%**. Portfolio: 0.60 × 12% + 0.40 × 8% = 7.2% + 3.2% = **10.4%**.
+
+9.  WACC = 0.60 × 10% + 0.40 × 6% × (1 – 0.25) = 6.0% + 1.8% = **7.8%**.
+
+10. Profit is imprecise about timing and measurement, while market value reflects the size, timing and risk of future cash flows (Section 1.3).
+
+**Using your result.** Questions 1 to 3 check time value, which everything else builds on. Questions 4 to 6 point to Chapter 4 (capital budgeting). Questions 8 and 9 point to Chapter 3 (cost of capital). Question 7 points back to @sec-fsa. If you missed several in one group, use the free resources named in the source basis note before that chapter.
+
+### Check your understanding {.unnumbered}
+
+1.  Why does a higher discount rate lower the present value of a cash flow?
+
+2.  A project has a positive NPV and an IRR below the required return. Can both be right? (Answer: for an ordinary project with one outflow followed by inflows this cannot happen; if it does, check the cash flows for sign changes and recheck the arithmetic.)
+
+3.  Example Co.'s ROE is 14.0% and its ROA is 7.6%. What explains the difference? (Answer: leverage; assets of 1,100 are financed partly by debt, so equity of 600 earns a higher return per dollar.)
+
+#### CFA connection {.unnumbered}
+
+Time value of money, NPV and IRR, and the CAPM are core Level I topics under quantitative methods, corporate issuers and portfolio management. We have not checked the current curriculum outline, so confirm the reading titles before listing them. This section is a refresher and does not replace CFA practice problems.
+
+## Section 3. Reading SEC Filings {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from SEC investor education materials, rewritten in original wording:
+
+- U.S. Securities and Exchange Commission. "How to Read a 10-K/10-Q." <https://www.sec.gov/fast-answers/answersreada10khtm.html>
+
+- Investor.gov. "How to Read an 8-K" (investor bulletin). <https://www.investor.gov/news-alerts/investor-bulletins/how-read-8-k>
+
+- U.S. Securities and Exchange Commission. "Form 10-Q" (filing deadlines). <https://www.sec.gov/answers/form10q.htm>
+
+- U.S. Securities and Exchange Commission. "Beginners' Guide to Financial Statements." <https://www.sec.gov/about/reports-publications/beginners-guide-financial-statements>
+
+- *Essentials of Corporate Finance*, Ch. 1, Sec. 1.6, for the requirement to register public offerings with the SEC.
+
+Illustrative numbers marked "Example Co." are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Explain the roles of the company and the SEC in public filings.
+
+- Distinguish Form 10-K, 10-Q and 8-K and the proxy statement.
+
+- Find a company's filings on EDGAR.
+
+- Say which parts of a 10-K matter most to a finance analyst and why.
+
+- Build a short reading routine for the capstone company.
+
+### 3.1 Why filings matter {.unnumbered}
+
+Public companies must file reports with the U.S. Securities and Exchange Commission (SEC), and the public can read them free on the SEC's EDGAR website. Public offerings of debt and equity must be registered with the SEC, and registration requires the firm to disclose a great deal of information [*Essentials of Corporate Finance*, Ch. 1, Sec. 1.6]. The company writes its own reports. The SEC sets what must be disclosed and how, and does not vouch that the contents are accurate. The 10-K includes financial statements audited by an independent accountant, and the CEO and CFO must certify that the report is accurate and complete (these certifications usually appear as Exhibits 31 and 32). That ties back to Sarbanes-Oxley in Section 1.3 and to the reminder in @sec-fsa (Section 1) that a clean audit is necessary but not sufficient.
+
+### 3.2 The main filings {.unnumbered}
+
+| **Filing** | **What it is** | **When** | **Use in this course** |
+|----|----|----|----|
+| Form 10-K | Annual report: business, risks, management's discussion, audited statements and notes | Once a year | Main source for the capstone model |
+| Form 10-Q | Quarterly report, shorter than the 10-K | After each of the first three fiscal quarters | Updating the latest results and liquidity |
+| Form 8-K | "Current report" on material events: earnings releases (Item 2.02), acquisitions or disposals (Item 2.01), new material agreements (Item 1.01), bankruptcy (Item 1.03) and others | Generally within four business days of the event | Events, deals, earnings releases |
+| Proxy statement (form type DEF 14A) | Information shareholders need to vote at the annual meeting, such as director nominees, executive pay and shareholder proposals | Before the annual meeting | Governance and incentives (Section 1.4) |
+
+The annual report to shareholders is a different document that is sometimes a glossy publication; some companies send the 10-K itself.
+
+::: {.callout-note title="Dated items to keep in mind"}
+The SEC page on Form 10-Q lists filing deadlines by size of company: 60 days after year end for the 10-K and 40 days for the 10-Q for large accelerated filers; 75 and 40 days for accelerated filers; and 90 and 45 days for other filers. The size thresholds and definitions have been revised since that table was written, so check the current SEC rules before quoting them. The statement that the proxy statement covers director nominees, executive pay and proposals is general; the Investor.gov proxy glossary page did not load during research, so confirm it there.
+:::
+
+### 3.3 Finding filings on EDGAR {.unnumbered}
+
+1.  Go to the SEC's EDGAR search (<https://www.sec.gov/edgar/search/>) and look up the company by name, ticker or its Central Index Key (CIK), the SEC's identifier for each filer.
+
+2.  Filter by form type, for example "10-K", and open the most recent filing. Filings are available as web pages and the financial statements are also published in structured form.
+
+3.  To check how a topic is described across filings, use the full-text search on the same page. A third-party description says it covers filings from 2001 onward; confirm the date range on the SEC's own page.
+
+4.  Use the company's investor relations page as a second route, since most companies post their filings there too.
+
+If you need to refresh the basics of the three statements, the SEC's Beginners' Guide to Financial Statements is a short primer, and @sec-fsa goes much deeper.
+
+### 3.4 Which parts of a 10-K matter to a finance analyst {.unnumbered}
+
+The SEC requires a 10-K to follow a set order of topics, so the same information is in the same place from one company to the next. Nobody reads every page; analysts read specific parts for specific reasons.
+
+| **Part of the 10-K** | **What it gives you** | **What a finance analyst looks for** |
+|----|----|----|
+| Business (Item 1) | Main products and services, markets, competition, regulation | Segments and where revenue comes from; the story behind the forecast. A good place to start. |
+| Risk factors (Item 1A) | The most significant risks, generally listed by importance | Risks that are new, reworded or moved up; links to the sensitivities in Chapter 7 |
+| Management's discussion and analysis (MD&A, Item 7) | Management's account of results, liquidity and capital resources | Reasons for changes in revenue and margins; cash, debt and capital plans for Part B of the capstone |
+| Market risk (Item 7A) | Exposure to interest rates, currencies and commodities | Material for Chapter 14 |
+| Financial statements and supplementary data (Item 8) | Audited income statement, balance sheet and cash flow statement, with the auditor's report | The three statements from @sec-fsa |
+| Notes to the statements | Detail behind the numbers | Debt (rates and maturities), leases, segment revenue, stock-based pay, equity and share repurchases, taxes |
+
+The notes are where much of the analysis happens. @sec-fsa shows why: lease obligations, R&D and stock compensation can all change the picture (Section 5), and the debt footnote supplies the rates and maturities needed for cost of capital in Chapter 3.
+
+::: {.callout-note title="Dated items to keep in mind"}
+Rules about 10-K contents change. The SEC eliminated the requirement for a five-year "Selected Financial Data" table (Item 301 of Regulation S-K), effective February 10, 2021, although older guides, including the SEC's own investor bulletin on reading a 10-K, may still mention it. Companies must now include an Item 1C on cybersecurity risk management and governance, starting with annual reports for fiscal years ending on or after December 15, 2023. Item numbers other than 1, 1A, 1C, 7 and 8 (such as 7A for market risk and the item where share repurchases are reported) come from general knowledge of Form 10-K and were not checked line by line. Check the current Form 10-K instructions before assigning item numbers to students.
+:::
+
+### 3.5 Proxy statements and the 8-K in practice {.unnumbered}
+
+The proxy statement is the best place to see the incentives from Section 1.4. It shows who is nominated to the board and how top executives are paid, and it is where shareholder proposals appear. Many companies take their Part III information (directors and executive compensation) from the proxy statement instead of repeating it in the 10-K, so you may need both.
+
+The 8-K gives you news in time. Earnings releases arrive as 8-Ks and usually include the company's own non-GAAP measures, which should be read against the GAAP reconciliation as @sec-fsa (Section 7.5) explains. Acquisitions, new debt agreements and impairments also come through 8-Ks.
+
+### 3.6 Where Example Co.'s statements would appear {.unnumbered}
+
+Example Co. is invented and has no filing, but the map below shows where each Chapter 2 number would live.
+
+| **Example Co. figure** | **Where it would appear in a 10-K** |
+|----|----|
+| Revenues 1,000; net income 84 | Income statement (Item 8); discussed in MD&A |
+| Total assets 1,100; equity 600 | Balance sheet (Item 8) |
+| Debt 400; interest 30 | Balance sheet; debt footnote for rates and maturities |
+| Depreciation 50; capital expenditures 80 | Cash flow statement; notes on property and equipment |
+| Dividends paid 25 | Cash flow statement; equity note |
+
+### 3.7 A reading routine {.unnumbered}
+
+For each capstone company, a team can follow this 30-minute routine and write down what it finds.
+
+1.  Read the business section and list the segments and the main customers or markets.
+
+2.  Read the risk factors and mark the three that would move the valuation most.
+
+3.  Read the MD&A liquidity discussion and note cash, debt and any plans to borrow or return cash.
+
+4.  Open the financial statements and the auditor's report, and confirm the auditor's opinion.
+
+5.  Find the debt note, the segment note and the share repurchase information.
+
+6.  Compare with last year's filing and note what changed.
+
+### Check your understanding {.unnumbered}
+
+1.  Who writes a 10-K, and does the SEC guarantee that it is accurate?
+
+2.  A company announces quarterly results and holds an earnings call. Which filing carries the results, and how soon is it due?
+
+3.  Which part of the 10-K is best for understanding what the company does, and which for how management explains its results?
+
+4.  Why might an analyst read the proxy statement as well as the 10-K?
+
+5.  Where would you find the interest rate and maturity of a company's bonds?
+
+6.  A guide tells you to read the five-year "Selected Financial Data" table. What should you check?
+
+#### CFA connection {.unnumbered}
+
+Reading filings supports the Level I financial reporting topics and the practical use of statements from @sec-fsa. The CFA curriculum teaches the statements and standards rather than how to navigate EDGAR, so this section is practical skill rather than exam content. Check the current curriculum before listing a mapping.
+
+## Section 4. Setting Up the Capstone {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Based on the Week 1 plan and the capstone milestones in the weekly course outline for this course. Written in original wording. This section is a planning guide and does not rely on outside sources.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Describe the two parts of the capstone and when each is due.
+
+- Apply the rules for choosing a company.
+
+- Explain how this chapter supports each part of the project.
+
+### 4.1 What the capstone is {.unnumbered}
+
+Each team values a public company in **Part A** (Weeks 1 to 8), then recommends capital structure, payout and liquidity policy in **Part B** (Weeks 9 to 14), and presents the whole project to a mock investment committee in Week 15. The final deliverables are a memo, an Excel model and a presentation.
+
+| **Milestone** | **Due** |
+|----|----|
+| Ranked list of three candidate companies | Week 2, Session 1 |
+| Historical analysis (five years, Du Pont and ROIC) | Week 3, Session 1 |
+| WACC memo | Week 4, Session 1 |
+| Three-statement model and DCF | Weeks 6 and 7 |
+| Checkpoint 1: draft model | Week 8 |
+| Part B assigned; first part due | Week 9; Week 11 |
+| Checkpoint 2: Part B draft | Week 13 |
+| Final memo, model and presentation | Week 15 |
+
+### 4.2 Choosing a company {.unnumbered}
+
+Choose a U.S.-listed, non-financial company with at least five years of filings. Banks and insurers do not fit the free cash flow approach used all semester. Each team ranks three candidates, and the instructor approves one company per team so teams do not duplicate.
+
+Before you rank a company, check that you can find its 10-K filings for five years on EDGAR (Section 3.3), that it is not a bank or insurer, and that its business is one your team can explain in two sentences after reading the business section.
+
+### 4.3 How this chapter supports the project {.unnumbered}
+
+| **Chapter 1 idea** | **Capstone use** |
+|----|----|
+| Goal of the firm (Section 1.3) | The valuation answers whether decisions add value for owners |
+| Three decisions (Section 1.2) | Part A looks at investment and Part B at financing and payout |
+| Agency and governance (Section 1.4) | Part B recommendations must consider incentives and pay |
+| Diagnostic (Section 2) | Shows which review topics to prioritize before Chapters 3 and 4 |
+| EDGAR and the 10-K (Section 3) | The source for every input in the model |
+
+### 4.4 Week 1 tasks {.unnumbered}
+
+1.  Take the diagnostic quiz in Section 2.5 and score it using Section 2.6.
+
+2.  Complete a short scavenger hunt on a sample company's filings: find segment revenue, the debt footnote, share repurchases and the risk factors.
+
+3.  Choose three candidate companies, rank them and bring the list to Week 2, Session 1.
+
+### Check your understanding {.unnumbered}
+
+1.  Why does the capstone exclude banks and insurers?
+
+2.  Which part of the project depends most on the 10-K debt footnote?
+
+3.  Name two reasons to read last year's 10-K alongside this year's.
+
+4.  Which Chapter 1 section helps you explain why Part B must consider incentives?
+
+#### CFA connection {.unnumbered}
+
+The capstone is a practice project and does not map directly to a CFA reading. It uses the topics from Sections 1 to 3 in a realistic task.

@@ -1,6 +1,8 @@
 project:
   type: book
   output-dir: docs
+  resources:
+    - chapters/downloads/
   
 book:
   title: "Advanced Financial Management"
@@ -17,11 +19,14 @@ book:
     - part: "Foundation"
       chapters:
       - chapters/01-Finance_function.qmd
-#      - chapters/02-statement_analysis.qmd
-#    - part: "Values and Investment"
-#      chapters:
-#      - chapters/03-cost_of_capital.qmd
-#    - references.qmd
+      - chapters/02-financial-statements.qmd
+    - part: "Values and Investment"
+      chapters:
+      - chapters/03-Cost_of_capital.qmd
+      - chapters/04-Capital_budgeting.qmd
+      - chapters/05-Forecasting.qmd
+      - chapters/06-DCF_valuation.qmd
+    - references.qmd
 
 bibliography: references.bib
 

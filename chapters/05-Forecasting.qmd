@@ -1,3 +1,753 @@
----
-title: "Forecasting & Three Statement Modeling"
----
+# Forecasting and Three-Statement Modeling {#sec-forecasting}
+
+This chapter teaches you to turn a company's story into a forecast, build the three financial statements around that forecast, convert them into free cash flow and value, and test the result before trusting it. "Example Co." continues from @sec-fsa: its year-0 statements are the ones built there, and every forecast figure for it is invented for teaching. Real-company and data-set figures are cited in footnotes and dated where they may have changed.
+
+| **Section** | **Topic** | **Main question** |
+|---------------|--------------------------|-------------------------------|
+| 1 | From story to statements | What is a forecast for, and how is a model organized? |
+| 2 | Forecasting the drivers | How do we choose revenue growth, margins, working capital and reinvestment? |
+| 3 | Building the three statements | How do the statements link, and what closes the model? |
+| 4 | From statements to value | How do we get free cash flow and a terminal value out of the model? |
+| 5 | Testing the model | Is the forecast consistent, how sensitive is it, and what goes wrong? |
+| 6 | A workflow for your own model | What are the steps and the deliverable? |
+
+Sections 1 and 2 set up the forecast, Section 3 builds the statements, Section 4 values them, Section 5 tests them and Section 6 turns the chapter into a procedure. Each section ends with review questions and a note on the related CFA readings.
+
+## Section 1. From Story to Statements {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Each section is a summary written in original wording. Footnotes identify where each point comes from, and the chapter closes with a reference list. Example Co. figures are invented and extend the running example from @sec-fsa. Figures for real companies and data sets are dated, because they change.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Name the main uses of forecast ("pro forma") statements.
+
+- Describe how a narrative becomes four value drivers, and apply the possible, plausible and probable tests.
+
+- Describe a sales-driven model and separate functional relationships from policy decisions.
+
+- List the steps for building a three-statement model in a sensible order.
+
+- Explain why the base year must be cleaned before it is projected.
+
+### 1.1 Why we forecast {.unnumbered}
+
+Projected financial statements are a core tool of corporate finance. They are used to **value** the firm and its securities, to **plan financing** (how much the firm will need to borrow or raise in future years, which is the heart of credit analysis), and to play "what if" games: what happens to cash, debt and covenants if sales are lower, costs are higher or the dividend rises?[^b1] In a corporate finance job, the budget, the financing plan and the valuation all come from the same model.
+
+### 1.2 Story first, numbers second {.unnumbered}
+
+A forecast that starts with a growth rate typed into a cell is a guess. A better order is to tell a short, focused story about the business (its products, markets, competition and management, and the economy around it), turn each part of the story into a value driver, and only then test whether the numbers are believable.[^d1]
+
+| **Part of the story** | **Driver it sets** | **Test to apply** |
+|----------------------|--------------------|--------------------------------|
+| How large can the market become, and what share can the firm win? | Revenue growth (market size × share) | Convert the implied revenue into dollars and compare it with the market and with the largest firms in the sector |
+| How profitable can the business be when it matures? | Operating margin (a target) and tax rate | Compare the target with the sector; a margin near the top of the sector needs a stated reason |
+| How much must the firm invest to grow? | Reinvestment (capital expenditure, working capital, acquisitions) | Compare with the firm's history and with sector averages |
+| How risky is the business, and how long will its advantage last? | Cost of capital, length of high growth, chance of failure | Does risk fall as the firm matures? Is a growth period beyond ten years justified? |
+
+Two rules keep the story usable: keep it **simple** and keep it **focused**. The bigger and more ambitious the story, the more evidence is needed that it is **possible** (it can happen), **plausible** (there is a credible path) and **probable** (it is likely enough to justify the numbers).[^d1]
+
+### 1.3 The architecture of a three-statement model {.unnumbered}
+
+Almost all models of this kind are **sales-driven**: revenue is forecast first, and most other lines are tied to it, directly or through another line. Receivables, for instance, are taken as a percentage of revenue.[^b2] Lines fall into two kinds:
+
+- **Functional relationships** are determined by sales or by other lines: receivables as a share of revenue, depreciation as a rate on fixed assets, interest as a rate on debt.
+
+- **Policy decisions** are set by management: the mix of debt and equity, the dividend and any share repurchases.
+
+Operating assets and operating liabilities are usually functional, and the financing mix is usually policy.[^b2] That split tells you where the model needs judgment and where it only needs arithmetic.
+
+| **Step** | **What you build** | **Why in this order** |
+|-------|------------------------------|-----------------------------------|
+| 1 | An assumptions page holding every driver | A change in one place flows through the whole model |
+| 2 | Revenue, operating costs, depreciation, operating income | The operating forecast drives everything else |
+| 3 | Operating balance sheet lines: working capital and fixed assets | They are functions of revenue |
+| 4 | Financing lines: debt, interest, dividends, equity | These are policy choices layered on the operating forecast |
+| 5 | Net income, retained earnings and the cash flow statement | They link the first two statements |
+| 6 | The plug that closes the balance sheet | Something must absorb the difference (Section 3.3) |
+| 7 | Checks: the balance sheet balances and cash reconciles | Catches errors before they reach the valuation |
+| 8 | Free cash flow, terminal value and valuation | Uses the finished statements |
+
+### 1.4 Start from a clean base year {.unnumbered}
+
+A forecast inherits whatever is in the base year. One-time gains and charges, leases treated as operating costs and research spending expensed rather than capitalized all distort the starting margin and the starting capital. Before projecting, adjust operating income for one-time items, leases and research and development, compare the resulting margin with the sector, and count research and acquisitions as part of reinvestment.[^d2]
+
+The tools for this are in @sec-fsa (Sections 5 and 7): clean the statements, then separate core from non-core earnings. Example Co.'s base year needs no adjustment. The variant in Section 7.4 of @sec-fsa, with a \$12 pre-tax gain buried in net income, shows the cost of skipping this step: a forecast that grows reported net income of 84 instead of core net income of 75.6 overstates every future year.
+
+### Check your understanding {.unnumbered}
+
+1.  Name three uses of forecast statements.
+
+2.  Classify each line as functional or policy: receivables, dividends, depreciation, debt, net fixed assets. (Answer: receivables, depreciation and net fixed assets are functional; dividends and debt are policy.)
+
+3.  Example Co. revenue is 1,000 and is forecast to grow 8% and then 7%. How many dollars of new revenue does each year add? (Answer: 80, then 75.6.)
+
+4.  A start-up forecasts a 30% share of a \$50 billion market in ten years. Which of the possible, plausible and probable tests is hardest to meet, and what evidence would you ask for?
+
+5.  Example Co.'s reported net income is 84 and its core net income is 75.6. If net income simply grew 8%, by how much would year-1 net income be overstated by starting from 84? (Answer: 84 × 1.08 – 75.6 × 1.08 = about 9.1.)
+
+#### CFA connection {.unnumbered}
+
+Relates to the CFA material on financial statement modeling (for example, the reading "Introduction to Financial Statement Modeling"). Reading titles and learning outcomes change between curriculum years, and the outcomes were not compared line by line with this chapter, so check the current curriculum before relying on this mapping.
+
+[^b1]: Benninga (2014), p. 127.
+
+[^b2]: Benninga (2014), pp. 127–128.
+
+[^d1]: Damodaran, *Narrative and Numbers* (2025 slide deck), slides 29–31 (keep the story simple and focused), 35 (possible, plausible, probable) and 42–44 (from story to growth, margin, reinvestment and risk inputs).
+
+[^d2]: Damodaran, *DCF To-Do List*, steps on adjusting operating income for one-time charges, leases and research and development, comparing margins with the sector, and including research and acquisitions in capital expenditure.
+
+## Section 2. Forecasting the Drivers {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Summarized from published modeling and valuation sources; see the footnotes. Sector figures come from a US data set dated January 2026. Example Co. figures are invented and tie to @sec-fsa.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Forecast revenue with a fading growth path and test it in dollar terms and against market size.
+
+- Explain why a compound growth rate depends on its end points and why a trend regression can be steadier.
+
+- Set a target operating margin and model fixed and variable costs.
+
+- Forecast working capital as a share of revenue and fixed assets, depreciation and capital expenditure from sales.
+
+- Convert between the balance-sheet-ratio method and the sales-to-capital method of reinvestment.
+
+- Use sector data as a range, not a target.
+
+### 2.1 Revenue {.unnumbered}
+
+**Growth should fade as the firm gets larger.** How fast depends on the size of the market, the strength of competition and the quality of management.[^d3] Three checks keep the path honest:
+
+- **Dollars, not percentages.** Convert each growth rate into the dollars of new revenue it needs. Compounding is easy to underestimate, and a modest-looking percentage can imply a very large dollar increase.[^d3]
+
+- **Market size and share.** Revenue should equal the total market times the firm's share. If the implied share is larger than any competitor has reached, the story needs more support.[^d1]
+
+- **Sector evidence.** Compare the long-run growth rate with mature firms in the sector, and with the firm's own growth as it grew larger.[^d3] US filers report revenue and operating income by business segment, which allows a forecast segment by segment.[^d2]
+
+**History is a guide, but the end points matter.** A compound annual growth rate (CAGR) uses only the first and last values. The same twelve years of sales for a large equipment maker give very different answers depending on the years chosen.[^b3]
+
+| **Method (same sales series, 2000–2011)** | **Growth** |
+|---------------------------------------|-----------|
+| CAGR, 2000 to 2011 | 10.44% |
+| CAGR, 2001 to 2010 | 8.49% |
+| CAGR, 2005 to 2010 | 3.22% |
+| CAGR, 2006 to 2011 | 13.79% |
+| Linear trend (yearly slope ÷ 2011 sales) | 5.27% |
+
+A regression of sales on time uses every observation, so it depends less on the end points, and it is often the steadier estimate. For an established business, a useful starting point is that long-run growth should be close to the economy's real growth plus inflation.[^b3]
+
+**Horizon.** Most explicit forecasts run five to ten years. Be cautious about going beyond ten, since few firms keep a durable advantage that long.[^d2][^d4]
+
+**Example Co.** assumes growth of 8%, 7%, 6%, 5% and 4% from revenue of 1,000. In dollars, that is new revenue of about 80, 76, 69, 61 and 51, a fading path that ends close to the terminal growth rate used in Section 4.
+
+### 2.2 Margins and costs {.unnumbered}
+
+Operating margin links revenue to operating income. Its current level is rarely the right one for the whole forecast.
+
+| **Current margin is...** | **Typical causes** | **Forecast treatment** |
+|-----------------|------------------------------|---------------------------|
+| Too low (the common case) | Up-front fixed costs, selling costs aimed at future growth, a lag between spending and revenue | Move toward a target margin; the speed depends on the cause |
+| Too high (less common) | A niche in a small market, patent protection that will lapse | Move down as protection erodes |
+
+The target is judged against the sector and against larger, stable firms.[^d3][^d1] How long convergence takes depends on the cause of the gap: infrastructure margins, for example, depend on when the investment becomes productive and capacity fills.[^d3]
+
+**Fixed and variable costs.** Operating costs rarely move one-for-one with revenue. A regression of operating costs (before depreciation) on sales for the equipment maker above gave costs of about 3,833 plus 0.7789 of each dollar of sales, with a fit near 99%.[^b3] The fixed part means costs fall as a share of sales when sales rise, which is **operating leverage**, and the reverse when sales fall. Keep depreciation separate from other operating costs so that fixed assets can be modeled on their own and EBITDA can be reported.[^b3]
+
+**Example Co.** keeps operating costs before depreciation at 80% of revenue (an EBITDA margin of 20%) and depreciation at 5% of revenue. In @sec-fsa, cost of goods sold (600) and SG&A (250) include 50 of depreciation, so costs before depreciation are 800 on revenue of 1,000. Holding the margin flat is a deliberate simplification, and question 3 below shows what changes if part of the cost is fixed.
+
+### 2.3 Working capital {.unnumbered}
+
+**Non-cash working capital** is non-cash current assets minus non-debt current liabilities (cash and interest-bearing debt are left out, because they are financing items). Forecast it as a percentage of revenue, using an average over several years instead of one year's value.[^d2] Ratios move through the business cycle, so choose the figure and document why. For the equipment maker, current assets ran from about 54% to 69% of sales across five years.[^b3]
+
+**Example Co.** has receivables of 150 (15% of revenue), inventory of 100 (10%) and payables and accruals of 100 (10%). Non-cash working capital is therefore 150, or 15% of revenue, and every extra dollar of revenue absorbs about 15 cents of cash.
+
+### 2.4 Fixed assets, depreciation and reinvestment {.unnumbered}
+
+Fixed assets can be tied to sales in three ways, and the choice changes capital expenditure.[^b4]
+
+| **Approach** | **Assumption** | **Implication for capital expenditure** | **Fits** |
+|----------------------|-------------------------|---------------------------|----------------------|
+| Net fixed assets as a share of sales | Productive capacity tracks after-depreciation value | Capex = change in net fixed assets + depreciation | Most firms (the default here) |
+| Gross fixed assets as a share of sales | Depreciation has no economic meaning | Capex = change in gross fixed assets | Assets that do not wear out in practice |
+| Net fixed assets constant | Depreciation is the maintenance spending needed to serve existing sales | Capex = depreciation | Firms whose existing base can serve added sales, such as a supermarket |
+
+**Depreciation** is best set by asset class and weighted by the mix. The equipment maker's weighted rate of about 13.3% came from asset lives of 32.5 years for buildings, 6.5 for machinery and 5.5 for leased equipment.[^b3]
+
+**Reinvestment** is the cash the firm must put back to grow: net capital expenditure plus the increase in working capital, plus acquisitions and capitalized research where they apply.[^d2] Growth is not free, and a forecast that adds revenue without reinvestment is overstating cash flow.[^d3] A second way to forecast it is the **sales-to-capital ratio**:
+
+$$\text{Reinvestment}_t = \frac{\text{Change in revenue}_t}{\text{Sales} / \text{Capital}}$$
+
+The ratio can come from the company's own history, which tends to be steadier than capital expenditure or working capital taken separately, or from sector averages.[^d3] The relevant ratio is the **marginal** one, because growth is driven by returns on new investment, and marginal and average ratios can differ.[^d5] If spending comes before the revenue it supports, use the following year's revenue change.[^d3] A firm with spare capacity can grow for a while with little reinvestment, so forecast capacity use to see when spending must restart.[^d3]
+
+The two methods are the same thing seen from different sides. Example Co. needs 15 of working capital and 65 of net fixed assets for each 100 of revenue, which is 80 of capital, so its marginal sales-to-capital ratio is 100 ÷ 80 = **1.25** (intangibles are held flat). In year 1, new revenue of 80 ÷ 1.25 = **64** of reinvestment, which is 12 of working capital plus 52 of net capital expenditure. The average ratio from @sec-fsa (1,000 ÷ 900 = 1.11) is lower because it also counts the 100 of intangibles; using it would give 72, which is right only if intangibles must grow too.
+
+### 2.5 Taxes, interest and payout {.unnumbered}
+
+- **Tax rate.** Use the effective rate in the early years, but if it is far below the marginal rate, move it toward the marginal rate over time.[^d2] Accumulated losses reduce taxable profit until they are used up (Section 3.4).
+
+- **Interest.** Interest equals a rate times the debt balance. Using the opening balance keeps the model simple; using the average balance is more accurate but makes the model circular (Section 3.4).[^b5]
+
+- **Dividends.** Use a payout ratio, a target dividend per share, or growth in total dividends. The equipment maker's model grew total dividends at the 8.2% compound rate of its history.[^b3]
+
+**Example Co.** uses a 30% tax rate, 7.5% interest on opening debt (30 ÷ 400) and a 30% dividend payout (25 ÷ 84).
+
+### 2.6 Benchmarks: use sector data as a range {.unnumbered}
+
+Sector averages show whether your drivers fall within what firms actually achieve.
+
+| **Measure** | **Example Co. (year 0)** | **All US non-financial firms** | **Software (system and application)** | **Retail (grocery and food)** | **Steel** | **Utility (general)** |
+|------------------|------------|------------|------------|------------|------------|------------|
+| Pre-tax operating margin (lease-adjusted) | 15.0% | 13.06% | 33.21% | 1.85% | 4.11% | 23.21% |
+| Non-cash working capital ÷ revenue | 15.0% | 13.77% | 26.79% | 1.94% | 22.68% | 40.65% |
+| Net capex ÷ revenue | 3.0% | 4.29% | 17.82% | –1.90% | 5.69% | 33.58% |
+| Sales ÷ invested capital | 1.11 | 1.43 | 1.54 | 4.65 | 1.80 | 0.30 |
+
+Source: sector data set, US firms, data as of January 2026.[^d6] Example Co. has no leases, so its unadjusted and lease-adjusted margins are the same. Net capex for Example Co. is capital expenditure less depreciation (80 – 50 = 30).
+
+How to read it: Example Co.'s margin is close to the all-firm figure, and it uses more capital per dollar of sales (1.11 against 1.43). The spread across sectors, from a 1.85% margin and a sales-to-capital ratio of 4.65 in grocery retail to 23% and 0.30 in utilities, shows that no ratio is "right" on its own. The comparison is a range check, not a target.
+
+::: {.callout-note title="Dated items"}
+The sector figures are pooled across firms of every age and size, are pre-tax, and are revised each year. Check the current data before quoting a number. The published equipment-maker model used for illustration in this chapter is built on 2007–2011 statements.
+:::
+
+### Check your understanding {.unnumbered}
+
+1.  A start-up with revenue of 100 forecasts 60% growth for five years. What is year-5 revenue, and how many dollars of new revenue does the last year need? (Answer: 100 × 1.6^5 = about 1,049; the last year adds about 1,049 – 655 = 393, almost four times the starting revenue.)
+
+2.  Using the table in 2.1, which growth figure would you use as a starting point, and why is a single CAGR a poor choice?
+
+3.  Suppose Example Co.'s operating costs before depreciation are 300 fixed plus 50% of revenue (still 800 at revenue of 1,000). What is EBITDA, and the EBITDA margin, at revenue of 900 and of 1,080? (Answer: 150 and 16.7%; 240 and 22.2%, against 216 and 20% if costs move in proportion.)
+
+4.  Example Co.'s revenue rises by 100. By how much do receivables, inventory and payables change, and what is the net cash need? (Answer: +15, +10 and +10; net working capital rises by 15.)
+
+5.  Year-1 revenue growth is 80. What is net reinvestment using the marginal sales-to-capital ratio of 1.25, and using the average ratio of 1.11? Which is better if the firm does not need to add intangibles? (Answer: 64 and 72; use 64.)
+
+6.  Example Co.'s year-1 net capital expenditure is 52 on revenue of 1,080. Compare that ratio with year 0 (3.0%) and the sector figure (4.29%). (Answer: 4.8%, higher than both because growth is 8%.)
+
+7.  For which kind of firm is "capital expenditure equals depreciation" a reasonable assumption, and what would you check before using it?
+
+#### CFA connection {.unnumbered}
+
+Relates to the CFA material on forecasting income statement and balance sheet items within a financial statement model, including the link between growth and investment. Neither source covers the CFA's own classification of forecasting approaches, which would need separate material. Check the current curriculum.
+
+[^d3]: Damodaran, *Growth Companies: Value Drivers* (*The Little Book of Valuation*), and *Valuing High Growth Firms* (lecture slides, chapter 11), on revenue growth and its decline over time, absolute dollar checks, sector comparisons, target margins and the reasons current margins are too low or too high, reinvestment from the sales-to-capital ratio, lags, and spare capacity.
+
+[^b3]: Benninga (2014), pp. 166–174. The data are a published pro forma model of Caterpillar built from 2007–2011 statements: sales growth measures (pp. 166–168), current assets and liabilities (p. 168), operating cost regression (pp. 169–170), fixed assets (pp. 170–172), depreciation by asset class (pp. 172–173), dividends (p. 173). The remark on real growth plus inflation is in a footnote on p. 168.
+
+[^d4]: Damodaran, *Valuing High Growth Firms* (lecture slides, chapter 11), on the rarity of growth periods longer than ten years.
+
+[^b4]: Benninga (2014), pp. 142–144, on three ways to model fixed assets.
+
+[^d5]: Damodaran, *Valuation (Spring 2024)*, Session 11 slides, section "Sales to Invested Capital: A Pathway to Estimating Reinvestment" (about slides 195–209), on marginal versus aggregate ratios.
+
+[^b5]: Benninga (2014), pp. 131–134, on interest on average balances and circular references.
+
+[^d6]: Damodaran, *Cash Flow Drivers by Sector (US)*, data set (94 industries; data as of January 2026). Columns used: pre-tax operating margin adjusted for leases, non-cash working capital as a percentage of revenues, net capital expenditure as a percentage of revenues, and sales to invested capital (last twelve months). "All US non-financial firms" is the data set's "Total Market (without financials)" row of 4,822 firms.
+
+## Section 3. Building the Three Statements {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+The model structure follows the sales-driven approach in the footnoted modeling text; the Example Co. numbers are invented and extend @sec-fsa. All figures are rounded for display, so totals may differ from the sum of the parts by 1.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Write the formulas that link the income statement, balance sheet and cash flow statement.
+
+- Build a five-year forecast for Example Co. and check that it balances and that cash reconciles.
+
+- Explain the mechanical and the financial meaning of the plug.
+
+- Handle a model whose cash goes negative, using debt as the plug and a minimum cash balance.
+
+- Describe circular references, target debt ratios, scheduled repayment and loss carryforwards.
+
+### 3.1 Example Co.: assumptions {.unnumbered}
+
+| **Driver** | **Assumption** | **Basis (year 0 from @sec-fsa)** |
+|---------------------|-----------------------|---------------------------|
+| Revenue growth | 8%, 7%, 6%, 5%, 4% | Fading path from revenue of 1,000 |
+| Operating costs before depreciation | 80% of revenue (EBITDA margin 20%) | 800 ÷ 1,000 |
+| Depreciation | 5% of revenue | 50 ÷ 1,000 |
+| Receivables | 15% of revenue | 150 ÷ 1,000 |
+| Inventory | 10% of revenue | 100 ÷ 1,000 |
+| Payables and accruals | 10% of revenue | 100 ÷ 1,000 |
+| Net fixed assets | 65% of revenue | 650 ÷ 1,000 |
+| Intangibles | Constant at 100 | No acquisitions or amortization |
+| Debt | Constant at 400; interest at 7.5% of the opening balance | 30 ÷ 400 |
+| Interest on cash | None | As in @sec-fsa |
+| Tax rate | 30% | As in @sec-fsa |
+| Dividends | 30% of net income | 25 ÷ 84 |
+| Plug | Cash | Section 3.3 |
+
+::: {.callout-tip title="Companion workbook"}
+[Download the Example Co. model (Excel)](downloads/example-co-forecast-model.xlsx). Every number in Sections 3 to 5 is a live formula driven by the blue cells on the *Assumptions* sheet, so you can change a driver and watch the statements, free cash flow and value update.
+
+- Set **Case** to 2 to run the stress case in Section 3.4. Set **Plug** to 1 for cash (debt fixed) or 2 for the debt revolver with a minimum cash balance.
+- The *Valuation* sheet reproduces Section 4 (enterprise value 1,375; equity value 1,075), *Sensitivity* reproduces the grid in 4.4, and *Checks* runs the tests in 5.1.
+:::
+
+### 3.2 The mechanics {.unnumbered}
+
+The equations below follow the standard sales-driven form.[^b6] Example Co.'s version separates depreciation from operating costs and charges interest on opening balances.
+
+| **Line**| **How it is computed** |
+|--------------------|---------------------------------------------------|
+| Revenue | Prior-year revenue × (1 + growth) |
+| EBITDA, depreciation, EBIT | 20% × revenue; 5% × revenue; EBITDA – depreciation |
+| Interest | 7.5% × opening debt |
+| Taxes, net income | 30% × pre-tax income; pre-tax income – taxes |
+| Dividends | 30% × net income |
+| Receivables, inventory, payables | 15%, 10% and 10% × revenue |
+| Net fixed assets | 65% × revenue |
+| Capital expenditure | Increase in net fixed assets + depreciation |
+| Debt | Unchanged (a policy choice) |
+| Shareholders' equity | Prior equity + net income – dividends |
+| Cash (the plug) | Total liabilities and equity – receivables – inventory – net fixed assets – intangibles |
+| Cash flow from operations | Net income + depreciation – increase in (receivables + inventory – payables) |
+| Cash flow from investing | – Capital expenditure |
+| Cash flow from financing | – Dividends + change in debt |
+
+### 3.3 The statements {.unnumbered}
+
+| **Income statement (\$)** | **Year 0** | **Year 1** | **Year 2** | **Year 3** | **Year 4** | **Year 5** |
+|--------------------------|------|------|------|------|------|------|
+| Revenues | 1,000 | 1,080 | 1,156 | 1,225 | 1,286 | 1,338 |
+| Operating costs before depreciation | (800) | (864) | (924) | (980) | (1,029) | (1,070) |
+| **EBITDA** | 200 | 216 | 231 | 245 | 257 | 268 |
+| Depreciation | (50) | (54) | (58) | (61) | (64) | (67) |
+| **Operating income (EBIT)** | 150 | 162 | 173 | 184 | 193 | 201 |
+| Interest expense | (30) | (30) | (30) | (30) | (30) | (30) |
+| Pre-tax income | 120 | 132 | 143 | 154 | 163 | 171 |
+| Taxes at 30% | (36) | (40) | (43) | (46) | (49) | (51) |
+| **Net income** | 84 | 92 | 100 | 108 | 114 | 119 |
+| Dividends (30% payout) | (25) | (28) | (30) | (32) | (34) | (36) |
+
+| **Balance sheet (\$)** | **Year 0** | **Year 1** | **Year 2** | **Year 3** | **Year 4** | **Year 5** |
+|--------------------------|------|------|------|------|------|------|
+| Cash (plug) | 100 | 101 | 110 | 130 | 161 | 204 |
+| Receivables | 150 | 162 | 173 | 184 | 193 | 201 |
+| Inventory | 100 | 108 | 116 | 122 | 129 | 134 |
+| Net fixed assets | 650 | 702 | 751 | 796 | 836 | 869 |
+| Intangibles | 100 | 100 | 100 | 100 | 100 | 100 |
+| **Total assets** | 1,100 | 1,173 | 1,250 | 1,333 | 1,419 | 1,507 |
+| Payables and accruals | 100 | 108 | 116 | 122 | 129 | 134 |
+| Debt | 400 | 400 | 400 | 400 | 400 | 400 |
+| Shareholders' equity | 600 | 665 | 735 | 810 | 890 | 974 |
+| **Total liabilities and equity** | 1,100 | 1,173 | 1,250 | 1,333 | 1,419 | 1,507 |
+
+| **Cash flow statement (\$)** | **Year 1** | **Year 2** | **Year 3** | **Year 4** | **Year 5** |
+|-----------------------------|------|------|------|------|------|
+| Net income | 92 | 100 | 108 | 114 | 119 |
+| + Depreciation | 54 | 58 | 61 | 64 | 67 |
+| – Increase in working capital | (12) | (11) | (10) | (9) | (8) |
+| **Cash flow from operations** | 134 | 147 | 158 | 169 | 179 |
+| Capital expenditures | (106) | (107) | (106) | (104) | (100) |
+| **Cash flow from investing** | (106) | (107) | (106) | (104) | (100) |
+| Dividends | (28) | (30) | (32) | (34) | (36) |
+| Net borrowing | 0 | 0 | 0 | 0 | 0 |
+| **Cash flow from financing** | (28) | (30) | (32) | (34) | (36) |
+| **Net change in cash** | 1 | 10 | 20 | 31 | 42 |
+
+**Two checks.** First, total assets equal total liabilities and equity in every year. Second, the net change in cash on the cash flow statement equals the change in cash on the balance sheet (for example, 134.4 – 106.0 – 27.7 = 0.7 in year 1, and cash rises from 100 to 100.7). The second check matters because cash is the plug: the balance sheet balances by construction, so only an independent cash flow statement can reveal an error.[^b7]
+
+### 3.4 The plug {.unnumbered}
+
+Every model needs one balance sheet item that closes it. The plug has two meanings:[^b8]
+
+- **Mechanical:** it is the item defined so that assets equal liabilities plus equity.
+
+- **Financial:** it states how the firm finances itself. With cash as the plug, the firm issues no stock, repays and borrows no debt, and every shortfall comes out of cash while every surplus goes into cash.
+
+| **Plug** | **Rule** | **What it assumes about financing** |
+|--------------|---------------------------|----------------------------------|
+| Cash and securities | Cash = total liabilities and equity – other assets | No new debt or equity; surplus piles up in cash |
+| Debt | Borrow what is needed to keep cash at a minimum | Shortfalls are funded by borrowing |
+| Equity | Issue or repurchase stock to hit a target debt-to-equity ratio | The firm manages leverage; the share count flexes |
+
+Example Co.'s output shows what the cash plug implies: cash climbs from 100 to 204 as the firm keeps 70% of earnings and capital expenditure slows with growth. A real firm would not sit on that cash. It would raise the dividend, buy back stock, repay debt or invest, and the forecast should say which.
+
+**When the plug misbehaves.** Raise growth and the payout and cash can turn negative. Suppose Example Co. grows 20%, 15%, 12%, 10% and 8% and pays out 50% of earnings, with everything else unchanged.
+
+| **Stress case (\$)** | **Year 1** | **Year 2** | **Year 3** | **Year 4** | **Year 5** |
+|----------------------------|------|------|------|------|------|
+| Cash with debt fixed at 400 | (8) | (90) | (151) | (196) | (219) |
+| Debt with cash held at a minimum of 50 | 458 | 541 | 607 | 657 | 687 |
+| Interest expense in the debt-plug case | 30 | 34 | 41 | 45 | 49 |
+
+Negative cash is not a real balance. It says the firm needs funding it has not arranged, and the model is quietly borrowing at the (zero) rate earned on cash. The fix is to make debt the plug whenever cash would fall below the minimum, and never let the formula repay debt unless the policy says so. In words: debt this year is the larger of last year's debt and the funding needed to keep cash at its minimum.[^b9] The result is useful in its own right: peak debt of 687 against 400 today is the financing need a credit analyst or treasurer wants to see.
+
+**Circular references.** If interest is computed on the *average* debt balance, interest depends on debt, debt depends on the funding gap, and the gap depends on interest. Spreadsheets solve this only with iterative calculation switched on, and a model that is not set up for it returns an error.[^b5] Example Co. avoids the problem by charging interest on opening balances. That is slightly less accurate but easier to audit.
+
+**Other financing structures the same framework handles:**
+
+- **Target debt-to-equity ratio.** Set debt equal to the target ratio times equity and let stock issued or repurchased be the plug.[^b10]
+
+- **Scheduled repayment.** In project-style financing, the loan is repaid in fixed installments, dividends are barred until it is repaid, no new equity is allowed, and cash is the plug. If costs run higher, the model shows the cash shortfall in the early years.[^b11]
+
+- **Tax loss carryforwards.** Taxable profit is the larger of zero and pre-tax profit less the unused loss carried forward. The effective tax rate is below the statutory rate until the losses are used up, and the cash-flow forecast should use the effective rate.[^b12]
+
+### Check your understanding {.unnumbered}
+
+1.  Compute Example Co.'s year-1 interest, pre-tax income, taxes, net income and dividends. (Answer: 30; 132; 39.6; 92.4; 27.7.)
+
+2.  Compute year-1 receivables, inventory and payables, and the increase in working capital. (Answer: 162, 108 and 108; the increase is 12.)
+
+3.  Compute year-1 capital expenditure. (Answer: 702 – 650 + 54 = 106.)
+
+4.  Compute year-1 ending cash from the cash flow statement. (Answer: 100 + 134.4 – 106 – 27.7 = about 100.7.)
+
+5.  In the stress case, what does the year-1 cash balance of –8 mean economically? What does the model assume about its cost?
+
+6.  In the debt-plug case, compute year-2 interest. (Answer: 7.5% × 457.5 = about 34.3.)
+
+7.  Why does charging interest on average balances make the model circular?
+
+#### CFA connection {.unnumbered}
+
+Relates to the CFA material on integrating the three statements in a model, including working capital, fixed assets and financing assumptions. The plug, circularity and debt-schedule mechanics are modeling practice rather than curriculum topics. Check the current curriculum.
+
+[^b6]: Benninga (2014), pp. 131–133, sets out the equations for a sales-driven model of this form.
+
+[^b7]: Benninga (2014), pp. 137–138, reconcile the change in cash from a consolidated statement of cash flows with the change implied by a model that uses cash as the plug.
+
+[^b8]: Benninga (2014), pp. 129–130, on the mechanical and financial meanings of the plug and the three candidate plugs (cash, debt, stock).
+
+[^b9]: Benninga (2014), pp. 145–148, on negative cash balances, debt as the plug and a minimum cash balance.
+
+[^b10]: Benninga (2014), pp. 148–149, on a target debt-to-equity ratio.
+
+[^b11]: Benninga (2014), pp. 150–153, on project finance with scheduled repayment.
+
+[^b12]: Benninga (2014), pp. 155–157, on tax loss carryforwards.
+
+## Section 4. From Statements to Value {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Summarized from published valuation and modeling sources; see the footnotes. The cost of capital, terminal growth rate and terminal return on capital for Example Co. are assumptions made for illustration. Check them against the cost of capital material before applying them to a real firm.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Compute free cash flow to the firm from the forecast statements and reconcile it to the cash flow statement.
+
+- State the rules for a terminal value: cap growth, tie reinvestment to growth and choose the return on capital deliberately.
+
+- Value Example Co. and move from enterprise value to equity value.
+
+- Explain why a high terminal value share is expected, and what matters instead.
+
+- Read a sensitivity table of value against the cost of capital and terminal growth.
+
+### 4.1 Free cash flow to the firm {.unnumbered}
+
+Free cash flow to the firm (FCFF) is the cash the business produces before any payment to lenders or owners:
+
+$$\text{FCFF} = \text{EBIT}(1 - t) + \text{Depreciation} - \text{Capital expenditure} - \Delta\,\text{Working capital}$$
+
+Equivalently, FCFF is after-tax operating income minus net reinvestment.[^b13][^d2]
+
+| **Example Co. (\$)** | **Year 1** | **Year 2** | **Year 3** | **Year 4** | **Year 5** |
+|---------------------------|------|------|------|------|------|
+| EBIT × (1 – 30%) | 113 | 121 | 129 | 135 | 140 |
+| + Depreciation | 54 | 58 | 61 | 64 | 67 |
+| – Capital expenditures | (106) | (107) | (106) | (104) | (100) |
+| – Increase in working capital | (12) | (11) | (10) | (9) | (8) |
+| **Free cash flow to the firm** | 49 | 61 | 73 | 86 | 99 |
+| Net reinvestment | 64 | 60 | 55 | 49 | 41 |
+
+**Reconciliation to the cash flow statement.** From @sec-fsa, FCFF less after-tax interest plus net borrowing equals free cash flow to equity. For year 1: 49.4 – (30 × 0.70 = 21.0) + 0 = 28.4, which equals cash flow from operations (134.4) less capital expenditure (106). It is paid out as dividends of 27.7 and the 0.7 added to cash.[^b13]
+
+### 4.2 The terminal value {.unnumbered}
+
+A firm has an indefinite life, but a forecast does not. The explicit forecast covers the growth period, and a **terminal value** captures the worth of everything after it. The usual approach is a stable growth model: cash flows grow at a constant rate forever, so
+
+$$\text{TV}_n = \frac{\text{FCFF}_{n+1}}{\text{WACC} - g} = \frac{\text{NOPAT}_{n+1}\,(1 - g/\text{ROC})}{\text{WACC} - g}$$
+
+where NOPAT is after-tax operating income and ROC is the return on capital earned on new investment.[^d7] Four rules keep it sensible:
+
+1.  **Cap the growth rate.** Stable growth cannot exceed the growth of the economy. It can be lower, and it can be negative for a declining business. The risk-free rate is a simple proxy for nominal economic growth, which gives the working rule: cap growth at the risk-free rate.[^d7][^d8] The formula is also meaningless if g is equal to or above the cost of capital.[^b14]
+
+2.  **Tie reinvestment to growth.** In stable growth, the reinvestment rate is g ÷ ROC. Do not assume that capital expenditure just replaces depreciation with no working capital, which implies a growth rate the assumption cannot support.[^d9]
+
+3.  **Choose the return on capital on purpose.** Growth creates value only when new investment earns more than the cost of capital. If ROC equals the cost of capital, growth adds nothing to value; if ROC is above it, higher growth adds value. Some analysts assume excess returns disappear in stable growth, while others point out that they can persist for long periods. Pick a position that matches the strength of the firm's advantage and explain it.[^d9][^d7]
+
+4.  **Let risk mature.** In stable growth, beta moves toward one, the cost of debt falls to that of a safer firm, the debt ratio moves toward the sector level, and the tax rate moves toward the marginal rate.[^d7][^d2]
+
+**Other approaches.** An exit multiple of EBITDA, earnings or book value is common in practice, and so are liquidation value (for a business built on a key person or a time-limited advantage) and a finite extra period of cash flows (for a short-lived business). A multiple imports today's market pricing into the answer, so it makes the valuation relative rather than intrinsic. Use it as a cross-check on the stable growth value, not as a replacement.[^d7][^d8][^b14]
+
+### 4.3 Valuing Example Co. {.unnumbered}
+
+Assumptions (all invented for teaching): a cost of capital of 9%, a stable growth rate of 3% (below an assumed risk-free rate of 4%) and a return on new capital in stable growth of 10%.
+
+| **Step** | **Calculation** | **Result (\$)** |
+|--------------------------|------------------------|-------------|
+| PV of year 1–5 free cash flow | 45.3 + 51.2 + 56.5 + 61.0 + 64.5 | 278.5 |
+| Year-6 after-tax operating income | 140.5 × 1.03 | 144.7 |
+| Reinvestment rate | 3% ÷ 10% | 30% |
+| Year-6 free cash flow | 144.7 × (1 – 0.30) | 101.3 |
+| Terminal value at end of year 5 | 101.3 ÷ (0.09 – 0.03) | 1,687.8 |
+| PV of terminal value | 1,687.8 ÷ 1.09^5 | 1,096.9 |
+| **Enterprise value** | 278.5 + 1,096.9 | **1,375.4** |
+| + Cash | From the year-0 balance sheet | 100.0 |
+| – Debt | From the year-0 balance sheet | (400.0) |
+| **Equity value** | | **1,075.4** |
+
+**From enterprise value to equity.** Add cash and non-operating assets, and subtract debt and every other claim ahead of shareholders, such as leases not already in debt, pension deficits, minority interests and options.[^d2] Example Co. has none of these. Treating cash as negative debt gives the same answer.[^b14]
+
+**Mid-year discounting.** The table discounts each cash flow as if it arrives at year-end. Cash arrives through the year, so a common refinement multiplies the enterprise value by (1 + WACC)^0.5 = 1.044, here giving about 1,436.[^b14]
+
+**The terminal value share.** The terminal value is 1,096.9 ÷ 1,375.4 = **80%** of enterprise value. Shares of 80% or more are normal and are not a reason to distrust the method, because the terminal cash flow is built from the same growth, margin and reinvestment assumptions as the explicit years. The question is whether those assumptions are credible, not how large the share is.[^d4][^d7] A useful cross-check: enterprise value is 6.9 times year-0 EBITDA of 200, which can be compared with the multiples of similar firms.
+
+**What the terminal return on capital is worth.**
+
+| **Terminal-period assumption** | **Reinvestment rate** | **Terminal value** | **Enterprise value** | **Equity value** |
+|----------------------------|----------|------------|------------|------------|
+| Return on capital equals the cost of capital (9%) | 33.3% | 1,607 | 1,323 | 1,023 |
+| Return on capital 10% (base case) | 30.0% | 1,688 | 1,375 | 1,075 |
+| Return on capital 13.1% (the return on new capital in the forecast continues) | 22.9% | 1,860 | 1,487 | 1,187 |
+| No reinvestment (growth for free) | 0% | 2,411 | 1,846 | 1,546 |
+
+Assuming growth with no reinvestment lifts equity value by 44% over the base case, with no change in the business. That is the "sleight of hand" the terminal rules guard against.[^d9]
+
+### 4.4 Sensitivity {.unnumbered}
+
+Equity value (\$) for different costs of capital and stable growth rates, with terminal return on capital at 10%:
+
+| **Cost of capital ↓ / growth →** | **2.0%** | **2.5%** | **3.0%** | **3.5%** | **4.0%** |
+|-------------------|-------|-------|-------|-------|-------|
+| 8% | 1,287 | 1,323 | 1,365 | 1,416 | 1,478 |
+| 9% | 1,043 | 1,058 | 1,075 | 1,095 | 1,118 |
+| 10% | 860 | 864 | 869 | 873 | 878 |
+| 11% | 719 | 717 | 714 | 711 | 706 |
+
+Value moves far more with the cost of capital than with growth. When the cost of capital is near the return on new capital (10%), growth adds almost nothing, and when it is above it (11%), higher growth lowers value. In a spreadsheet data table, blank out any cell where the growth rate is equal to or above the cost of capital, because the formula breaks down there.[^b15]
+
+### Check your understanding {.unnumbered}
+
+1.  Compute year-1 free cash flow to equity for Example Co. from FCFF. (Answer: 49.4 – 21.0 + 0 = 28.4.)
+
+2.  Recompute the terminal value with a stable growth rate of 3% and a return on new capital of 10%. (Answer: reinvestment 30%; free cash flow 144.7 × 0.70 = 101.3; terminal value 101.3 ÷ 0.06 = 1,688.)
+
+3.  The risk-free rate turns out to be 2.5%. What stable growth rate would you use, and what is equity value from the table? (Answer: no more than 2.5%; about 1,058.)
+
+4.  Terminal value is 80% of enterprise value. Does that mean the valuation rests on guesswork? Explain.
+
+5.  List three claims besides debt that might be subtracted in the move from enterprise value to equity value.
+
+6.  Apply mid-year discounting to Example Co.'s enterprise value. (Answer: 1,375.4 × 1.044 = about 1,436.)
+
+7.  Why does growth have no effect on terminal value when the return on capital equals the cost of capital?
+
+#### CFA connection {.unnumbered}
+
+Relates to the CFA material on free cash flow valuation, terminal value (growth and multiple methods) and the equity bridge from firm value, and to the discounted cash flow content of the equity valuation topic. Check the current curriculum for reading titles and for the treatment of the terminal growth rate.
+
+[^b13]: Benninga (2014), pp. 136–138, on the free cash flow definition and the reconciliation with the statement of cash flows. The link between free cash flow to the firm and to equity is developed in @sec-fsa, Section 4.3.
+
+[^d7]: Damodaran, *Terminal Value* (Valuation, Session 9 slides): stable growth cap, the terminal value formula with reinvestment of g ÷ ROC, what changes in stable growth, and the treatment of a large terminal value share.
+
+[^d8]: Damodaran, *Valuation (undergraduate, Spring 2023)*, Session 12 slides (about slides 198–202), on ways to estimate terminal value and the cap on growth.
+
+[^d9]: Damodaran, *Valuation (Spring 2023)*, Session 11 slides (about slides 203–214), on terminal reinvestment from g ÷ ROC, excess returns in perpetuity, the capital-expenditure-equals-depreciation shortcut, internal consistency, and matching the currency and inflation basis of cash flows and discount rates.
+
+[^b14]: Benninga (2014), pp. 138–142, on the terminal value formula, other terminal value variants (book value, price-earnings, EBITDA multiples), cash as negative debt and mid-year discounting.
+
+[^b15]: Benninga (2014), pp. 144–145, on data tables of equity value and the guard against a growth rate that is equal to or above the cost of capital.
+
+## Section 5. Testing the Model {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Summarized from published modeling and valuation sources; see the footnotes. The Caterpillar figures are from a published pro forma built on 2007–2011 statements and a 2012 share price, so they are dated. Example Co. figures are invented.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Run a set of consistency checks on a model and interpret the results.
+
+- Use sensitivity tables and scenarios, and explain why scenarios are better when drivers move together.
+
+- Explain why higher growth can lower value.
+
+- Identify the modeling errors that most often distort a forecast.
+
+### 5.1 Consistency checks {.unnumbered}
+
+A model can balance and still be wrong. These checks test whether the story, the statements and the valuation agree with each other.
+
+| **Check** | **Test** | **Example Co.** |
+|--------------------|-----------------------------|--------------------------|
+| Balance sheet | Assets equal liabilities plus equity in every year | Passes (Section 3.3) |
+| Cash reconciliation | The cash flow statement and the balance sheet give the same change in cash | 0.7, 9.8, 19.9, 30.8, 42.5 both ways |
+| Growth equals reinvestment times return | Growth in after-tax operating income ≈ net reinvestment ÷ prior-year after-tax operating income × return on new capital | Year 1: 64 ÷ 105 = 61.0%; × 13.1% = 8.0% |
+| Return on capital | The return on new capital against the cost of capital and the sector | 13.1% against 9% |
+| Margins and capital turnover | Within the sector range | Section 2.6 |
+| Dollar test | The dollars of new revenue are credible against the market | Section 2.1 |
+| Terminal growth | At or below the risk-free rate and below the cost of capital | 3% against an assumed 4% and 9% |
+| Terminal reinvestment | Equal to g ÷ ROC, not zero | 30% |
+| Implied multiple | Enterprise value ÷ EBITDA against similar firms | 6.9× |
+
+The growth check rests on the identity that expected growth equals the reinvestment rate times the return on new capital:[^d10]
+
+$$g_t = \frac{\text{Net reinvestment}_t}{\text{NOPAT}_{t-1}} \times \text{ROC}_{\text{new}}$$
+
+Example Co.'s return on new capital is its after-tax operating margin times its marginal sales-to-capital ratio: 10.5% × 1.25 = 13.1%. Applying the identity to each year reproduces the assumed growth of 8%, 7%, 6%, 5% and 4%, which confirms that the statements invest exactly what the story needs. A forecast whose growth is higher than this identity supports is promising growth it has not paid for.
+
+### 5.2 Sensitivity and scenarios {.unnumbered}
+
+A one-variable sensitivity table (Section 4.4) ranks the drivers by how much they move value. It has a limit: real drivers move together. A recession lowers growth and margins together and raises risk at the same time, so a table that varies them one at a time understates the range.
+
+**Scenarios** fix this. Each scenario is a coherent story with its own growth, margin, reinvestment and risk, and each gets a probability. For young firms, a chance of failure can be layered on top.[^d1] The probability-weighted value, and the spread between scenarios, say more than one point estimate.
+
+**Higher growth is not always better.** In a published example with a 20% cost of capital and fixed assets of 77% of sales, equity value rose as sales growth increased to about 6% (1,117) and then fell as growth rose further (1,049 at 16%), because the extra growth needed more investment than it returned.[^b15] This is the return-on-capital point from Section 4.2 in a sensitivity table.
+
+### 5.3 A cautionary case: a published equipment-maker model {.unnumbered}
+
+A published pro forma for Caterpillar, built from 2007–2011 statements, shows how reasonable-looking inputs can combine into an odd forecast.[^b16]
+
+| **Input or result** | **Value** |
+|-------------------------------------|------------------------|
+| Sales growth (trend regression) | 5.27% a year |
+| Operating costs before depreciation | 83.9% of sales (the 2011 level) |
+| Net fixed assets ÷ sales | 27.65% (five-year average; 2011 actual was 23.9%) |
+| Depreciation rate | 13.26% |
+| Stable growth / cost of capital | 9.0% / 10.84% |
+| Model value per share / market price | \$44.74 / \$90.60 |
+
+What the model produced, and what to learn from it:
+
+- **A step change in year 1.** Applying the five-year average (27.65%) to a base year whose ratio was lower (23.9%) lifts net fixed assets from 14,395 to 17,504 in one year, a rise of 21.6%, while sales rise 5.3%. An average over a cycle applied to an off-average starting point creates a jump that the story does not explain.
+
+- **Profit that falls while sales rise.** Depreciation climbs from 2,527 in 2011 to 7,225 in 2016 against sales growth of 29%, while the cost ratio is held fixed, so pre-tax profit falls from 5,958 in 2012 to 4,671 in 2016. Capital expenditure, depreciation and sales need to be consistent with one another.
+
+- **An implausible plug.** With treasury stock as the plug, the balance sheet absorbs repurchases: treasury stock grows from 9,451 in 2011 to 43,511 in 2016. Always look at what the plug is doing.
+
+- **A terminal value that is mostly the spread.** With growth of 9% and a cost of capital of 10.84%, the terminal value is 107,487, about 59 times the final-year cash flow of 1,814. In the grid of growth and cost of capital that the model displays, equity value per share runs from about –\$18 to \$389. A stable growth rate of 4% (an illustrative cap) would cut the multiple to about 15 times.
+
+- **A gap is a prompt, not a verdict.** A model value of \$44.74 against a market price of \$90.60 says the inputs and the market disagree. Re-examine the inputs first.
+
+::: {.callout-note title="Dated items"}
+The company statements, the cost of capital and the share price are from a 2014 text and refer to 2011–2012. The lessons about step changes, consistency and terminal value do not depend on the date. The numbers should not be reused.
+:::
+
+### 5.4 Common modeling errors {.unnumbered}
+
+The table collects the errors that recur in the sources used throughout this chapter.[^e1]
+
+| **Error** | **What you see** | **Fix** |
+|------------------------|--------------------------|--------------------------|
+| Drivers hard-coded inside formulas, or cell references not locked when copying across years | Zeros or wrong values in later years | Keep every driver on one assumptions page and lock the references |
+| Circular references without iteration enabled | An error message or stale numbers | Use opening balances, or enable iterative calculation knowingly |
+| Growth without reinvestment | Free cash flow that is too high | Tie reinvestment to growth with ratios or sales-to-capital |
+| Capital expenditure equals depreciation and no working capital in stable growth | A growth rate near zero hidden in a growth forecast | Use g ÷ ROC |
+| Stable growth at or above the cost of capital, or above the risk-free rate | An enormous or negative terminal value | Cap growth and block the invalid cells |
+| Nominal cash flows discounted at a real rate, or a currency mismatch | A value far too high or low | Match currency and inflation basis |
+| Negative cash balance | Cash below zero in a year | Make debt the plug with a minimum cash balance |
+| A cycle average applied to an off-average base year | A jump in year 1 | Phase the ratio in or normalize the base year |
+| A long explicit period with no basis | Growth continuing for decades | Limit to ten years unless the advantage is exceptional |
+| One cost of capital across growth and maturity | Overvalued early risk, undervalued late risk | Let the cost of capital fall as the firm matures |
+
+### 5.5 Bottom line {.unnumbered}
+
+- A forecast is a story turned into four drivers: growth, margin, reinvestment and risk.
+
+- Tie reinvestment to growth in every year, including the terminal year.
+
+- A model that balances is not a model that is right. Reconcile cash, test growth against reinvestment and check the plug.
+
+- Cap terminal growth at the risk-free rate and choose the return on capital on purpose.
+
+- Report a range from scenarios, not a single number.
+
+### Check your understanding {.unnumbered}
+
+1.  Verify the growth check for year 4. (Answer: net reinvestment 49.0 ÷ year-3 after-tax operating income 128.6 = 38.1%; × 13.1% = 5.0%.)
+
+2.  The terminal value multiple of final-year free cash flow is (1 + g) ÷ (WACC – g). Compute it for g = 9% and for g = 3% at a cost of capital of 10.84%. (Answer: 1.09 ÷ 0.0184 = 59.2×; 1.03 ÷ 0.0784 = 13.1×.)
+
+3.  Why can higher sales growth reduce a firm's value? Use the return on capital.
+
+4.  Example Co. scenarios give equity values of 800 (weak), 1,075 (base) and 1,300 (strong) with probabilities of 25%, 50% and 25%. What is the probability-weighted value? (Answer: 200 + 537.5 + 325 = 1,062.5.)
+
+5.  In the sensitivity table in Section 4.4, why is value almost flat across growth rates at a 10% cost of capital?
+
+6.  A model discounts nominal cash flows at a real rate and uses a stable growth rate equal to its cost of capital. Name the errors.
+
+#### CFA connection {.unnumbered}
+
+Relates to the CFA material on sensitivity and scenario analysis in valuation models and on checking a forecast for internal consistency. The identity linking growth, reinvestment and return on capital, and the growth cap at the risk-free rate, go beyond what the readings require. Check the current curriculum.
+
+[^d10]: Damodaran, *FCFF notes* (equity valuation notes), worked examples on expected growth as the reinvestment rate times the return on capital and on expected reinvestment as g ÷ ROC; also *Growth Companies: Value Drivers* (*The Little Book of Valuation*).
+
+[^b16]: Benninga (2014), pp. 161–178: model assumptions (p. 176), the pro forma and free cash flows (pp. 176–177), valuation and sensitivity (pp. 177–178). The first-year jump in net fixed assets, the fall in profit and the size of the terminal value multiple are derived from the figures in that model.
+
+[^e1]: Benninga (2014), pp. 131 and 135 (locking references), 134 (circular references), 142–148 (plugs and negative cash) and 144–145 (growth at or above the cost of capital); Damodaran, *Growth Companies: Value Drivers*, *Valuing High Growth Firms*, *Terminal Value* (Session 9) and *Valuation (Spring 2023)*, Session 11 (reinvestment, terminal rules, currency and inflation basis, growth period and cost of capital over time).
+
+## Section 6. A Workflow for Your Own Model {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section turns Sections 1 to 5 into a procedure. It is original, built on the sources footnoted earlier in the chapter.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Follow a repeatable sequence for forecasting and valuing a company from its annual report.
+
+- Produce a one-page memo that states the story, the value range and the assumptions that matter.
+
+### 6.1 The workflow {.unnumbered}
+
+| **Step** | **What to do** | **Where to look** | **Flag** |
+|----|---------------------|----------------------|---------------------------|
+| 1 | Clean the base year: remove one-time items, treat leases as debt, capitalize research where material | Annual report (Form 10-K), notes; @sec-fsa | Margin well above or below the sector for no clear reason |
+| 2 | Write the story in five sentences and list a target for growth, margin, reinvestment and risk | Business description, segment note | A story with no limit on growth or margin |
+| 3 | Set the revenue path in dollars and as market share | Segment data, industry reports | Implied share larger than any competitor |
+| 4 | Set the margin target and the convergence year; separate fixed and variable costs | Five years of history, sector data | Target at the top of the sector without a reason |
+| 5 | Set working capital and reinvestment from ratios or sales-to-capital | Balance sheet, sector data | Growth with little reinvestment |
+| 6 | Build the three statements; choose the plug; run the balance and cash checks | Your model | Cash below zero, or a plug that does something odd |
+| 7 | Compute free cash flow and the terminal value with growth at or below the risk-free rate and reinvestment of g ÷ ROC | Your model | Terminal growth above the cost of capital |
+| 8 | Run the sensitivity table (cost of capital against growth) and three scenarios with probabilities | Your model | Value that depends on a single input |
+| 9 | Write the memo | — | Conclusions not tied to the assumptions |
+
+**Deliverable.** A one-page memo that states the story, shows the forecast and the value range from the scenarios, names the three assumptions that move value most with the numbers behind them, and says what evidence would change your mind. A reader should be able to follow every number back to the filings or to a stated assumption.
+
+### Check your understanding {.unnumbered}
+
+1.  Which steps of the workflow can be completed using only the annual report, and which need outside data?
+
+2.  Choose a company from the sector table in 2.6. List its four value drivers and say where each would sit relative to the sector.
+
+3.  Which assumption in your memo would a skeptical reader attack first, and what is your evidence?
+
+#### CFA connection {.unnumbered}
+
+Applies the CFA material on building and presenting a financial statement model. No curriculum reading covers the memo format.
+
+## References {.unnumbered}
+
+Benninga, S. (2014). *Financial Modeling* (4th ed.). Cambridge, MA: MIT Press.
+
+Damodaran, A. *Cash Flow Drivers by Sector (US)* [data set, data as of January 2026]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/New_Home_Page/datafile/cfbasics.html>
+
+Damodaran, A. *DCF To-Do List* [checklist]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/DCFtodolist.pdf>
+
+Damodaran, A. *FCFF notes* [equity valuation notes]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/pdfiles/eqnotes/fcff.pdf>
+
+Damodaran, A. *Growth Companies: Value Drivers*, in *The Little Book of Valuation*. NYU Stern. <https://pages.stern.nyu.edu/adamodar/New_Home_Page/littlebook/growthvaluedrivers.htm>
+
+Damodaran, A. *Narrative and Numbers* [2025 slide deck]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/pdfiles/country/narrative&numbersDEShaw2025.pdf>
+
+Damodaran, A. *Terminal Value*, Valuation Session 9 [slides]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/pdfiles/valonlineslides/session9.pdf>
+
+Damodaran, A. *Valuation (Spring 2023)*, Session 11 [slides]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr23/session11slides.pdf>
+
+Damodaran, A. *Valuation (Spring 2024)*, Session 11 [slides]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/podcasts/valspr24/session11slides.pdf>
+
+Damodaran, A. *Valuation (undergraduate, Spring 2023)*, Session 12 [slides]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/podcasts/valUGspr23/session12slides.pdf>
+
+Damodaran, A. *Valuing High Growth Firms* [lecture slides, chapter 11]. NYU Stern. <https://pages.stern.nyu.edu/~adamodar/pdfiles/CLC/slides/Ch11.pdf>

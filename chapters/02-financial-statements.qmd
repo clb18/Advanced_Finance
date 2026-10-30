@@ -1,0 +1,1905 @@
+# Financial Statement Analysis and Quality of Earnings {#sec-fsa}
+
+This chapter teaches you to read the three financial statements, clean them up, measure performance with ratios, and judge how far reported earnings can be trusted. Material from Aswath Damodaran's free *Accounting for Finance* slides is marked "Damodaran". Supplements from Fridson & Alvarez (2002) are marked "Supplement". "Example Co." figures are invented for teaching.
+
+| **Section** | **Topic** | **Main question** |
+|---------------|--------------------------|-------------------------------|
+| 1 | The financial statements: an overview | What do the statements do, and what do they not do? |
+| 2 | Income statements | How is profit measured? |
+| 3 | Balance sheets | What does the firm own and owe? |
+| 4 | Cash flow statements | Where did cash come from and go? |
+| 5 | Accounting inconsistencies and their consequences | Which accounting choices distort the picture? |
+| 6 | Financial ratios | How do we compare firms and years? |
+| 7 | Quality of earnings | How far can reported profit be trusted and projected? |
+
+Sections 1 to 4 build the statements, Section 5 corrects them, Section 6 measures performance and Section 7 applies everything to judge earnings quality. Each section ends with review questions and a note on the related CFA readings.
+
+## Section 1. The Financial Statements: An Overview {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from Aswath Damodaran's free Accounting for Finance slides (NYU Stern), Session 1, and his "Financial Statement Analysis" slides. Material from his slides is labeled "Damodaran"; supplements from Fridson & Alvarez are labeled "Supplement". Written in original wording. Illustrative numbers marked "Example Co." are invented for teaching.
+
+Supplemented with Fridson & Alvarez, Financial Statement Analysis: A Practitioner's Guide (3rd ed., Wiley, 2002) on why statements are not neutral (preparer incentives, restatement cases, smoothing). Blocks labeled "Supplement" mark the added material, with the book's printed page numbers. Dated items are flagged where the book pre-dates later rules.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Explain what accounting is meant to do, and what it is not meant to do.
+
+- Describe the balance sheet, income statement and statement of cash flows and how they connect.
+
+- Contrast the accounting view of the balance sheet with the finance view (debt, equity, assets in place, growth assets).
+
+- Describe the three principles behind accounting measurement and why they matter to an investor.
+
+- Distinguish GAAP from IFRS at a high level.
+
+- Explain why preparers' incentives mean a clean audit is not a guarantee of accuracy.
+
+### 1.1 What accounting does {.unnumbered}
+
+Accounting verifies transactions, records them accurately and reports them in a form others can understand. Damodaran describes accountants as **historians**: they document what has already happened. They do not forecast the future and they do not value assets. Keeping that in mind explains most of what looks odd in financial statements.
+
+A set of statements should answer three questions:
+
+1.  What does the business **own**? (assets)
+
+2.  What does it **owe**? (liabilities)
+
+3.  How much **profit** did it make? (earnings)
+
+### 1.2 The three statements {.unnumbered}
+
+| **Statement** | **Question it answers** | **Timing** | **Main contents** |
+|----------------|-----------------|----------------|-----------------------|
+| Balance sheet | What does the firm own and owe? | A point in time | Assets, liabilities, shareholders' equity |
+| Income statement | How much did the firm earn? | A period (quarter, year) | Revenues less costs, ending in net income |
+| Statement of cash flows | Where did cash come from and go? | A period | Operating, investing and financing cash flows |
+
+#### The balance sheet {.unnumbered}
+
+The balance sheet lists assets and liabilities at one date; the gap between them is the owners' equity. Asset categories include fixed assets (land, equipment), current assets (inventory, receivables, cash), financial assets (investments in securities or other firms) and intangible assets (patents, trademarks, brand names).
+
+#### The income statement {.unnumbered}
+
+It starts with revenues from selling goods or services and subtracts costs (cost of goods sold, operating expenses, interest, taxes) to reach net income. Its purpose is to measure how much was earned over the period using **accounting** earnings.
+
+#### The statement of cash flows {.unnumbered}
+
+It tracks changes in the cash balance. Damodaran calls it the most "honest" statement because it records actual cash in and out, leaving less room for judgment. It has three parts:
+
+- **Operations:** cash from running the business, after adjusting for non-cash expenses such as depreciation and amortization and for changes in working capital.
+
+- **Investing:** capital expenditures, cash acquisitions and investments in financial assets.
+
+- **Financing:** new debt borrowed or repaid, new equity issued, and dividends and buybacks.
+
+#### How the statements connect {.unnumbered}
+
+The statements are not independent. A choice in one shows up in the others. Depreciation is an expense on the income statement and is added back on the cash flow statement. A rise in fixed assets between two balance sheets appears as capital expenditure in the cash flow statement. Net income flows into shareholders' equity. A reader who checks that the three statements tell a consistent story catches many errors and some manipulation.
+
+### 1.3 Three principles behind accounting measurement {.unnumbered}
+
+Accounting follows a set of conventions that differ from how a finance professional thinks about value:
+
+1.  **Book value (historical cost) is the best estimate of value** unless there is a good reason to say otherwise.
+
+2.  **Market prices and estimated values are distrusted** because they are seen as volatile and open to manipulation.
+
+3.  **When methods conflict, choose the more conservative (lower) value.**
+
+The consequence is that a balance sheet rarely shows what assets are worth today. Only current assets (cash, receivables, inventory) sit close to market value, along with some sectors, such as banks, that mark assets to market. Because assets are at historical cost, the equity figure is also not a current value. There is a gradual move toward **fair value accounting**, which pushes book values closer to market values, but today's statements are a mix of both approaches.
+
+### 1.4 The finance view of the balance sheet {.unnumbered}
+
+Damodaran reorganizes the balance sheet around the questions investors ask: what is the debt worth and how risky is it, what is the equity worth and how risky is it, and what are the firm's assets in place and growth assets worth.
+
+| **Accounting balance sheet** | **Financial balance sheet** |
+|---------------------------|---------------------------------------------|
+| Fixed assets, intangibles, current assets, financial investments | **Assets in place:** existing investments that generate cash flow today (long-lived assets and working capital) |
+| (Not shown on the balance sheet) | **Growth assets:** the value expected from investments not yet made |
+| Current liabilities, long-term debt, other long-term obligations | **Debt:** fixed claim, fixed maturity, tax-deductible, little or no role in management |
+| Shareholders' equity | **Equity:** residual claim, perpetual life, significant role in management |
+
+The big difference is growth assets. Accounting statements show what has been invested, not the value of opportunities still to come, so for young, growing firms the accounting balance sheet understates what the firm is worth.
+
+### 1.5 GAAP and IFRS {.unnumbered}
+
+**GAAP** (Generally Accepted Accounting Principles) is the US standard and has been modified over many years. **IFRS** (International Financial Reporting Standards) is used in most other countries and is now more widely accepted globally, helped by convergence efforts between the two sets of standards. The core statements look similar under both, but specific treatments differ, and an analyst comparing firms across countries must check which standard each follows.
+
+### 1.6 The accountant's role and the changing rules {.unnumbered}
+
+> **Damodaran: The accountant's role** — Accounting for Finance, Session 1
+
+Damodaran gives accounting three jobs: **check** transactions and operations as they occur, **record** them in a consistent manner, and **report** the results in standardized form. He is equally clear about what is not the accountant's job: forecasting the future, however tempting, and valuing assets or operations. He notes that many accountants would disagree with this view. It is his position, and it explains why the statements describe history rather than value.
+
+> **Damodaran: Why accounting rules keep changing** — Accounting for Finance, Session 1 and Session 5
+
+Formal rules exist for two reasons: **standardization**, so that companies can be compared, and **first principles**, so that earnings, asset values and cash flows measure what they are supposed to measure. Damodaran adds in Session 5 that much of today's accounting was written in detail during the twentieth century for manufacturing firms, and that accountants have struggled as the economy shifted to technology and services. Four issues come up again and again (taxes, stock-based pay, contractual commitments that are not debt, and investments in non-physical assets), and Section 5 takes them in turn.
+
+> **Damodaran: The bottom line for an analyst** — Accounting for Finance, Session 1
+
+- Financial analysis and valuation almost always start from accounting statements, so it pays to understand how accountants think, even when you disagree with them.
+
+- Accounting thinking keeps changing. You need to understand what changed and why, to keep up.
+
+- IFRS is followed by about 90 countries as of 2020, the date on the slides. Treat that count as a snapshot and check a current source before quoting it.
+
+> **Supplement, Fridson & Alvarez: 1.7 Why financial statements are not neutral** — Fridson & Alvarez (2002), pp. 3–12
+
+Damodaran explains the rules: accountants are historians who prefer cost and caution. Fridson and Alvarez add a second lens, which is who prepares the statements and what they want. The issuers are companies run for their shareholders. Their aim is not necessarily the most complete picture of the firm. It is often the lowest cost of capital, which means the best credit rating and the highest price-earnings multiple (pp. 4–5). The two ideas fit together: the conventions set the default, and managers make choices inside them.
+
+Judgment is available in many places: when revenue is booked, how long assets are assumed to last, and when losses are recognized. An example from the book (p. 10): if a company lengthens the assumed average life of its equipment from eight to nine years, depreciation expense falls and earnings per share rise, yet equipment wears out at the same rate, the tax deduction is unchanged, and cash flow is unchanged. Only reported earnings, and any bonus tied to them, have moved.
+
+#### Three cautionary cases {.unnumbered}
+
+| **Company** | **What happened** | **What to take from it** |
+|--------------|---------------------------------------|--------------------|
+| Mercury Finance (1997) | Restated 1996 earnings to \$56.7 million from \$120.7 million originally reported. Shares fell from \$14.875 to \$2.125 when trading reopened. Bankruptcy followed in 1998. | The auditors had certified the results. The return on equity was more than double the historical average for the business, a warning sign visible in the numbers (pp. 6–7). |
+| MicroStrategy (2000) | Restated 1999 revenue from \$205.3 million to about \$150 million after revenue on large software projects had been recognized too early. Shares promptly fell by \$140, to \$86.75. | Revenue recognition is a judgment area. The company's auditors had approved the policy until the restatement (p. 7). |
+| Lernout & Hauspie (2000) | A partner paid \$35 million to develop translation software, then L&H bought the partner and the product. The net effect was to record \$35 million of revenue instead of a \$35 million R&D expense. The auditor withdrew its opinion on 1998–1999, and bankruptcy came two weeks after the company announced irregularities. | A clean opinion on past statements is not a guarantee. Transactions with related or dependent parties deserve a close look (pp. 7–8). |
+
+#### Smoothing and "big baths" {.unnumbered}
+
+The authors cite research by Zeckhauser and co-authors on quarterly earnings. If reporting were neutral, results that barely beat last year's quarter would be about as common as results that barely missed it. In the data, small increases are far more common than small decreases, which suggests managers find discretionary items to avoid a slightly negative comparison. Large declines are also more common than large increases, consistent with a "big bath": when a bad quarter cannot be rescued, management may bring forward future expenses and write down assets (such as old plants and goodwill from past deals) by more than needed, so that later periods look better (pp. 11–12).
+
+#### What this means for the analyst {.unnumbered}
+
+- A clean audit opinion is necessary but not sufficient. All three companies above were audited.
+
+- Look for numbers that should move together and do not, such as revenue and receivables, or earnings and operating cash flow (Sections 2 and 4).
+
+- Ask what the preparer gains from a particular presentation, and compare with peers and with the firm's own history.
+
+::: {.callout-note title="Dated items to keep in mind"}
+These cases are from 1997–2000. Since then, disclosure and audit rules have been tightened in many countries, so the specific loopholes may be closed. The lesson about incentives has not changed.
+:::
+
+### 1.8 Example Co.: a first look {.unnumbered}
+
+The same fictional firm is used in the following chapters so that the statements tie together.
+
+| **Example Co. (in \$)**         | **Amount** |
+|---------------------------------|------------|
+| Revenues                        | 1,000      |
+| Net income                      | 84         |
+| Total assets                    | 1,100      |
+| Debt                            | 400        |
+| Shareholders' equity            | 600        |
+| Net change in cash for the year | +39        |
+
+Sections 2 to 4 build each statement in turn, and Section 6 uses them to compute ratios.
+
+### Check your understanding {.unnumbered}
+
+1.  Why does Damodaran call accountants "historians"? What does that imply for using statements to value a firm?
+
+2.  Give one example of a link between the income statement and the cash flow statement, and one between the balance sheet and the cash flow statement.
+
+3.  A start-up has few assets and a large market value. Which part of the financial balance sheet explains the gap?
+
+4.  Which of the three accounting principles would lead to a lower reported value for a patent that the firm believes is very valuable?
+
+5.  Fridson and Alvarez argue that a company's goal in reporting is often "cheap capital." Why might that goal conflict with the goal of a perfectly accurate report?
+
+6.  A company extends its equipment depreciation life from 8 to 9 years. Which of these change: reported earnings, cash flow, the tax deduction, the real wear on equipment?
+
+7.  Mercury Finance reported a return on equity more than double its industry's average. What should that fact have prompted an analyst to do?
+
+#### CFA connection {.unnumbered}
+
+This chapter maps to the CFA readings "Introduction to Financial Statement Analysis" (roles of the three statements) and, in part, "Financial Reporting Standards" (IFRS vs. US GAAP). Damodaran does not cover the IASB conceptual framework or standard-setting bodies, which would need separate material. The Fridson & Alvarez supplement adds why preparers' incentives make reporting quality uneven, which supports the "Financial Reporting Quality" reading.
+
+## Section 2. Income Statements: Measuring Profits {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from Damodaran's Session 2 and 2A slides ("Income Statements") and his "Financial Statement Analysis" slides. Company examples come from his Session 2A slides. Example Co. figures are invented.
+
+Supplemented with Fridson & Alvarez, Financial Statement Analysis: A Practitioner's Guide (3rd ed., Wiley, 2002) on common-size analysis, revenue and expense quality, one-time items and operating leverage. Blocks labeled "Supplement" mark the added material, with the book's printed page numbers. Dated items are flagged where the book pre-dates later rules.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Contrast accrual and cash accounting.
+
+- Classify expenses as operating, financing or capital.
+
+- Walk through the income statement from revenues to net income.
+
+- Explain revenue recognition and three meanings of depreciation.
+
+- Treat non-operating income, one-time items and pro-forma earnings with appropriate skepticism.
+
+- Use common-size statements, receivables trends and depreciation checks to judge the quality of reported profits.
+
+### 2.1 Accrual versus cash accounting {.unnumbered}
+
+**Accrual accounting** records a transaction when it occurs, not when cash changes hands. Revenue is booked when the sale is made, and expenses are matched to the revenue they helped produce, even if they were paid earlier or will be paid later. **Cash accounting** records revenue when it is received and expenses when they are paid. Except for small businesses and individuals, accrual accounting is required. This is why net income and cash flow differ, and why Section 4 exists.
+
+### 2.2 Three kinds of expense {.unnumbered}
+
+| **Type** | **What it is** | **Examples** |
+|---------------|----------------------------|------------------------------|
+| Operating | Costs of running the business that benefit the current period | Cost of goods sold, selling, general and administrative (SG&A) |
+| Financing | Costs of non-equity financing | Interest on loans and bonds |
+| Capital | Costs that provide benefits over many years | Plant, equipment; for non-manufacturers, less tangible investments |
+
+Capital expenses are not deducted at once; they are spread over time as depreciation or amortization. Much of the controversy in Section 5 is about expenses that are classified in the wrong category.
+
+### 2.3 The flow of the income statement {.unnumbered}
+
+| **Line** | **What it measures** |
+|--------------------------------|----------------------------------------|
+| Revenues | Estimated sales from the period's transactions |
+| – Cost of goods sold = **Gross profit** | Profitability of production |
+| – Other operating expenses = **Operating profit** | Profitability of operations (SG&A and similar costs deducted) |
+| – Financial expenses = **Pre-tax income** | Income to equity investors before tax |
+| – Taxes = **Net income** | After-tax income to equity investors |
+
+A fuller version, as Damodaran shows it, continues below net income before extraordinary items: extraordinary items and the effect of accounting changes are added or subtracted, and preferred dividends are deducted, to reach **net income to common stockholders**.
+
+#### Example Co. {.unnumbered}
+
+| **Example Co. income statement (\$)** | **Amount** | **% of revenue** |
+|---------------------------------------|------------|------------------|
+| Revenues                              | 1,000      | 100.0%           |
+| Cost of goods sold                    | \(600\)    | 60.0%            |
+| **Gross profit**                      | **400**    | **40.0%**        |
+| SG&A                                  | \(250\)    | 25.0%            |
+| **Operating income (EBIT)**           | **150**    | **15.0%**        |
+| Interest expense                      | \(30\)     | 3.0%             |
+| Pre-tax income                        | 120        | 12.0%            |
+| Taxes at 30%                          | \(36\)     | 3.6%             |
+| **Net income**                        | **84**     | **8.4%**         |
+
+> **Supplement, Fridson & Alvarez: 2.3 supplement: common-size analysis in practice** — Fridson & Alvarez (2002), pp. 50–54
+
+Damodaran's income statement for Example Co. already shows each line as a percentage of revenue. Fridson and Alvarez call this the percentage (or common form) income statement and show how much it reveals. They compare Boston Beer, a small brewer, with Anheuser-Busch for 2000.
+
+| **% of sales, 2000**                | **Boston Beer** | **Anheuser-Busch** |
+|-------------------------------------|-----------------|--------------------|
+| Cost of goods sold                  | 40.8%           | 55.4%              |
+| Gross profit                        | 59.2%           | 44.6%              |
+| Selling, general and administrative | 47.4%           | 17.7%              |
+| Depreciation and amortization       | 3.3%            | 6.6%               |
+| **Operating profit**                | **8.5%**        | **20.3%**          |
+| Interest expense                    | —               | 2.8%               |
+| **Net income**                      | **5.9%**        | **12.7%**          |
+
+- The smaller brewer has the better gross margin but the much worse operating margin, because marketing and overhead consume 47.4% of its sales dollar against 17.7% at its giant rival, which spreads those costs over far more volume (p. 52).
+
+- **Same-company comparison:** Boston Beer's SG&A rose from 46.1% to 47.4% of sales between 1999 and 2000, and operating margin slipped from 9.5% to 8.5%. A shift like this is a prompt to find the cause (more competition, or overhead growing faster than sales), not an answer (p. 51).
+
+- **A caution on peer comparisons:** a lower cost-of-goods ratio does not prove greater efficiency. A brewer that contracts out brewing would show lower product costs than one that brews its own beer. Strategy and business mix can explain differences that look like skill (pp. 54–55).
+
+- Boston Beer's depreciation rose from 0.8% to 3.3% of sales between 1994 and 2000. Fixed costs like this raise operating leverage and make earnings more volatile (p. 54).
+
+### 2.4 Revenue recognition {.unnumbered}
+
+For many firms revenue is recorded at the point of sale. For long-term contracts the timing is a matter of judgment. Under the current US standard (ASC 606), revenue follows the transfer of promised goods or services to the customer, in the amount the company expects to be entitled to. A real estate developer recognizes revenue as construction progresses; a software firm's revenue depends on its performance obligations in the contract.
+
+Firms with several businesses or markets should disclose where revenue comes from. These breakdowns usually appear in the footnotes, by geography (the detail varies) and by business segment (which involves some subjectivity in how segments are defined).
+
+> **Supplement, Fridson & Alvarez: 2.4 supplement: judging the quality of revenue** — Fridson & Alvarez (2002), pp. 56–57, 126–133
+
+Damodaran's point that revenue timing involves judgment has a practical side. Fridson and Alvarez stress that any gimmick that raises reported sales raises earnings without a matching rise in cash flow, and that the gap cannot last. Ways revenue can be inflated without an obvious sign in the current income statement include (pp. 56–57):
+
+- Lowering credit standards for customers without raising the allowance for bad debts. Sales and profit rise now, and the losses appear later.
+
+- Short-term discounts that pull customers' orders forward. This shifts revenue from a later period to the present.
+
+- Generous terms: stretched payment periods, partial refunds if prices fall, or trial use of equipment without payment (the book cites IBM in the late 1980s).
+
+Checks the authors recommend: a later surge in credit losses or an unexpected shortfall in revenue (hindsight), and, in the current period, sales growth far above competitors' without a good reason such as a new product.
+
+#### Case: receivables running ahead of revenue {.unnumbered}
+
+KnowledgeWare began selling through resellers in fiscal 1994 and soon had trouble collecting. The quarterly numbers (in \$ thousands) showed the problem before the restatement (p. 131):
+
+| **Quarter ending**     | **Jun 1993** | **Sep 1993** | **Dec 1993** | **Mar 1994** |
+|-----------------|--------------|--------------|--------------|--------------|
+| Revenues               | 40,426       | 34,144       | 38,178       | 38,928       |
+| Accounts receivable    | 36,894       | 37,084       | 41,506       | 50,252       |
+| Days sales outstanding | 83           | 98           | 100          | 117          |
+
+In the September 1993 quarter revenue fell 15.5% while receivables rose slightly, and DSO then climbed every quarter. The company later restated its first nine months from a \$4.46 million profit to a \$3.6 million loss (pp. 130–132).
+
+#### Case: escalating overstatement {.unnumbered}
+
+Informix (software) restated its revenue down by a total of \$244 million for 1994 through mid-1997. It acknowledged overstating revenue by 4.0% in 1994, 12.9% in 1995 and 29.1% in 1996. Some sales had been recorded with side agreements letting resellers return unsold licenses, delay payment, or get help reselling (pp. 127–128). The authors point out that this escalating pattern is common: a small amount of "borrowed" revenue each year has to be repeated and enlarged to keep up.
+
+::: {.callout-note title="Dated items to keep in mind"}
+These cases pre-date today's revenue standard (ASC 606 in the US, IFRS 15 internationally), which sets a single, more detailed model for when revenue is recognized. The specific software rules in the book (such as SOP 97-2) have been replaced. The warning signs, such as receivables or days sales outstanding rising faster than sales, still apply.
+:::
+
+### 2.5 Operating expenses and depreciation {.unnumbered}
+
+Cost of goods sold is netted from revenue to get gross profit. Other operating expenses are then deducted to reach operating income. SG&A is often the largest of these and can be broad and vague, which limits what an analyst can learn from it.
+
+**Depreciation** has three different meanings:
+
+- **Economic depreciation:** the real loss in an asset's earning power, which varies with how the asset is used.
+
+- **Accounting depreciation:** mechanical, driven by the asset's age, using straight-line or an accelerated schedule.
+
+- **Tax depreciation:** the amount tax authorities allow in computing taxable income.
+
+The three rarely match, which is one reason reported earnings are not a clean measure of economic performance.
+
+#### Illustration: straight-line depreciation {.unnumbered}
+
+A machine costs \$500 and is expected to last five years with no salvage value. Straight-line depreciation is \$100 a year. An accelerated method would charge more in early years. The total is the same; only the timing differs.
+
+> **Supplement, Fridson & Alvarez: 2.5 supplement: checking depreciation** — Fridson & Alvarez (2002), pp. 10, 58–59
+
+- **A quick test:** compare the ratio of depreciation to property, plant and equipment with peers. An unusually low ratio may mean management is slow to recognize wear and tear, which would overstate earnings (p. 58).
+
+- **Beware the "industry norm" explanation.** Companies often describe a longer asset life as bringing them into line with the industry, and do not stress that it also raises earnings. Fort Howard's 1992 change in estimated lives cut depreciation by \$9.9 million in one quarter and reduced its net loss by \$6.1 million (p. 58).
+
+- **Method changes work the same way.** Weirton Steel switched from straight-line to a production-variable method in 1992 and cut its net loss by nearly half. Such methods tend to lower depreciation when output falls, so the book value of an aging plant declines more slowly (pp. 58–59).
+
+This connects directly to Damodaran's three meanings of depreciation: accounting depreciation is a mechanical estimate, and the estimate can be changed.
+
+### 2.6 Financial expenses and non-operating income {.unnumbered}
+
+- The most common financial expense is **interest** on bank loans or bonds. Lease obligations act like debt, so part of lease cost is implicitly interest (Section 5).
+
+- Some companies net interest expense against interest income and report net interest expense or net interest income.
+
+- Income on cash and marketable securities (T-bills, commercial paper) is reported separately or netted against interest expense.
+
+- **Small or minority stakes** in other firms: the income from the holding usually appears on the income statement.
+
+- **Majority stakes:** the company generally **consolidates** the subsidiary, counting 100% of its revenues, operating expenses and operating income, even though it does not own all of it.
+
+### 2.7 Extraordinary items {.unnumbered}
+
+Extraordinary items capture events outside normal operations: one-time gains or losses from selling assets or divisions, write-offs of past projects, lawsuits or fines, and goodwill impairment. Damodaran's test: if an item recurs every year, it is not truly extraordinary, even if its sign changes.
+
+### 2.8 Pro-forma accounting {.unnumbered}
+
+Firms may report **pro-forma** results to correct perceived inconsistencies or to make profits look better. Investors should not take them at face value and should decide independently what to add back. Two areas deserve the most scrutiny: expenses moved from operating to capital (sometimes justified, sometimes not) and the removal of expenses labeled one-time or extraordinary.
+
+> **Supplement, Fridson & Alvarez: 2.7–2.8 supplement: one-time items and pro-forma earnings** — Fridson & Alvarez (2002), pp. 59–60, 64–67
+
+Damodaran's test is that an item that recurs every year is not extraordinary. Fridson and Alvarez explain why companies want the label: investors value a company on its future earnings, so a loss presented as outside the normal course of business, below the line and after tax, is likely to be given little weight (p. 59). Accounting standards of the time therefore set a strict test: the event had to be both unusual in nature and infrequent. Write-offs of receivables and inventories, currency gains and losses, and gains or losses on selling a business segment or assets did not qualify. Even the September 11, 2001 attacks were not allowed to be broken out as extraordinary (p. 60). Their advice is that an analyst can largely disregard a genuine extraordinary item when forecasting, but must stay alert to losses and gains that management merely calls one-time.
+
+On pro-forma earnings, the book gives examples of how far the numbers can move (pp. 64–67):
+
+- Veritas Software turned a GAAP loss of \$103.1 million for the second quarter of 1999 into a pro-forma profit of \$29.2 million, helped by exclusions such as the amortization of purchased research and development.
+
+- Two data providers computed "operating earnings" for the S&P 500 differently. For 2001's first quarter, one showed a 17% year-over-year decline and the other a 33% decline. The market's price-earnings multiple in August 2001 was 22.2 on one measure, 24.2 on the other, and 36.8 when only strict extraordinary items were excluded. The more items excluded, the cheaper stocks look.
+
+- Adjusting is not wrong in itself. Setting aside genuinely unusual events is part of forecasting. The risk is going too far, and the authors quote the FASB chairman's view that GAAP net income is still the best predictor of future cash flows.
+
+::: {.callout-note title="Dated items to keep in mind"}
+US GAAP no longer allows an "extraordinary item" category (it was eliminated in 2015), and IFRS prohibits it. Today the analytical question is the same but is asked of "unusual or infrequent" items reported within continuing operations, and of discontinued operations. The book also describes goodwill amortization as ending in 2001, when impairment testing replaced it under US GAAP.
+:::
+
+### 2.9 Accounting measures of profitability {.unnumbered}
+
+| **Measure**                | **Formula**                                  |
+|----------------------------|--------------------------------------------|
+| Net margin                 | Net income ÷ Revenues                        |
+| Operating margin           | Operating income ÷ Revenues                  |
+| After-tax operating margin | Operating income × (1 – tax rate) ÷ Revenues |
+
+Example Co.: net margin = 84 ÷ 1,000 = 8.4%; operating margin = 150 ÷ 1,000 = 15.0%; after-tax operating margin = 150 × 0.70 ÷ 1,000 = 10.5%.
+
+> **Supplement, Fridson & Alvarez: 2.9 supplement: operating leverage and the quality of growth** — Fridson & Alvarez (2002), pp. 72–73, 77–78
+
+A company's published income statement rarely separates fixed and variable costs, so operating leverage must be estimated. The book's Central Widget illustration shows the mechanics. The price is \$10 a unit, variable cost \$8.50, so each unit contributes \$1.50 toward \$300 million of fixed costs (p. 78):
+
+| **Units sold (millions)** | **Contribution (\$M)** | **Fixed costs (\$M)** | **Pretax income (\$M)** |
+|-------------------|------------------|------------------|------------------|
+| 300 | 450 | 300 | 150 |
+| 250 | 375 | 300 | 75 |
+| 200 | 300 | 300 | 0 (break-even) |
+| 150 | 225 | 300 | \(75\) |
+| 100 | 150 | 300 | \(150\) |
+
+Once break-even volume is passed, each extra unit adds its full contribution to pretax income, so profit rises faster than sales. The same leverage works in reverse when sales fall.
+
+On growth, the authors separate **internal growth** (sales from existing operations) from **external growth** (sales bought through acquisitions). Faster sales growth does not by itself create shareholder value; acquired growth adds value only if profitability improves, for example through lower costs from bigger purchases or shared sales forces (pp. 72–73). Since acquisitive companies often disclose little, it pays to track what part of revenue growth was purchased.
+
+### 2.10 Six income statements side by side {.unnumbered}
+
+> **Damodaran: Company examples** — Accounting for Finance, Session 2A
+
+Session 2A walks through the income statements of six companies chosen to span the life cycle and different sectors. The summary below uses the headline lines that Damodaran carries into his ratio analysis (Session 6A). Figures are in **millions of each company's own currency** and are for the year shown in his slides, which is not the same year for every company (Toyota is the year to March 2019 and Dr. Reddy's the year to March 2020).
+
+| **Company** | **Stage / sector** | **Revenues** | **Gross profit** | **Operating income** | **Net income** |
+|------------|------------|------------|------------|------------|------------|
+| Peloton (\$) | Young | 219 | 74 | \(71\) | \(71\) |
+| Netflix (\$) | High growth | 20,156 | 7,716 | 2,605 | 1,866 |
+| Coca-Cola (\$) | Mature | 37,266 | 22,647 | 10,086 | 8,985 |
+| Toyota (¥) | Aging | 30,225,681 | 6,836,186 | 2,467,545 | 1,985,587 |
+| Total (\$) | Commodity | 200,316 | 60,028 | 16,257 | 11,438 |
+| Dr. Reddy's (₹) | Pharmaceutical | 125,936 | 100,371 | 28,216 | 29,377 |
+
+Three things to notice. First, amounts in different currencies cannot be compared directly; the margins in Section 6 solve that. Second, Dr. Reddy's net income is larger than its operating income, which the slides tie to a negative effective tax rate (about -5.8%), meaning a tax credit rather than a tax charge. Third, Peloton's operating loss and net loss are the same, because it recorded no income tax charge.
+
+#### What the examples teach {.unnumbered}
+
+- **Segments and geography.** Coca-Cola's footnotes break revenue into business segments and regions, which shows where the company's revenue and profit really come from. The same total can hide very different growth and margins by region.
+
+- **Sector formats differ.** Commodity companies such as Total are driven by price swings and by large depreciation, depletion and amortization charges. A financial services firm such as HSBC reports interest and fee income rather than the revenues-less-cost-of-goods-sold layout used by most companies, so the generic income statement flow in Section 2.3 has to be adapted.
+
+- **Per-share and comprehensive income.** Earnings per share and other comprehensive income (gains and losses booked directly to equity, such as currency translation) appear below net income in the reported statements and need to be read alongside it.
+
+> **Damodaran: Bottom line on income statements** — Sessions 2 and 2A
+
+Accounting standards are broadly similar across these six companies, and rules have been converging worldwide. What differs is the business, so the same lines carry different meaning in different sectors. Read an income statement with the business model in mind.
+
+### Check your understanding {.unnumbered}
+
+1.  A firm ships goods in December and is paid in February. Under accrual accounting, in which year is the revenue recorded?
+
+2.  Classify each: interest on a bond, factory depreciation, advertising, purchase of a new building.
+
+3.  A company reports a "restructuring charge" in each of the last five years. Is it extraordinary? Why or why not?
+
+4.  Using Example Co., how would net income change if the tax rate fell to 25%? (Answer: pre-tax income stays 120; tax = 30; net income = 90.)
+
+5.  In the Boston Beer and Anheuser-Busch comparison, which line explains most of the gap in operating margin, and how large is the difference in percentage points? (Answer: SG&A, 47.4% vs 17.7%, about 29.7 points, partly offset by Boston Beer's lower product costs and depreciation.)
+
+6.  KnowledgeWare's revenue fell in the September 1993 quarter while receivables rose. List two possible explanations an analyst should check.
+
+7.  Informix overstated revenue by 4.0%, 12.9% and 29.1% in three consecutive years. What does the pattern suggest about how such practices develop?
+
+8.  Company A depreciates equipment at a much lower share of property, plant and equipment than its peers. Name two possible explanations and what to do next.
+
+9.  With the Central Widget figures, what is pretax income at 275 million units? (Answer: 275 × \$1.50 = \$412.5M contribution, less \$300M fixed = \$112.5M.)
+
+#### CFA connection {.unnumbered}
+
+Maps to "Understanding Income Statements": components and formats, revenue and expense recognition, non-recurring items, and non-operating items. EPS and comprehensive income get only brief treatment (Session 2A examples). Common-size analysis, which Damodaran's slides do not cover, is supplied by the Fridson & Alvarez supplement, along with revenue and expense quality and the treatment of nonrecurring items.
+
+## Section 3. Balance Sheets: The Asset Base and Debt Due {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from Damodaran's Session 3 slides ("Balance Sheets"), Session 3A slides ("Balance Sheet Comparisons") and his "Financial Statement Analysis" slides. Example Co. figures are invented.
+
+Supplemented with Fridson & Alvarez, Financial Statement Analysis: A Practitioner's Guide (3rd ed., Wiley, 2002) on goodwill write-offs, tangible-only ratios and accounting versus economic equity. Blocks labeled "Supplement" mark the added material, with the book's printed page numbers. Dated items are flagged where the book pre-dates later rules.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Read a balance sheet and identify its main components.
+
+- Explain why book values on the balance sheet often differ from market values.
+
+- Describe how a balance sheet changes across a company's life cycle.
+
+- Identify sector differences in balance sheets.
+
+- Pick out the balance sheet items an analyst can rely on most.
+
+- Explain how goodwill write-offs and acquisition prices affect balance sheet ratios, and contrast accounting equity with economic equity.
+
+### 3.1 Structure {.unnumbered}
+
+| **Assets** | **Liabilities and equity** |
+|-----------------------------------|------------------------------------|
+| **Fixed assets:** long-lived real assets such as property and equipment | **Current liabilities:** due within a year, such as payables and short-term debt |
+| **Intangible assets:** patents, trademarks, goodwill | **Debt:** borrowing at fixed claims and maturities |
+| **Current assets:** short-lived assets such as cash, receivables and inventory | **Other long-term obligations:** such as pensions and deferred items |
+| **Investments:** in securities or other firms | **Shareholders' equity:** the residual claim |
+
+Assets always equal liabilities plus equity. Equity is what is left after liabilities are subtracted from assets, so any error in valuing assets passes straight through to equity.
+
+#### Example Co. {.unnumbered}
+
+| **Assets (\$)** | **Amount** | **Liabilities and equity (\$)** | **Amount** |
+|-------------------|---------------|-------------------------|---------------|
+| Cash | 100 | Accounts payable and accruals | 100 |
+| Receivables and inventory | 250 | Debt | 400 |
+| Fixed assets (net) | 650 | Shareholders' equity | 600 |
+| **Intangibles** | **100** |  |  |
+| **Total assets** | 1,100 | **Total liabilities and equity** | 1,100 |
+
+### 3.2 Why book value is not market value {.unnumbered}
+
+Because accounting uses historical cost, the balance sheet records what was invested in assets, not what they are worth. Only current assets sit close to market value, plus sectors such as banks whose assets are marked to market. Accountants themselves disagree about whether the balance sheet should show what was invested (traditional accounting) or what assets are worth now (fair value). Today's statements follow neither approach cleanly.
+
+Damodaran's point about intangibles is striking: Coca-Cola has a market value of around \$200 billion, yet its balance sheet records only the trademarks and goodwill it acquired (about \$9.3 billion and \$16.8 billion in 2019). The value of the brand the company built itself is not on the balance sheet, and goodwill from past acquisitions says little about current value.
+
+> **Supplement, Fridson & Alvarez: 3.2 supplement: book value can change overnight** — Fridson & Alvarez (2002), pp. 33–36
+
+Because asset values rest on judgment, balance sheets can be revised suddenly. Fridson and Alvarez cite 2000–2001 write-offs of goodwill from acquisitions made during the late-1990s telecommunications boom (p. 33):
+
+| **Company** | **Write-off** | **Note** |
+|-----------------|-------------------|------------------------------------|
+| JDS Uniphase (July 2001) | \$44.8 billion of goodwill | The largest in corporate history at that time; management had warned months earlier |
+| Nortel Networks (2001) | \$12.3 billion of goodwill | Followed by other software and fiber companies |
+| Sherwin-Williams (Q4 2000) | \$352.0 million (\$293.6 million after tax) | Even afterwards, goodwill was 18.8% of assets and 47.9% of shareholders' equity |
+
+The value did not disappear on the day of the write-off. It was lost over time, and the balance sheet simply recorded it late. The authors add that bond rating agencies did not respond to the large write-offs with mass downgrades, because they track ratios both with and without intangibles and give more weight to the version that ignores them (p. 33).
+
+#### Why goodwill can flatter credit ratios {.unnumbered}
+
+A fictional example in the book (pp. 34–36) shows how paying a high price for an acquisition can improve a balance sheet ratio. Associated Amalgamator (tangible assets \$1,000M, liabilities \$800M, ratio 1.25) buys United Consolidator (tangible assets \$400M, liabilities \$340M, ratio 1.18) with stock at a 33⅓% premium:
+
+| **Amalgamator after the deal** | **Scenario I: shares at 1.0× book** | **Scenario II: shares at 1.5× book** |
+|------------------------|------------------------|-------------------------|
+| Purchase price | \$80M | \$120M |
+| Goodwill created | \$20M | \$60M |
+| Total assets ÷ total liabilities | 1.25 | 1.28 |
+| Tangible assets ÷ total liabilities | 1.23 | 1.23 |
+
+The ratio including goodwill rises with the price paid, even though nothing available to creditors has increased. The tangible-only ratio is 1.23 in both cases, which reflects reality. The lesson for Damodaran's point about goodwill: it reflects what was paid, and what was paid can reflect a high stock price.
+
+#### Example Co.: ratios with and without intangibles {.unnumbered}
+
+| **Example Co. (\$)** | **Calculation** | **Result** |
+|------------------------------|---------------------------|----------------|
+| Total liabilities | 100 (payables) + 400 (debt) | 500 |
+| Total assets ÷ total liabilities | 1,100 ÷ 500 | 2.20× |
+| Tangible assets ÷ total liabilities | (1,100 – 100 intangibles) ÷ 500 | 2.00× |
+
+Both ratios are reported by credit analysts. The gap between them shows how much of the creditor's cushion rests on intangibles.
+
+> **Supplement, Fridson & Alvarez: 3.2 supplement: the economist's equity and the accountant's equity** — Fridson & Alvarez (2002), pp. 39–44
+
+Damodaran notes that book equity is not a current value. The book spells out the idea. In economics, equity means the present value of cash flows to owners, so a trademark built internally has real value to an economist and none on the balance sheet (p. 39). Two consequences:
+
+- **Negative book equity is not always distress.** A leveraged recapitalization can borrow to buy back stock at a premium to book value, producing negative book equity. In the book's illustration (Sluggard), equity is –\$60M on the balance sheet while market capitalization is \$390M. A company with consistently losing years may reach the same accounting result, but there the economic equity may be near zero as well (pp. 39–42).
+
+- **Market capitalization is a useful but imperfect stand-in.** The authors point out that Intel's market value fell by \$35.7 billion (8.8%) on a single day in 2000, which is hard to square with a change in its fundamentals. They recommend choosing the measure suited to the task: book values matter for a loan covenant that tests debt to net worth, while liquidation analysis relies much less on historical cost (p. 44).
+
+### 3.3 The balance sheet across a company's life cycle {.unnumbered}
+
+| **Stage** | **Typical pattern** | **Example discussed** |
+|--------------|--------------------------|---------------------------------|
+| Young | Little debt, small asset base. Continuing losses can make equity negative; venture capital or an IPO can restore positive equity before profits arrive. | Peloton (2019): assets grew from \$271M to \$865M; cash and marketable securities the largest asset; book equity small next to market value (about \$402M against \$8.1B in Session 6A) |
+| High growth | Asset base expands sharply; debt stays low. | Netflix (2019): content assets the largest item, showing the weight of intangibles; deferred revenue is a current liability because subscriptions are collected before service is delivered |
+| Mature growth | Assets stabilize; debt rises as profits appear. |  |
+| Mature stable | Debt large and growing; equity may shrink if cash is returned through dividends and buybacks. | Coca-Cola (2019) |
+| Aging | Stable assets and revenues. | Toyota (2020) |
+
+### 3.4 Case notes {.unnumbered}
+
+#### Coca-Cola (2019): a mature company {.unnumbered}
+
+- Tax assets reflect past overpayment and will lower future tax bills. They are not cash that would be available if the company were liquidated.
+
+- Goodwill reflects prices paid in past acquisitions, not current value.
+
+- Repurchased shares held as **treasury stock** reduce shareholders' equity. Cancelling them instead would reduce shares outstanding.
+
+- Debt footnotes show currency, maturity and coupon rate, which are needed to forecast cash flows. The stated rate on old debt is not the current cost of debt.
+
+#### Toyota (2020): an aging company {.unnumbered}
+
+- Finance receivables from its captive finance arm appear on the balance sheet.
+
+- Investments in affiliated companies appear as assets because they are not held for trading.
+
+- Pension treatment differs by country. Underfunded plans must be shown as debt in some countries but not in others (the example given is Germany versus the US).
+
+### 3.5 Sector and industry differences {.unnumbered}
+
+Accounting standards are broadly the same across companies, but what appears on the balance sheet depends on the business. The tangible/intangible mix differs, and acquisitive firms carry goodwill.
+
+| **Sector** | **What stands out** |
+|----------------|--------------------------------------------------------|
+| Commodity (e.g., Total, an oil company) | Inventory can lose value fast. Oil produced at \$60 a barrel loses nearly half its value if the price falls to \$35, unlike most manufacturing inventory. |
+| Banks (e.g., HSBC) | Most assets are financial, so market values are easier to assess, and marking to market is long established. Non-controlling interests show ownership stakes the reporting firm does not fully own. |
+| Pharmaceuticals (e.g., Dr. Reddy's) | Valuable patents from R&D barely appear on the balance sheet; goodwill and other intangibles can overshadow brands and research. |
+| Multinationals | Currency translation gains or losses can run through the income statement or directly through shareholders' equity. Employee benefit obligations are recorded as liabilities. |
+
+### 3.6 The balance sheet, account by account {.unnumbered}
+
+> **Damodaran: Three views of what a balance sheet is for** — Accounting for Finance, Session 3
+
+| **View** | **What the balance sheet should show** | **Who holds it** |
+|-----------------|--------------------------------|------------------------|
+| Record of capital invested | How much the business has invested in the assets that run current operations | Damodaran and others who see it as a history of investment |
+| Measure of current value | What the business is worth today | A large school of accountants and accounting rule writers |
+| Liquidation value | What the assets would fetch if sold today | Lenders, among others |
+
+#### Fixed and current assets {.unnumbered}
+
+The old way showed fixed and current assets at original cost, net of accounting depreciation. The new way, as accounting has adopted fair value, marks assets to current market value. The two approaches give more different answers for **older assets** than newer ones, and for **fixed assets** than current assets.
+
+#### Financial assets and cross holdings {.unnumbered}
+
+- **Publicly traded securities:** the move to market prices is almost complete.
+
+- **Majority stakes (over 50%):** the parent consolidates 100% of the subsidiary's revenues and operating income, and the part it does not own appears on the liability side as a minority (non-controlling) interest.
+
+- **Minority stakes:** shown as an asset. If held for trading they are marked to market; if held as a long-term investment they stay at book value.
+
+#### Intangible assets and goodwill {.unnumbered}
+
+Damodaran says accountants "talk a big game" about intangibles, but they are good at valuing small-bore intangibles such as licenses and customer lists, whose cash flows can be observed and forecast. They are much weaker on the big ones, such as brand name and management quality. In practice, most intangible assets on balance sheets around the world are one item: **goodwill**.
+
+- Goodwill appears only after an acquisition. It is the price paid minus the target's asset value (its dressed-up book value).
+
+- He calls it a plug variable that signifies little. It sits on the balance sheet because otherwise the balance sheet would not balance.
+
+- Under current rules, companies test goodwill for impairment each year. The stated purpose is to inform markets, but impairments usually follow market price moves by months or years, so their effect on stock prices has been negligible.
+
+#### Current liabilities {.unnumbered}
+
+Current liabilities fall into three groups:
+
+- **Non-interest-bearing:** accounts payable and supplier credit, part of normal operations.
+
+- **Interest-bearing short-term borrowing:** commercial paper, short-term debt and the portion of long-term debt due within a year.
+
+- **Deferred amounts:** salaries, taxes and other items due soon.
+
+When computing non-cash working capital (Section 4), the interest-bearing group is moved out and counted as debt.
+
+#### Debt due {.unnumbered}
+
+Companies borrow in three forms: **corporate bonds** (public markets), **bank loans**, and **lease debt**. Until 2019 only capital leases counted; since 2019 operating lease commitments are debt as well (Section 5). Marking to market has been far more muted on the liability side than on the asset side. Bank debt is mostly recorded as originally borrowed, and corporate bonds are mostly not marked to market.
+
+The footnotes carry detail the balance sheet does not: each debt issue with its stated rate and maturity, features such as floating or fixed rate and straight or convertible, and a table of repayments due by year. Coca-Cola's footnotes, for instance, show the currency, maturity and coupon needed to forecast cash flows.
+
+#### Shareholders' equity {.unnumbered}
+
+- **Old ways:** equity reflects the whole history of the business: equity raised, plus retained earnings over time.
+
+- **New ways:** equity becomes a jumble of mark-to-market accounting and its contradictions.
+
+- **His view:** under either approach, book equity has little hope of measuring the intrinsic value of equity.
+
+- **Par value** is a throwback and can be ignored.
+
+- **Company age:** young companies have far less book equity than older ones of the same market value.
+
+- **Capitalization:** only capitalized expenses become assets, so equity depends on what the firm capitalizes versus expenses.
+
+- **Buybacks:** dividends and buybacks both reduce equity, but buybacks are usually much larger and have the greater effect.
+
+- **Negative equity** is possible, from long losses or from large buybacks or write-offs.
+
+> **Damodaran: Dated items to check** — Accounting for Finance, Session 3
+
+::: {.callout-note title="Dated items"}
+The slide places the change from automatic goodwill amortization to annual impairment testing in the late 1990s. The US rule (SFAS 142) was issued in 2001 and the IFRS rule followed in 2004, so check the dates before quoting.
+:::
+
+### 3.7 Real balance sheets: what the numbers show {.unnumbered}
+
+> **Damodaran: Company balance sheets** — Accounting for Finance, Session 3A
+
+| **Company** | **What stands out** |
+|------------|------------------------------------------------------------|
+| Peloton (2019) | Total assets grew from about \$271M to \$865M, and cash and marketable securities are the largest asset. |
+| Netflix (2019) | Total assets \$33,976M, of which non-current content assets are \$24,505M and cash \$5,018M. Long-term debt is \$14,759M, current content liabilities \$4,414M, and deferred revenue \$925M. Total liabilities are \$26,394M. |
+| Coca-Cola (2019) | The balance sheet shows acquired trademarks of \$9,266M and goodwill of \$16,764M. The value of the Coca-Cola brand that the company built itself is not recorded. Debt footnotes list currency, maturity and coupon. Treasury stock reduces equity. |
+| Toyota (2020) | Finance receivables from its captive finance arm and investments in affiliates are on the balance sheet. Pension treatment differs by country. |
+| Total (2019) | A commodity company: large fixed assets, and inventory exposed to price swings. |
+| HSBC (2019) | A bank: most assets are financial and carried near market value; the liability side is customer deposits and borrowings. |
+
+::: {.callout-note title="Netflix's content commitments"}
+At the end of 2019 Netflix owed \$19,490M for streaming content (up from \$19,286M in 2018): \$8,477M due within a year, \$8,353M in one to three years, \$2,041M in three to five years, and \$619M after five years. Only part of it is recorded as content liabilities (about \$7.7B across current and non-current), and none of it is counted as debt. Section 5 returns to why such commitments deserve debt-like treatment.
+:::
+
+### 3.8 Bottom line {.unnumbered}
+
+- A balance sheet is best seen as a **record of history**, the cumulative result of what the firm has done.
+
+- It does not cleanly measure invested capital or fair value.
+
+- The most dependable items are **cash and marketable securities**, which involve little judgment, and **debt**, which closely measures what is owed on interest-bearing liabilities.
+
+### Check your understanding {.unnumbered}
+
+1.  Why might a firm with a \$200 billion market value show far lower equity on its balance sheet?
+
+2.  Netflix collects subscription fees in advance. Where does this appear on the balance sheet, and why?
+
+3.  For Example Co., compute capital as debt + equity – cash. (Answer: 400 + 600 – 100 = 900.)
+
+4.  Why is a tax asset on the balance sheet different from cash in a liquidation?
+
+5.  After the Sherwin-Williams write-off, goodwill was still 47.9% of equity. What does that say about the equity cushion available to creditors?
+
+6.  In the Amalgamator example, why did total assets ÷ total liabilities rise when the acquisition price rose? Which version of the ratio gives a better picture of creditor protection?
+
+7.  Example Co. has total assets of 1,100 and total liabilities of 500. What would tangible assets ÷ total liabilities be if intangibles were 300 instead of 100? (Answer: (1,100 – 300) ÷ 500 = 1.60×.)
+
+8.  A company has negative book equity because it borrowed to buy back shares. Why might it not be in financial trouble?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Understanding Balance Sheets": elements, uses and limitations, measurement bases. Liquidity and solvency ratios are in Section 6. Damodaran's slides do not cover common-size balance sheets or alternative formats in detail. The Fridson & Alvarez supplement adds goodwill and intangibles, tangible-only ratios and accounting versus economic equity.
+
+## Section 4. Cash Flow Statements: Cash In and Out {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from Damodaran's Session 4 slides ("Cash Flow Statements"), Session 4A slides ("Cash Flow Statement Comparisons") and his "Financial Statement Analysis" slides. Example Co. figures are invented.
+
+Supplemented with Fridson & Alvarez, Financial Statement Analysis: A Practitioner's Guide (3rd ed., Wiley, 2002) on leveraged buyouts, life-cycle examples, financial flexibility and the limits of EBITDA. Blocks labeled "Supplement" mark the added material, with the book's printed page numbers. Dated items are flagged where the book pre-dates later rules.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Classify cash flows as operating, investing or financing.
+
+- Explain why net income and operating cash flow differ.
+
+- Compute free cash flow to equity and free cash flow to the firm.
+
+- Describe how cash flow statements differ across the life cycle and across sectors.
+
+- Use gaps between income and cash flow as a warning signal.
+
+- Explain why cash flow matters more than earnings for leveraged firms, assess financial flexibility, and reconcile EBITDA to free cash flow.
+
+### 4.1 Why the statement matters {.unnumbered}
+
+The cash flow statement records cash actually received and paid, so accounting judgment and manipulation affect it least. Its purpose is to explain the change in the cash balance, and it holds the items needed to estimate the cash flows that valuation depends on.
+
+### Cash flow statement mechanics (Session 4) {.unnumbered}
+
+> **Damodaran: What the statement is for** — Accounting for Finance, Session 4
+
+On the surface, the statement explains how much the cash balance changed in a period and why. It also holds three other pieces of information: how much **cash earnings** the company had (as opposed to accrual earnings), how much and where it **reinvested** to sustain and grow, and how much cash it **raised from or returned to** debt and equity investors. The statement keeps the signs on cash flows (outflows are negative), and it looks at cash flows through the eyes of equity investors.
+
+#### Operations: the working capital effect {.unnumbered}
+
+Embedded in operating cash flow is the change in **non-cash working capital**, defined as non-cash current assets minus non-debt current liabilities. An **increase** in non-cash working capital **reduces** cash flow, and a decrease raises it. A firm that needs more working capital will therefore report less operating cash flow, for the same net income, than a firm that needs less.
+
+#### Investing: operating and non-operating assets {.unnumbered}
+
+- The section covers both operating and non-operating assets, except investment in liquid, close to riskless securities, which is treated as cash and marketable securities.
+
+- Investment in **operating assets** (capital expenditure net of divestitures, plus acquisitions of other companies) drives growth in revenues and operating income. Acquisitions paid with stock do not show up here.
+
+- Investment in **non-operating assets** creates a separate source of value that appears below operating income, as income from cross holdings or securities.
+
+#### Financing: debt, dividends and buybacks {.unnumbered}
+
+- **Debt:** interest sits in operating cash flow (it reduces net income), but principal repayments are in financing. If total debt rises in the period it is a cash inflow, and if it falls it is an outflow. New borrowing can neutralize or exceed repayments.
+
+- **Dividends and buybacks:** until the 1980s dividends were the only cash flow US equity investors received. Since then buybacks have grown. For the company the effect is identical: cash leaves. For shareholders it differs: those who sell back get cash, and those who do not get a larger share of the remaining equity. Both reduce book equity.
+
+#### Potential dividends (free cash flow to equity) {.unnumbered}
+
+Session 4 closes with FCFE, the cash a company could pay out to equity investors after reinvesting and after debt flows. It is the cash flow measure behind the equity valuation methods in Section 4.3.
+
+### Six cash flow statements {.unnumbered}
+
+> **Damodaran: Company examples** — Accounting for Finance, Session 4A
+
+Damodaran lines up one company for each stage of the life cycle and for three sectors. The headline totals below come from his slides, in **millions of local currency** except Netflix, which reports in thousands (converted here to millions). Years are those shown on each slide.
+
+| **Company** | **Operations** | **Investing** | **Financing** | **Net change in cash** |
+|---------------|--------------|--------------|--------------|---------------|
+| Peloton FY2019 (\$M) | (108.6) | (297.5) | 417.2 | 11.3 |
+| Netflix 2019 (\$M) | (2,887.3) | (387.1) | 4,505.7 | 1,231.7 |
+| Coca-Cola 2019 (\$M) | 10,471 | (3,976) | (9,004) | (2,581) |
+| Toyota FY2020 (¥M) | 3,590,643 | (3,150,861) | 397,138 | 705,675 |
+| Total 2019 (\$M) | 24,685 | (17,177) | (7,709) | \(201\) |
+| HSBC 2019 (\$M) | 29,743 | (35,318) | (14,842) | (20,417) |
+| Dr. Reddy's FY2020 (₹M) | 18,392 | (16,892) | (2,241) | \(741\) |
+
+Netflix's net change includes small currency effects; the other rows also include small exchange rate effects where reported. Dr. Reddy's statement is for the year to 31 March 2020, with the prior year shown alongside.
+
+#### What each one shows {.unnumbered}
+
+- **Peloton (young):** operating cash flow is negative (about -\$109M on a net loss of about \$196M). Stock-based compensation of \$89.5M is added back in operations. It spent \$249.8M on marketable securities and \$83.0M on property and equipment, and was funded by \$539.1M from preferred stock, so financing carried the company.
+
+- **Netflix (growth):** operating cash flow is negative (about -\$2.9B) even though net income is \$1.87B, because it spent \$13.9B on streaming content assets and only \$9.2B of content amortization was added back. Financing brought in \$4.47B of new debt and only \$72M of common stock. Interest paid was \$599M.
+
+- **Coca-Cola (mature):** strong operating cash flow of \$10.5B on net income of \$9.0B. It spent \$5.5B on acquisitions, \$2.1B on property and equipment, returned \$6.8B in dividends and \$1.1B in buybacks, and borrowed \$23.0B while repaying \$24.9B, so debt was rolled over rather than reduced much.
+
+- **Toyota (aging):** large operating cash flow offset by investing that includes receivables from its finance business, so investing is nearly as large as operations. Dividends to Toyota common shareholders were ¥618.8B, with another ¥54.9B to non-controlling interests.
+
+- **Total (commodity):** depreciation, depletion, amortization and impairment of \$16.4B is a large add-back. It spent \$11.8B on intangibles and property and equipment and \$4.7B on acquisitions, partly offset by divestments of \$2.1B. It paid \$6.6B of dividends to its shareholders and \$2.8B of treasury share purchases.
+
+- **HSBC (financial services):** the operating section is dominated by changes in loans, deposits and trading positions, because lending and deposit-taking are the business. Operating cash flow of \$29.7B is therefore not comparable to a manufacturer's. Dividends paid were \$9.8B.
+
+- **Dr. Reddy's (pharmaceutical):** receivables rose by about ₹10.9B, which took cash from operations. Investing is large because it moves surplus cash in and out of investments (purchases of ₹122.7B and sales of ₹109.2B).
+
+::: {.callout-note title="Reading across the six"}
+The same totals mean different things at different stages. Negative operating cash flow is normal for a young or fast-growing firm funded from outside, and a warning sign for a mature one. Look at where the money came from and where it went, not just the sign.
+:::
+
+> **Supplement, Fridson & Alvarez: 4.1 supplement: cash flow versus earnings in a leveraged buyout** — Fridson & Alvarez (2002), pp. 93–98
+
+Damodaran stresses that the cash flow statement is the "honest" one. A leveraged buyout (LBO) shows why. In the book's illustration, investors buy a company with 90% borrowed money. Interest expense jumps to \$265 million, and the company that earned \$112 million in 2001 reports a net loss of \$7 million in 2002. Yet depreciation of \$105 million is not a cash outlay, so cash from operations is \$98 million. After \$95 million of equipment purchases, \$3 million is left to repay debt (pp. 93–94).
+
+| **LBO, 2002 (\$ millions)** | **Base case** | **Pessimistic case** |
+|-----------------------------|---------------|----------------------|
+| Net income                  | \(7\)         | \(146\)              |
+| \+ Depreciation             | 105           | 105                  |
+| **Cash generated**          | **98**        | **(41)**             |
+
+- If everything goes to plan, the equity investors turn a \$250 million investment into about \$789 million after tax over five years, a compound return of 25.8%, while the book return on equity averages only 4% (p. 96). An analyst who focused on earnings would miss the point.
+
+- The pessimistic case assumes sales, cost of sales and SG&A each miss plan by only 8%. That is enough to turn cash generated negative (p. 97).
+
+- The authors' conclusion: for a highly leveraged firm, the cash flow statement is the best guide to financial health, because its owners care about cash to retire debt rather than reported income (p. 98).
+
+### 4.2 The three sections {.unnumbered}
+
+| **Section** | **What it includes** | **Notes** |
+|--------------|----------------------|------------------------------------|
+| Operating | Cash from operations, after taxes and interest | Starts from net income, adds back non-cash charges such as depreciation, and adjusts for changes in working capital |
+| Investing | Capital expenditures, acquisitions, purchases and sales of financial assets | Mostly negative for growing firms |
+| Financing | Equity issued or bought back; debt issued or repaid; dividends | Shows how the firm funds itself and rewards owners |
+
+The three sections sum to the net change in cash for the period.
+
+#### Example Co. {.unnumbered}
+
+| **Example Co. cash flow statement (\$)** | **Amount** |
+|------------------------------------------|------------|
+| Net income                               | 84         |
+| \+ Depreciation (non-cash)               | 50         |
+| – Increase in receivables and inventory  | \(20\)     |
+| **Cash flow from operations**            | **114**    |
+| Capital expenditures                     | \(80\)     |
+| **Cash flow from investing**             | **(80)**   |
+| New borrowing                            | 30         |
+| Dividends paid                           | \(25\)     |
+| **Cash flow from financing**             | **5**      |
+| **Net change in cash**                   | **39**     |
+
+Cash rose by \$39 even though the firm paid dividends and spent \$80 on equipment, because operations generated more cash than net income suggests once depreciation is added back.
+
+### 4.3 Cash flow to equity and to the firm {.unnumbered}
+
+Damodaran's valuation focus produces two cash flow measures:
+
+- **Free cash flow to equity (FCFE):** cash left after interest, taxes and reinvestment, plus net debt issued. It belongs to equity holders.
+
+- **Free cash flow to the firm (FCFF):** cash before debt payments, taxed as if the firm had no debt, and after reinvestment. It belongs to all capital providers.
+
+The cash flow statement is written from the equity investor's perspective: interest is already deducted, and it shows what equity investors received (dividends, buybacks). To get cash flow before debt service, start from the statement and add back the interest expense that was netted out.
+
+| **Example Co. (\$)** | **FCFE** | **FCFF** |
+|-------------------|----------------------|-------------------------------|
+| Start | Cash flow from operations: 114 | After-tax operating income: 150 × 0.70 = 105 |
+| \+ Depreciation | already included | \+ 50 |
+| – Working capital increase | already included | – 20 |
+| – Capital expenditures | – 80 | – 80 |
+| \+ Net borrowing | \+ 30 | not included |
+| **Result** | **64** | **55** |
+
+Check: FCFF 55 – after-tax interest (30 × 0.70 = 21) + net borrowing 30 = 64 = FCFE.
+
+### 4.4 The statement across the life cycle {.unnumbered}
+
+| **Stage** | **Company** | **What to look for** |
+|--------------|--------------|-------------------------------------------|
+| Young | Peloton (2019 prospectus) | Negative operating cash flow, funded by equity financing |
+| Growth | Netflix (2020) | Heavy investment, financing used to fund growth |
+| Mature | Coca-Cola | Strong operating cash flow, returned to owners through dividends and buybacks |
+| Aging | Toyota | Stable operations |
+
+The actual statements for these companies are summarized in the section "Six cash flow statements" above.
+
+> **Supplement, Fridson & Alvarez: 4.4 supplement: life-cycle examples with real numbers** — Fridson & Alvarez (2002), pp. 99–107
+
+Damodaran's six statements (Section 4.4 above) show the life-cycle pattern with recent companies. Fridson and Alvarez work through earlier cash flow statements from 1998–2001, which adds more concrete cases:
+
+| **Stage** | **Company** | **What the cash flow statement showed** |
+|-----------|-----------|---------------------------------------------------|
+| Emerging growth | Focal Communications (2000) | Net loss \$105.9M, yet operating cash flow +\$52.2M after adding back non-cash charges. Capital expenditures of \$309.6M were funded by \$251.0M of financing. By summer 2001 the company warned it would run out of cash by early 2002 unless it could raise funds. |
+| Established growth | Solectron (FY2000) | Net income \$497.2M, but operating cash flow –\$342.7M. Inventory rose \$2,096M and receivables \$934M, partly offset by payables +\$1,711M. It also spent \$1.1B on acquisitions and raised \$2.3B of debt. |
+| Mature | American Greetings (FY2001) | Depreciation and amortization covered capital spending. Even in a net loss year, operations produced \$110M of cash. External funding was needed only for \$180M of acquisitions, including Gibson Greetings. |
+| Declining | Polaroid (1998–2000) | No cumulative profit. Operating cash flow of \$228.6M over three years against \$490.8M of capital spending, bridged partly by \$243.7M from asset sales. Filed for bankruptcy in October 2001. |
+
+Solectron is a useful warning for students: strong profit and negative operating cash flow can happen together in a fast-growing firm, because inventories and receivables must be funded. The question is how the gap is financed.
+
+### 4.5 Sector differences and warning signs {.unnumbered}
+
+The sector examples in Session 4A are a commodity company (Total, 2019), a financial services firm (HSBC, 2019) and a pharmaceutical firm (Dr. Reddy's Laboratories). The general lessons:
+
+- Income statements and cash flow statements sometimes send different messages. That is normal, because of timing and non-cash items.
+
+- **Persistent gaps** between earnings and operating cash flow can signal accounting problems and deserve investigation.
+
+> **Supplement, Fridson & Alvarez: 4.5 supplement: financial flexibility** — Fridson & Alvarez (2002), pp. 107–110
+
+The book frames the cash flow statement as a way to judge financial flexibility: whether a company can keep investing and paying its dividend if business turns down or capital markets close. A condensed format lists uses of cash from least to most discretionary. Wal-Mart's fiscal year ended January 2001 (\$ millions):
+
+| **Wal-Mart (FY Jan 2001, \$M)** | **Amount** | **Example Co. (\$)** | **Amount** |
+|----------------------------------|-------------|-------------|-------------|
+| Basic cash flow (net income + depreciation + deferred taxes + other) | 9,749 | Net income + depreciation | 134 |
+| Increase in adjusted working capital | \(145\) | Increase in working capital | \(20\) |
+| **Operating cash flow** | **9,604** | **Operating cash flow** | **114** |
+| Capital expenditures | (8,042) | Capital expenditures | \(80\) |
+| **Discretionary cash flow** | **1,562** | **Discretionary cash flow** | **34** |
+| Dividends | (1,070) | Dividends | \(25\) |
+| Dividend cover (discretionary cash flow ÷ dividends) | 1.46× | Dividend cover | 1.36× |
+
+- Dividends are paid at the board's discretion, so they are a source of flexibility in a downturn, though boards go to great lengths to avoid cutting them (p. 109).
+
+- Wal-Mart's net income could fall by about \$492 million (roughly 8%) before dividend cover dropped below 1.0×. For Example Co., the same test gives 34 – 25 = 9, about 11% of net income of 84.
+
+- Capital spending is the next cushion, but cutting to "maintenance" level for long erodes competitiveness. The authors suggest getting independent confirmation of management's maintenance estimate (p. 110).
+
+- Rising inventories or receivables relative to sales can force outside borrowing, and tighter credit then reduces flexibility further (p. 110).
+
+> **Supplement, Fridson & Alvarez: 4.5 supplement: EBITDA is not the same as cash flow** — Fridson & Alvarez (2002), pp. 173–177
+
+Damodaran starts the cash flow statement from net income and adjusts for working capital. Fridson and Alvarez explain why a shortcut of "net income plus depreciation" or EBITDA can mislead.
+
+- Depreciation is not a permanent source of cash for paying interest, because plant and equipment must be replaced, often at higher prices. It is a short-term safety valve (p. 173).
+
+- W. T. Grant, the largest US retailer when it failed in 1975, showed positive earnings and positive "net income plus depreciation" until two years before bankruptcy. The missing piece was cash tied up in receivables and inventory (pp. 175–177).
+
+- The more complete measure subtracts the change in working capital requirements (receivables plus inventory minus payables). If inventories or receivables grow as a share of sales, earnings may be overstated (p. 177).
+
+Example Co. bridge from EBITDA to the free cash flow to the firm calculated earlier:
+
+| **Example Co. (\$)**                    | **Amount** |
+|-----------------------------------------|------------|
+| EBITDA                                  | 200        |
+| – Taxes on operating income (150 × 30%) | \(45\)     |
+| – Increase in working capital           | \(20\)     |
+| – Capital expenditures                  | \(80\)     |
+| **Free cash flow to the firm**          | **55**     |
+
+Of the 200 of EBITDA, only 55 is free cash flow, which is why using EBITDA as a stand-in for cash flow overstates what is available to lenders and owners.
+
+### 4.6 Bottom line {.unnumbered}
+
+- The statement shows cash flows from the equity investor's view, including what equity investors received.
+
+- To estimate cash flow before debt payments, start from the statement and add back interest expense.
+
+### Check your understanding {.unnumbered}
+
+1.  Why is depreciation added back in operating cash flow?
+
+2.  Example Co. issues \$30 of new debt and pays \$25 of dividends. In which section does each appear?
+
+3.  Compute FCFE if capital expenditures rise to \$100 and everything else is unchanged. (Answer: 114 – 100 + 30 = 44.)
+
+4.  A firm reports rising net income for five years while operating cash flow falls. What would you investigate?
+
+5.  In the LBO illustration, why does the company report a loss yet still generate cash? Why would the equity investors care more about cash than about net income?
+
+6.  Solectron reported net income of \$497.2M but operating cash flow of –\$342.7M. Which working capital items explain the difference, and how was the gap financed?
+
+7.  Using the Example Co. figures: what is dividend cover, and how far could net income fall before cover drops below 1.0×? (Answer: 34 ÷ 25 = 1.36×; a fall of 9, about 11% of net income.)
+
+8.  W. T. Grant looked sound on "net income plus depreciation" until shortly before it failed. What additional information would have revealed the problem?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Understanding Cash Flow Statements": classification of flows, links to the other statements, analysis, and FCFF/FCFE. Damodaran's slides do not cover the direct method, indirect-to-direct conversion, non-cash activities, or IFRS vs. US GAAP differences in classification. The Fridson & Alvarez supplement adds cash flow analysis for leveraged firms, life-cycle examples, financial flexibility and the limits of EBITDA, which support the "performance and coverage cash flow ratios" outcome.
+
+## Section 5. Accounting Inconsistencies and Their Consequences {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from Damodaran's Session 5 and 5A slides ("Cleaning Up Accounting"), his "Financial Statement Analysis" slides (Gap and SAP examples) and his November 2022 blog post "Facebook/Meta, Lesson 2: Accounting". Example Co. figures are invented.
+
+Supplemented with Fridson & Alvarez, Financial Statement Analysis: A Practitioner's Guide (3rd ed., Wiley, 2002) on leases in credit analysis, expense-recognition cases and accounting warning signs. Blocks labeled "Supplement" mark the added material, with the book's printed page numbers. Dated items are flagged where the book pre-dates later rules.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Distinguish the marginal, effective and cash tax rates, and explain deferred taxes and net operating losses.
+
+- Explain why stock-based compensation is an operating expense and why adding it back is debated.
+
+- Explain why operating leases and R&D are misclassified in standard statements.
+
+- Adjust operating income, debt and capital for leases.
+
+- Capitalize R&D and describe its effects on income, equity and returns.
+
+- Recognize how discretion over revenue recognition and one-time items can mislead.
+
+- Use accounting warning signs, including Beneish's indicators, and case examples to question reported results.
+
+### 5.1 The problem {.unnumbered}
+
+Damodaran notes that much accounting practice was written for twentieth-century manufacturers, and that four issues keep causing trouble: **taxes**, **stock-based pay**, **contractual commitments that are not debt**, and **investments in non-physical assets**. The last two give the most dramatic misclassifications:
+
+- **Operating leases** are expensed as operating costs but behave like **financing** costs (the firm has borrowed to use an asset).
+
+- **R&D** is expensed as an operating cost but behaves like a **capital** expense (it is spent to produce future growth).
+
+Added to this is discretion: managers have latitude over when revenue is recognized and what counts as extraordinary, and can use it to manage earnings and mislead.
+
+### 5.2 Taxes {.unnumbered}
+
+> **Damodaran: Three tax rates** — Accounting for Finance, Session 5
+
+| **Rate** | **What it measures** |
+|--------------|----------------------------------------------------------|
+| Marginal tax rate | The statutory rate. In 2020 a US company paid 21% of taxable income as federal tax. Multinationals face a blend of rates depending on where they report income. |
+| Effective tax rate | Taxes divided by taxable income as reported on the income statement, under accrual accounting. |
+| Cash tax rate | Taxes actually paid on taxable income. |
+
+For most companies the effective rate is below the marginal rate, because of operations in lower-tax countries and legal tax deferral and avoidance strategies.
+
+#### Deferred taxes {.unnumbered}
+
+When the amount expensed in the reported books differs from taxable income on the tax books, the difference is reported as a **deferred tax liability** (the company pays less tax now than it reports) or a **deferred tax asset** (it pays more). The logic is that items giving rise to lower taxes today will reverse and cause higher taxes later, and the reverse for assets.
+
+#### Net operating losses {.unnumbered}
+
+A US company that loses money can carry the losses forward to reduce future taxes. Until the Tax Reform Act of 2017, a loss could also be carried back two years (as a credit against taxes paid) and carried forward 20 years. The 2017 Act removed the carryback and allows losses to be carried forward indefinitely. Accumulated losses should be disclosed in the financials and have value to the company.
+
+The Session 6A table shows the spread in effective tax rates: Peloton 0.0% (no tax on a loss), Netflix 9.5%, Coca-Cola 16.7%, Toyota 28.9%, Total 34.8%, and Dr. Reddy's about -5.8% (a tax credit).
+
+::: {.callout-note title="Dated items"}
+The 21% federal rate and the 2017 carryback rules are as of Damodaran's 2020 slides. Check current law before using them, since carryforward limits have been changed more than once.
+:::
+
+### 5.3 Stock-based compensation {.unnumbered}
+
+> **Damodaran: An operating expense** — Accounting for Finance, Session 5 and Session 5A
+
+Companies pay employees with stock options and shares (often restricted shares) for two reasons: to **align** employee and shareholder interests, and to make up for a **lack of cash**. Whatever the motive, Damodaran says it is clearly a compensation expense.
+
+- If a grant is large and occasional and mainly meant to align interests, there is an argument for spreading it over time.
+
+- If a company uses stock pay consistently, mainly because it is cash-poor, it is an annual expense.
+
+To expense it, the options or stock must be valued **when granted**. Until 2004 companies had leeway to value option grants at their exercise value at grant. After 2004, FAS 123 requires valuation using the time premium (an option pricing model), shown as expense in the year of grant. Companies following IFRS or GAAP now report the current year's stock-based pay as an operating expense.
+
+#### Is it a cash flow? {.unnumbered}
+
+The debate has moved on to whether it is a **non-cash** expense, like depreciation, that deserves to be added back. Most companies and analysts say yes, and many add it back to report adjusted earnings. Damodaran disagrees strongly: with depreciation you pay nothing, but here you give away a share of the equity in place of cash.
+
+#### Where it shows up {.unnumbered}
+
+- **Options outstanding** from past grants appear in the footnotes, with the remaining maturity and exercise price.
+
+- **Restricted stock units** granted in past years appear in the discussion of share count.
+
+#### Examples from the slides {.unnumbered}
+
+| **Company** | **Stock-based compensation** | **Notes** |
+|------------|------------|------------------------------------------------|
+| Peloton | \$10.3M (FY2017), \$8.5M (FY2018), \$89.5M (FY2019) | Added back in operating cash flow and again in its adjusted EBITDA. The FY2019 figure is more than ten times FY2018. |
+| Netflix (2019) | \$405.4M expense | Footnote: 20,859,326 options outstanding at a weighted-average exercise price of \$124.28, 5.57 years remaining, aggregate intrinsic value about \$4.23B. In 2019 it granted 2,588,380 options at an average \$320.66 and saw 2,208,052 exercised at \$32.88. |
+| Coca-Cola (2019) | \$201M | About 2% of operating cash flow, in contrast with the technology examples. |
+
+::: {.callout-note title="Peloton's adjusted EBITDA"}
+Peloton's FY2019 net loss of \$195.6M becomes an **adjusted EBITDA loss of only \$71.3M** (a margin of -7.8%) after adding back depreciation and amortization of \$21.7M, stock-based compensation of \$89.5M, litigation expenses of \$12.1M, ground lease expense for build-to-suit obligations of \$7.2M and a few smaller items. Stock-based pay is the largest add-back. This is the kind of "adjusted earnings" Damodaran asks analysts to question.
+:::
+
+### 5.4 Operating leases and other commitments {.unnumbered}
+
+#### The method {.unnumbered}
+
+1.  Compute the **debt value of leases** as the present value of lease commitments, discounted at the pre-tax cost of debt.
+
+2.  Record a matching **leased asset** equal to that debt value, and depreciate it.
+
+3.  Adjust operating earnings: add back the lease expense and subtract depreciation on the leased asset.
+
+Shortcut (assuming depreciation roughly equals principal repayment): **adjusted operating earnings = operating earnings + lease debt × pre-tax cost of debt.**
+
+#### Illustration {.unnumbered}
+
+A firm pays \$100 a year in lease expense for five years. Its pre-tax cost of debt is 6%. Present value = 100 × \[1 – 1.06\^–5\] ÷ 0.06 = about \$421. The firm has \$421 of lease debt. Using the shortcut, operating income rises by 421 × 6% = about \$25.
+
+#### The Gap (2003) {.unnumbered}
+
+| **Item** | **Before adjustment** | **After adjustment** |
+|--------------------|------------------|----------------------------------|
+| Conventional debt | about \$1.97B (6% pre-tax cost) | same |
+| Lease payments / PV of commitments | \$978M / about \$4.40B | PV added as debt |
+| Total debt | about \$1.97B | about \$6.37B |
+| Adjusted operating income | — | about \$1.36B (7-year depreciation); about \$1.28B (shortcut) |
+| Cost of capital | about 7.31% | about 6.25% |
+| Return on capital | about 12.9% | about 9.3% |
+
+#### Effects of capitalizing leases {.unnumbered}
+
+- Debt rises, which raises debt ratios used in cost of capital and levered beta.
+
+- Operating income rises, because the lease cost moves from an operating expense to interest, which sits below the operating line.
+
+- **Net income is unchanged.**
+
+- Return on capital generally falls, because capital grows faster than operating income.
+
+- Cost of capital can fall, because more (cheaper) debt enters the capital mix.
+
+::: {.callout-note title="A note on newer rules"}
+Damodaran's 2022 post notes that before accounting rules changed in 2019, lease treatment distorted margins, returns and debt ratios, especially in retailing and restaurants. Since then, lease standards (IFRS 16, and ASC 842 in the US) bring most leases onto the balance sheet, so the adjustment is smaller than in the Gap example. He suggests other contractual commitments, such as Netflix's content obligations, may deserve similar treatment.
+:::
+
+> **Damodaran: Leases are debt: the principle** — Accounting for Finance, Session 5
+
+The essence of debt is a contractual obligation for the future whose failure can put survival at risk. A lease does exactly that, so Damodaran argues there never was a reason to treat leases differently. Until 2019 accountants split them: **capital leases** (the lessee effectively owns the asset) were debt with a counter-asset, while **operating leases** (temporary use) were operating expenses with nothing on the balance sheet. Since 2019 both GAAP and IFRS require all lease commitments to be treated as debt.
+
+The conversion follows the steps for any bank loan or bond:
+
+1.  Start with the contractual lease commitments by year.
+
+2.  Compute the firm's pre-tax cost of borrowing today, based on its default risk.
+
+3.  Take the present value of the commitments at that rate. The result is **debt**, with the same value shown as a **counter-asset**.
+
+4.  To complete the cycle, charge **interest** on the lease debt (present value × pre-tax cost of debt) and **depreciation** on the lease asset (using the lease life).
+
+#### Consequences for the company {.unnumbered}
+
+- **Debt rises** by the present value of lease commitments, and a counter-asset of the same size is created.
+
+- **Operating income changes**: the current year's lease expense is added back and reduced by depreciation.
+
+- **Interest expense rises** by the interest part of the current payment, and **depreciation rises** by depreciation on the lease asset.
+
+- **Taxes and net income do not change** (or should not), because one tax-deductible expense is replaced by two of equivalent value.
+
+#### Nordstrom {.unnumbered}
+
+The slides use Nordstrom's 2019 lease table. Operating lease payments are \$333M, \$353M, \$327M, \$300M and \$252M for the next five years, then \$1,136M thereafter, for total payments of \$2,701M.
+
+| **Step** | **Result** |
+|------------------|------------------------------------------------------|
+| Payments after year 5 | \$1,136M, treated as a 5-year annuity of \$227.2M a year (1,136 ÷ 5), starting 2025 |
+| Discount rate | 4.7% |
+| Less: amount representing interest | (\$582M) |
+| **Present value of lease payments** | **\$2,119M** |
+| On the 2019 balance sheet | Current portion of operating lease liabilities \$244M plus non-current operating lease liabilities \$1,875M = \$2,119M |
+
+Nordstrom also had long-term debt of \$2,676M, so lease debt adds almost as much again to its borrowing. The adjusted-versus-unadjusted comparison for The Gap earlier in the chapter shows the same effect from the older rules.
+
+#### Netflix and other contractual commitments {.unnumbered}
+
+Leases are the commonest contractual commitment, but others share their characteristics and deserve the same treatment: **purchase commitments** at many manufacturers, **content commitments** at a streaming company such as Netflix, and **player contracts** for a sports team. Netflix's content obligations were \$19,490M at the end of 2019 (Section 3), compared with long-term debt of \$14,759M on its balance sheet, so these obligations (undiscounted) are larger than all the debt on its balance sheet.
+
+> **Supplement, Fridson & Alvarez: 5.4 supplement: leases from the credit analyst's side** — Fridson & Alvarez (2002), pp. 274, 283–284
+
+Fridson and Alvarez reach the same conclusion as Damodaran: operating leases are economically close to borrowing. Their treatment is a shortcut aimed at credit work:
+
+- **Balance sheet:** add the off-balance-sheet liabilities by capitalizing the current year's rental expense (from the notes). A common rule of thumb multiplies annual rent by **seven or eight**. The authors say this has proved reasonably accurate when compared with disclosed capitalized values (p. 274).
+
+- **Coverage:** add one-third of rentals to both the numerator and the denominator of the fixed-charge coverage ratio, on the theory that about a third of a lease payment is interest and two-thirds is principal (p. 284).
+
+- **Beware structuring:** borrowers have devised leases that qualify as operating leases to stay off the balance sheet. Analysts should look at economic substance, not the label (p. 274).
+
+**How the two methods relate.** The seven-to-eight multiple behaves like an annuity factor, so it suits long leases and higher interest rates. When the schedule of commitments is disclosed, the present value method taught above (Damodaran) is more precise. For example, \$100 a year for five years at 6% has a present value of about \$421, well below a \$700–\$800 multiple-of-rent estimate, because the multiple assumes a much longer remaining life. Use the multiple as a quick cross-check, not a substitute.
+
+| **Fixed-charge coverage** | **Formula (pp. 283–284)** |
+|-----------------|-------------------------------------------------------|
+| Basic | (Net income + income taxes + interest expense) ÷ interest expense |
+| With capitalized interest | Same numerator; denominator adds capitalized interest (it is real interest cost even though not expensed) |
+| With leases | Add ⅓ of rentals to both the numerator and the denominator |
+
+Example Co. has no disclosed leases. As an illustration, if it paid \$20 of rent: basic coverage is (84 + 36 + 30) ÷ 30 = 5.0×. With one-third of rent (\$6.67) added to both parts, coverage is 156.67 ÷ 36.67 = **4.27×**. Leases reduce measured coverage, as they should.
+
+The book also notes other ways debt can be kept off the balance sheet, such as joint ventures and partly owned subsidiaries. At a minimum, an analyst should attribute a proportionate share of that debt to the parent (p. 274).
+
+::: {.callout-note title="Dated items to keep in mind"}
+The rental-multiple shortcut dates from when operating leases were mostly off the balance sheet. Under IFRS 16 and ASC 842, most leases are now recorded on the balance sheet, so use the disclosed lease liability where available. The principle of treating leases as debt, and of testing structures for economic substance, still applies.
+:::
+
+### 5.5 R&D and other non-physical capital expenses {.unnumbered}
+
+#### The method {.unnumbered}
+
+1.  Choose an **amortizable life**, typically 2 to 10 years by industry (he uses 3 years for most technology and software firms).
+
+2.  Collect R&D spending for that many years back.
+
+3.  Sum the **unamortized** portions. Current-year spending is fully unamortized and each earlier year loses 1/N. For a 5-year life, the weights are 100%, 80%, 60%, 40% and 20%, from newest to oldest.
+
+4.  The sum is the **research asset**. This year's **amortization** is the sum of prior-year R&D divided by N.
+
+5.  Adjusted operating income = operating income + current R&D – amortization.
+
+#### Illustration (3-year life) {.unnumbered}
+
+| **Year** | **R&D spending** | **Unamortized share** | **Unamortized amount** |
+|-----------------|-----------------|-------------------|-------------------|
+| Current | 130 | 3/3 | 130.0 |
+| Year –1 | 120 | 2/3 | 80.0 |
+| Year –2 | 110 | 1/3 | 36.7 |
+| Year –3 | 100 | 0 | 0 |
+| **Research asset** |  |  | **246.7** |
+
+Amortization this year = (120 + 110 + 100) ÷ 3 = 110. Operating income rises by 130 – 110 = **\$20**. Book equity and invested capital rise by the research asset, \$246.7.
+
+#### SAP (from the slides) {.unnumbered}
+
+With a 5-year life, SAP's research asset is about €2,914M and annual amortization is about €903M. Operating income rises by about €117M, and book equity increases substantially (from about €3.8B to about €6.8B in the deck). Free cash flow to the firm is about €1,283M after net capital expenditure of about €119M, and return on capital is affected by the larger capital base.
+
+#### Facebook/Meta (from the 2022 post) {.unnumbered}
+
+- Trailing R&D: \$32.6B. With a 3-year life, the research asset is \$53.1B and annual amortization \$18.9B.
+
+- Pre-tax operating income rises from \$35.5B to \$49.3B; net income from \$28.8B to \$42.5B.
+
+- Pre-tax return on invested capital falls from 38.9% to 34.1% because capital increases.
+
+- His argument: uncertainty about future benefits should not decide the classification. What matters is when the benefits arrive.
+
+#### Effects of capitalizing R&D {.unnumbered}
+
+- Operating income usually rises, but the size depends on R&D growth. If R&D is flat, amortization offsets the add-back and the effect is zero; faster growth gives a larger effect.
+
+- Net income rises accordingly.
+
+- Book equity and capital rise by the research asset; accounting returns usually fall.
+
+- Capital expenditures rise by the R&D amount and depreciation by the amortization, so net capital expenditure rises by the same amount as after-tax operating income.
+
+> **Damodaran: Why R&D is a capital expense** — Accounting for Finance, Session 5
+
+A capital expenditure is an expense whose benefits come in future periods. R&D fits that definition, yet accounting rules around the world mostly require R&D to be expensed, on two grounds: the benefits are too uncertain, and conservatism is better. Damodaran rejects both. Uncertainty is never used as the test for other capital spending (a factory to make an untested product is still capitalized), and accounting should deliver the most **realistic** earnings, not the most conservative.
+
+#### Other non-physical investments that look like R&D {.unnumbered}
+
+Accountants almost always capitalize physical assets but are inconsistent about the rest:
+
+- A pharmaceutical company that **buys a patent** may capitalize it; one that does **R&D** to reach the same result may not.
+
+- A company that depends on **human capital** is almost never required to capitalize recruiting and training.
+
+- A subscriber-based company that spends to **acquire subscribers** usually cannot capitalize that spending.
+
+- Other examples: advertising to build a brand, consulting-firm recruiting and training, oil exploration costs, and customer acquisition costs.
+
+#### A pharmaceutical example (Amgen) {.unnumbered}
+
+Damodaran capitalizes Amgen's R&D with a **10-year amortizable life**, reflecting the length of the drug approval process. Current R&D is \$3,030M, and the sum of earlier years' unamortized R&D is \$13,284M. Amortization this year is \$1,694M, so the net effect on operating income is \$3,030M − \$1,694M = \$1,336M. Figures below are in \$ millions.
+
+| **Item** | **As reported** | **Adjusted for R&D** | **Why it moves** |
+|----------------|----------------|----------------|------------------------|
+| Net income | 4,196 | 5,532 | Add current R&D, subtract amortization |
+| Book equity | 17,869 | 31,153 | Add unamortized R&D (13,284) |
+| Return on equity | 23.48% | 17.75% | Equity grows faster than income |
+| Pre-tax operating income | 5,594 | 6,930 | Add current R&D, subtract amortization |
+| Invested capital | 21,985 | 35,269 | Add unamortized R&D (13,284) |
+| Pre-tax return on capital | 25.44% | 19.65% | Capital grows faster than income |
+
+The slide's adjusted net income adds the full R&D adjustment without a tax effect, so treat it as a first pass. The lesson is the direction of the changes: earnings rise, and returns **fall** because the capital base grows more than the earnings do.
+
+> **Supplement, Fridson & Alvarez: 5.5 supplement: when management does the capitalizing** — Fridson & Alvarez (2002), pp. 153–156
+
+Damodaran's adjustments (leases, R&D) are made by the analyst to improve analysis. Fridson and Alvarez show the other side: what happens when management uses discretion over which costs go to the balance sheet.
+
+#### America Online and advertising {.unnumbered}
+
+- In 1994 an accounting exception allowed direct-response advertising to be capitalized if the company had historical evidence to predict the revenue it would bring. AOL capitalized the cost of subscriber-acquisition mailings and free trials and amortized it over 12 to 18 months. Fiscal 1994 showed a profit of \$6.2 million rather than a loss of about \$6 million (p. 153).
+
+- The capitalized balance grew from \$37 million to \$77 million (fiscal 1995) and \$314 million (fiscal 1996). In fiscal 1996, lengthening the amortization period to 24 months added \$48 million to net income (p. 154).
+
+- In October 1996, AOL reversed course, expensing the balance with a one-time charge of \$385 million. It later restated and settled SEC charges that it had not qualified for the exception because its environment was too unstable to predict revenue reliably (pp. 154–155). Its main competitor had expensed these costs from the start.
+
+The comparison with Damodaran is helpful. His R&D argument is that when benefits clearly arrive over several years, the cost is economically an investment. The AOL case adds that capitalization needs reliable evidence of future benefit, and that a change in the amortization period can move earnings with no change in operations.
+
+#### IBM and a one-time gain hidden in expenses {.unnumbered}
+
+In 1999 IBM reported selling, general and administrative expense falling from 20.4% to 16.8% of revenue (\$14.7 billion versus \$16.7 billion). The Management Discussion mentioned a benefit from the sale of its Global Network business. The notes showed a pretax gain on that sale of \$4.057 billion, more than twice the year-over-year decrease in SG&A. Netting the gain against expenses makes a one-time event look like lasting efficiency (p. 156).
+
+#### Pension income inside operating income {.unnumbered}
+
+Under the pension accounting then in force, returns on a company's pension fund flowed into operating income. For IBM in 1999, \$799 million, or 6.7% of operating income of about \$11.9 billion, was investment return on its pension plans, up from 1.8% in 1996. Part of IBM's earnings growth thus reflected a rising stock market rather than its computer business, which the analyst should separate when projecting earnings (pp. 201, 203).
+
+::: {.callout-note title="Dated items to keep in mind"}
+Pension accounting has changed since 2002. In the US, only the service-cost part of pension expense is now reported within operating income, with other components reported below it, so check the presentation used for the period you are studying. The advertising exception and the specific IBM and AOL rules are historical, but the analytical lesson, to compare reported results with cash, notes and peers, remains current.
+:::
+
+### 5.6 Discretion in revenue and extraordinary items {.unnumbered}
+
+Beyond classification, managers can time revenue recognition and decide what is labeled one-time. The practical defense is the one introduced in Section 2: look at multi-year patterns, compare earnings with cash flow (Section 4), and treat recurring "extraordinary" items as ordinary.
+
+> **Supplement, Fridson & Alvarez: 5.6 supplement: warning signs and the case file** — Fridson & Alvarez (2002), pp. 89, 126–133, 191
+
+Section 5 ends with Damodaran's advice to look at patterns, compare with cash flow, and treat repeated one-offs as ordinary. Fridson and Alvarez make this concrete with a research-based checklist and a set of cases.
+
+#### Five indicators from Beneish {.unnumbered}
+
+Professor Messod Beneish built a statistical model of companies likely to manipulate earnings (manipulation here includes fraud and aggressive management within GAAP, shown by later restatements or write-offs). The presence of any of these factors raises the probability of manipulation (p. 89):
+
+1.  Rising days sales in receivables.
+
+2.  Deteriorating gross margins.
+
+3.  Falling rates of depreciation.
+
+4.  Declining asset quality (non-current assets other than property, plant and equipment as a share of total assets).
+
+5.  Growing sales.
+
+These are signs to investigate, not proof. Many fast-growing companies are honest. The point is that the sales growth that investors reward is also what manipulators try to show.
+
+#### Case file {.unnumbered}
+
+| **Case** | **What the statements showed** | **Signal to look for** |
+|---------------|------------------|--------------------------------------|
+| KnowledgeWare (1994) | Reseller sales booked as revenue, collections lagging | Receivables up while revenue fell; DSO 83 → 117 days |
+| Informix (1996–97) | Revenue overstated 4.0%, 12.9%, 29.1% in 1994–96 | About \$170M of 1996 sales went to resellers who had not yet resold the software; side agreements; CFO resignation and a late filing |
+| AOL (1994–96) | Marketing cost capitalized, amortization extended | Balance sheet asset growing faster than revenue; one-time write-off |
+| IBM (1999) | Gain on asset sale netted in SG&A | Expense ratio improvement larger than the fine print can support |
+| Cal Micro Devices (1994) | About one-third of fiscal 1994 revenue was spurious | Weak internal controls; auditor warnings; a write-off of nearly half of receivables |
+| Mercury Finance (1996) | Originally reported earnings cut by more than half on restatement | ROE more than double the industry average |
+
+The authors' common thread is that distorting one part of the statements throws another out of line. Tracking ratios over time and against peers is often enough to raise the question (p. 130). They also caution that auditors and audit committees are not a complete safeguard: the SEC's study of frauds from 1987 to 1997 found many audit committees met about once a year, or did not exist (p. 191).
+
+### 5.7 The bottom line: trust, but verify {.unnumbered}
+
+> **Damodaran: Accounting statements are raw material** — Accounting for Finance, Session 5A
+
+- **Raw material, not fact.** In corporate finance and valuation, financial statements are accounting opinion, and should be treated that way.
+
+- **Mold them to your needs.** Where accounting is outdated or has different priorities, you should have no qualms about redoing or rebuilding the statements.
+
+- **Your choices have consequences** for how you measure profits, invested capital and even share count. The company you see will be closer to the truth than the one in the statements.
+
+- **Markets move faster than accountants.** Markets have priced retailers as if leases were debt for decades, while accountants changed in 2019.
+
+### Check your understanding {.unnumbered}
+
+1.  Why does capitalizing leases leave net income unchanged but raise operating income?
+
+2.  A firm's R&D has been flat for years. What is the effect of capitalizing it on operating income? Why?
+
+3.  Why does return on capital fall after either adjustment, even though operating income rises?
+
+4.  Compute lease debt for \$50 a year of lease expense over 4 years at a 5% pre-tax cost of debt. (Answer: 50 × \[1 – 1.05\^–4\] ÷ 0.05 = about \$177.)
+
+5.  Using the seven-to-eight rule, estimate the lease debt of a retailer paying \$60 million a year in rent. Why might the present value method give a different answer? (Answer: \$420–\$480 million; the multiple assumes long lease lives and higher rates, so a short remaining schedule would give a smaller present value.)
+
+6.  Example Co. paid \$20 of rent. Compute fixed-charge coverage with one-third of rent added. (Answer: 156.67 ÷ 36.67 = 4.27×.)
+
+7.  AOL capitalized subscriber costs and then lengthened the amortization period. Explain the effect on net income and what an analyst should check in the notes.
+
+8.  Which of Beneish's five indicators would be triggered by a company whose receivables grow 40% while sales grow 10%?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Long-Lived Assets" (capitalizing vs. expensing), "Non-Current Liabilities" (leases), "Financial Reporting Quality" (analyst adjustments, discretion) and, at an introductory level, "Income Taxes" (deferred taxes, net operating losses, effective versus cash taxes) and the treatment of share-based compensation. The CFA readings go further on deferred tax mechanics and on share-based pay accounting. The CFA curriculum teaches the lessee/lessor accounting mechanics that Damodaran skips; this chapter is the analyst's adjustment view. The Fridson & Alvarez supplement adds warning signs and detection methods, which support "Financial Reporting Quality", and the credit analyst's treatment of leases.
+
+## Section 6. Financial Ratios {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+Adapted from Damodaran's Session 6 and 6A slides ("Financial Ratios") and his "Financial Statement Analysis" slides. The six-company ratio tables use his Session 6A figures, in millions of each company's currency. Liquidity and activity definitions and the Du Pont material are extended with the Fridson & Alvarez supplement. Example Co. figures are invented and tie to Sections 2 to 4.
+
+Supplemented with Fridson & Alvarez, Financial Statement Analysis: A Practitioner's Guide (3rd ed., Wiley, 2002) on Du Pont analysis, liquidity and activity ratios, and cash-flow-based credit ratios. Blocks labeled "Supplement" mark the added material, with the book's printed page numbers. Dated items are flagged where the book pre-dates later rules.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Compute and interpret pre-tax ROA, return on capital and return on equity.
+
+- Decompose return on capital into margin and capital turnover.
+
+- Compute margin and leverage ratios.
+
+- Explain what ratios can and cannot tell an analyst.
+
+- Apply the Du Pont and modified Du Pont decompositions of return on equity.
+
+- Compute liquidity, activity and cash-flow-based leverage ratios.
+
+### 6.1 Example Co. inputs {.unnumbered}
+
+| **Item (\$)**           | **Amount** | **Item (\$)**        | **Amount** |
+|-------------------------|------------|----------------------|------------|
+| Revenues                | 1,000      | Total assets         | 1,100      |
+| EBIT (operating income) | 150        | Debt                 | 400        |
+| Depreciation            | 50         | Shareholders' equity | 600        |
+| EBITDA                  | 200        | Cash                 | 100        |
+| Interest expense        | 30         | Tax rate             | 30%        |
+| Net income              | 84         |                      |            |
+
+### 6.2 Profitability ratios {.unnumbered}
+
+#### Margins {.unnumbered}
+
+- **Net margin** = net income ÷ revenue = 84 ÷ 1,000 = **8.4%**
+
+- **Operating margin** = operating income ÷ revenue = 150 ÷ 1,000 = **15.0%**
+
+- **After-tax operating margin** = operating income × (1 – t) ÷ revenue = 105 ÷ 1,000 = **10.5%**
+
+#### Pre-tax return on assets {.unnumbered}
+
+EBIT ÷ total assets = 150 ÷ 1,100 = **13.6%**. It measures operating efficiency before financing effects.
+
+#### Return on capital (ROC) {.unnumbered}
+
+**ROC = after-tax operating income ÷ capital**, where capital = book debt + book equity – cash and marketable securities. This is better than ROA when many liabilities are non-interest-bearing or current, because capital counts only what investors have put in.
+
+Example Co.: capital = 400 + 600 – 100 = 900. ROC = 105 ÷ 900 = **11.7%**.
+
+#### Decomposing ROC {.unnumbered}
+
+**ROC = after-tax operating margin × capital turnover** (revenue ÷ capital).
+
+Example Co.: 10.5% × (1,000 ÷ 900 = 1.11) = **11.7%**. A firm can raise ROC by earning more on each dollar of sales or by generating more sales from each dollar of capital.
+
+#### Return on equity (ROE) {.unnumbered}
+
+**ROE = net income ÷ book value of common equity** = 84 ÷ 600 = **14.0%**. It is the return from the equity investor's viewpoint.
+
+**Non-cash ROE** removes after-tax interest income on cash from net income and cash from equity, to isolate returns on operating assets. It matters for cash-rich firms.
+
+### Margins in depth (Session 6) {.unnumbered}
+
+> **Damodaran: Ratios scale absolute numbers** — Accounting for Finance, Session 6
+
+Statements are in absolute amounts (dollars, rupees, reais), which cannot be compared across companies, because bigger companies earn more and borrow more. Ratios scale numbers to each other and allow comparisons across companies, across time and against benchmarks.
+
+| **Margin** | **What it tells you** |
+|------------|------------------------------------------------------------|
+| Contribution margin | Profit on each additional unit sold, after only the variable cost of producing it. Many software firms are close to 100%. |
+| Gross margin | A close relative: a direct measure of marginal profitability and of how revenue increases flow into profit. Zoom reported a gross margin of 92% in 2019. High-margin firms have more profit potential. |
+| Operating margin | What is left after operating costs that cannot be traced to individual sales (such as SG&A). If those costs are fixed, the **gap between gross and operating margin** is a rough proxy for economies of scale: firms with high gross but low operating margins should see profit margins improve faster as they grow. |
+| EBITDA margin | A rough measure of operating cash flow (before taxes and capital expenditure) and of the capacity to generate cash before discretionary choices. Lenders use it to judge whether a firm can borrow. High-EBITDA-margin firms should be able to borrow more. |
+| Net margin | What equity investors keep from each dollar of revenue. It is a mixed and noisy measure because it reflects the operating model, taxes, leverage and non-operating assets. High net margins give more total profit to equity but not necessarily more per share. |
+
+> **Damodaran: Margins for six companies** — Accounting for Finance, Session 6A
+
+|   | **Peloton** | **Netflix** | **Coca-Cola** | **Toyota** | **Total** | **Dr. Reddy's** |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Gross margin | 33.81% | 38.28% | 60.77% | 22.62% | 29.97% | 79.70% |
+| Operating margin | -32.34% | 12.92% | 27.06% | 8.16% | 8.12% | 22.41% |
+| After-tax operating margin | -32.34% | 11.70% | 22.55% | 5.81% | 5.29% | 23.71% |
+| Net margin | -32.53% | 9.26% | 24.11% | 6.57% | 5.71% | 23.33% |
+| Effective tax rate | 0.00% | 9.47% | 16.70% | 28.88% | 34.76% | -5.83% |
+
+#### What the table shows {.unnumbered}
+
+- **Young to old:** young companies often have negative or very low margins, because they are still building revenue and because some operating expenses are aimed at future growth rather than current operations.
+
+- **Business differences:** high gross margin businesses have the advantage. Coca-Cola (a brand-name consumer product) and Dr. Reddy's (pharmaceutical) start with very high gross margins, which feed into high operating and net margins.
+
+- **Leverage effects:** companies with a lot of debt can have low net margins while operating margins stay high.
+
+- **Taxes:** Dr. Reddy's after-tax operating margin (23.7%) is higher than its operating margin (22.4%) because of the negative tax rate, a reminder that tax effects can move the answer.
+
+The slide shows Dr. Reddy's gross margin as 79.7%. Gross margin definitions vary across companies and reporting formats, so confirm what is included in cost of goods sold before comparing across countries.
+
+### Accounting returns in depth {.unnumbered}
+
+> **Damodaran: How returns are measured** — Accounting for Finance, Session 6
+
+Accounting returns scale profit to an investment measure. They can differ in three ways: how **profit** is measured (to equity only, or to debt and equity; before or after tax), how **investment** is measured (by equity only, or by debt and equity, usually at book value), and **timing** (start, end or average of the period).
+
+::: {.callout-note title="The consistency rule"}
+A consistent accounting return measures profit and investment for the **same group**. Net income (to equity) goes with book equity. Operating income (to all investors) goes with invested capital (debt plus equity).
+:::
+
+> **Damodaran: Returns for six companies** — Accounting for Finance, Session 6A
+
+In the slide, **invested capital** is book equity plus debt minus cash, measured at the **end of the previous year**, so ROE and ROIC are computed on opening balances. Figures are in millions of local currency.
+
+|   | **Peloton** | **Netflix** | **Coca-Cola** | **Toyota** | **Total** | **Dr. Reddy's** |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Return on equity | -79.00% | 35.62% | 47.15% | 9.89% | 9.68% | 23.16% |
+| ROIC (pre-tax) | NA | 22.07% | 19.33% | 7.62% | 11.32% | 20.96% |
+| After-tax ROIC | NA | 19.98% | 16.10% | 5.42% | 7.38% | 22.18% |
+
+Worked example, Netflix: operating income \$2,605M ÷ opening invested capital \$11,805M (book equity \$5,239M + debt \$10,360M − cash \$3,794M) = 22.07%. ROE = net income \$1,866M ÷ opening equity \$5,239M = 35.62%.
+
+#### What returns reflect {.unnumbered}
+
+- **Competitive advantages.** If accounting returns are a fair measure of true returns, they hold the evidence of competitive advantage. Industries with high barriers to entry should earn higher returns on capital than others, and firms with strong advantages within an industry should beat their peers.
+
+- **Accounting choices and inconsistencies.** Accounting can skew returns by misclassifying capital, operating and financial expenses (the subject of Section 5), and by write-offs that reflect past mistakes.
+
+> **Supplement, Fridson & Alvarez: 6.2 supplement: the Du Pont formula** — Fridson & Alvarez (2002), pp. 333–335
+
+Damodaran decomposes return on capital into margin and turnover. The Du Pont formula applies the same idea to the whole return on equity, and it is a CFA topic. The book credits it to Donaldson Brown of Du Pont and General Motors in the 1920s (p. 333).
+
+| **Step**               | **Formula**               | **Example Co.**       |
+|------------------------|---------------------------|-----------------------|
+| Return on sales        | Net income ÷ sales        | 84 ÷ 1,000 = 8.4%     |
+| × Asset turnover       | Sales ÷ total assets      | 1,000 ÷ 1,100 = 0.91× |
+| = Return on assets     | Net income ÷ total assets | 84 ÷ 1,100 = 7.6%     |
+| × Financial leverage   | Total assets ÷ equity     | 1,100 ÷ 600 = 1.83×   |
+| **= Return on equity** | **Net income ÷ equity**   | **84 ÷ 600 = 14.0%**  |
+
+This confirms the ROE of 14.0% computed in the main text, and shows that a 7.6% return on assets is magnified to 14.0% by leverage of 1.83×. The book's food-industry example (2000) shows why the breakdown matters:
+
+| **Company** | **Asset turnover** | **Return on sales** | **Return on assets** | **Leverage** | **ROE** |
+|------------|------------|------------|------------|------------|------------|
+| Conagra | 2.06× | 1.63% | 3.36% | 4.15× | 13.93% |
+| Kraft Foods | 0.51× | 7.54% | 3.84% | 3.71× | 14.24% |
+| Hershey Foods | 1.22× | 7.93% | 9.70% | 2.93× | 28.47% |
+| McCormick | 1.28× | 6.48% | 8.28% | 4.62× | 38.27% |
+
+- **Conagra and Kraft** have nearly identical ROE, but Conagra earns a thin margin on high turnover (a commodity-style business) while Kraft earns a wide margin on low turnover (p. 334).
+
+- **McCormick versus Hershey:** McCormick's higher ROE came entirely from leverage (4.62× vs 2.93×). Hershey earned more on its assets. To get McCormick's higher ROE, investors take more financial risk (p. 335).
+
+- **Caution on short-term fixes:** cutting needed capital spending raises asset turnover and return on assets in the short run but can hurt competitiveness later (p. 334). Check why a ratio moved.
+
+- **Very high ROE can reflect low book equity.** Ralston Purina's book value was \$2.36 a share against a \$30.02 stock price, so its ROE of 120.9% looks less extreme measured against market value (p. 335).
+
+The book calls the version that adds leverage the modified Du Pont formula: return on assets × financial leverage = return on equity (p. 335). The authors note that analysts generally respond more favorably when ROE improves through return on assets than through more leverage.
+
+### 6.3 Leverage ratios {.unnumbered}
+
+| **Ratio**         | **Formula**                         | **Example Co.**     |
+|------------------|----------------------------------|--------------------|
+| Debt-to-equity    | Debt ÷ Equity                       | 400 ÷ 600 = 66.7%   |
+| Debt-to-capital   | Debt ÷ (Debt + Equity)              | 400 ÷ 1,000 = 40.0% |
+| Debt-to-EBITDA    | Debt ÷ EBITDA                       | 400 ÷ 200 = 2.0×    |
+| Interest coverage | Operating income ÷ Interest expense | 150 ÷ 30 = 5.0×     |
+
+Debt ratios can be measured with book or market values. Leverage ratios change when leases are treated as debt (Section 5), so compare firms on the same basis.
+
+### Efficiency ratios {.unnumbered}
+
+> **Damodaran: Turnover ratios** — Accounting for Finance, Session 6 and Session 6A
+
+Efficiency ratios measure the revenue payoff from reinvesting in the business. Turnover ratios put revenue on top, and the denominator varies:
+
+- **Working capital turnover** = sales ÷ non-cash working capital (or one item, such as inventory or receivables).
+
+- **Asset turnover** = sales ÷ total assets.
+
+- **Capital turnover** = sales ÷ invested capital.
+
+|   | **Peloton** | **Netflix** | **Coca-Cola** | **Toyota** | **Total** | **Dr. Reddy's** |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Asset turnover | 0.81 | 0.78 | 0.45 | 0.58 | 0.78 | 0.78 |
+| Sales to invested capital | NA | 1.71 | 0.71 | 0.93 | 1.39 | 0.94 |
+
+Both ratios use the prior year's balance. Peloton's invested capital was negative (about -\$61M), so its sales-to-capital ratio has no meaning.
+
+#### The dark side of growth {.unnumbered}
+
+Growth lets a company scale up, but the company must reinvest to deliver it. Turnover ratios link what the company reinvests to how much revenue grows, so more efficient companies grow revenue with less reinvestment. The link between company age and turnover varies by business type, with older companies becoming more efficient in some and less in others, and accounting inconsistencies affect these ratios too.
+
+### Leverage, coverage and liquidity in depth {.unnumbered}
+
+> **Damodaran: Variants of debt ratios** — Accounting for Finance, Session 6
+
+- **What to include in debt:** only long-term debt, all interest-bearing debt, or debt including commitments such as leases.
+
+- **Book or market:** book values from the balance sheet, or market capitalization for equity (and, if feasible, market value of debt).
+
+- **Gross or net:** gross debt is all debt; net debt subtracts cash and marketable securities.
+
+Damodaran's guidance in Session 6A: debt is a source of capital, neither good nor bad, and in most of the world it is a trade-off between the tax benefit of borrowing and distress risk. When comparing companies, measure debt the same way for all, and it is usually better to use **total debt** rather than a subset and **market value** rather than book value. Netting cash against debt is reasonable in principle, but cash is a transient asset, here today and gone tomorrow.
+
+> **Damodaran: Debt ratios for six companies** — Accounting for Finance, Session 6A
+
+|   | **Peloton** | **Netflix** | **Coca-Cola** | **Toyota** | **Total** | **Dr. Reddy's** |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Debt to equity (market) | 0.00% | 6.82% | 20.78% | 104.05% | 59.83% | 1.42% |
+| Debt to capital (market) | 0.00% | 6.39% | 17.20% | 50.99% | 37.43% | 1.40% |
+| Debt to EBITDA | NA | 1.24 | 3.73 | 4.82 | 1.92 | 0.29 |
+| Net debt to EBITDA | NA | 0.82 | 3.04 | 3.84 | 1.08 | 0.28 |
+
+The book-value versions are shown in the slide too (for example Netflix debt to equity 194.66% on book values, against 6.82% on market values), which is a vivid illustration of why Damodaran prefers market values for a company whose value is largely not on its balance sheet.
+
+::: {.callout-note title="Two cautions on this table"}
+**Coca-Cola book equity.** On the slide the book equity used for Coca-Cola is \$52,170M, the same figure as its invested capital in the returns table (where its book equity is about \$19,058M). The book-based debt ratios for Coca-Cola (82% debt to equity, 45% debt to capital) therefore look understated. The market-value ratios above are unaffected.
+
+**Netflix EBITDA.** The slide's Netflix EBITDA of \$11,924M is about \$2,605M of operating income plus about \$104M of depreciation plus \$9,216M of streaming content amortization. If content amortization is treated as an ordinary operating cost (as Fridson and Alvarez's warning on EBITDA suggests), debt to EBITDA is about 5.4 times rather than 1.24. What you add back changes the story.
+:::
+
+> **Damodaran: Coverage and liquidity ratios** — Accounting for Finance, Session 6A
+
+**Coverage ratios** measure the buffer for meeting commitments. Interest coverage scales operating income to interest expense. **Fixed charge coverage** expands the commitment to include debt payments and scales it to operating income plus fixed charges. **Liquidity ratios** measure cash on hand to cover near-term needs: the current ratio (current assets ÷ current liabilities) and the quick ratio (liquid current assets, usually excluding inventory, ÷ current liabilities).
+
+|   | **Peloton** | **Netflix** | **Coca-Cola** | **Toyota** | **Total** | **Dr. Reddy's** |
+|-----------|-----------|-----------|-----------|-----------|-----------|-----------|
+| Interest coverage | NA | 4.16 | 10.66 | 76.59 | 6.97 | 53.54 |
+| Fixed charge coverage | NA | 5.16 | 1.39 | 1.55 | 2.99 | 13.10 |
+| Current ratio | 2.00 | 0.90 | 0.76 | 1.04 | 1.21 | 2.42 |
+| Quick ratio | 1.53 | 0.90 | 0.63 | 0.91 | 0.97 | 1.89 |
+
+- **Safety in numbers.** All else equal, higher interest and fixed charge coverage means a bigger buffer.
+
+- **Normalization.** Year-to-year swings in operating income and debt repayments can distort the ratios. For volatile businesses, use an average across time. Young companies can look bad at first but may grow operating income quickly.
+
+- **Reading the table.** Coca-Cola has a current ratio below 1 and fixed charge coverage of 1.39 because it repays about \$24.9B of debt a year, which it rolls over; Toyota's high interest coverage hides fixed charge coverage of only 1.55 for the same reason. Peloton has no debt, so coverage ratios do not apply.
+
+> **Supplement, Fridson & Alvarez: 6.3 supplement: coverage and cash-flow-based leverage** — Fridson & Alvarez (2002), pp. 173–175, 283–284, 293–294
+
+Damodaran's leverage table gives interest coverage as operating income ÷ interest expense. Fridson and Alvarez add the version used in credit analysis and two cash-flow-based ratios:
+
+| **Ratio** | **Formula** | **Example Co.** |
+|---------------|-------------------------------------------|---------------|
+| Fixed-charge coverage | (Net income + taxes + interest) ÷ interest (see Section 5 for lease and capitalized-interest adjustments) | (84 + 36 + 30) ÷ 30 = 5.0× |
+| EBITDA coverage | EBITDA ÷ interest expense | 200 ÷ 30 = 6.7× |
+| Total debt to cash flow | (Short-term debt + current maturities + long-term debt) ÷ cash flow from operations | 400 ÷ 114 = 3.5 years |
+
+- **Total debt to cash flow** is read as the years needed to repay debt if all cash flow were devoted to it. The authors do not mean this literally; they value the ratio because both numbers are comparatively hard. Debt is a contractual amount, and cash flow does not depend on depreciation policy, while debt to capital depends on equity that may be misstated and coverage depends on earnings that can be managed (p. 294).
+
+- **EBITDA coverage flatters.** Depreciation is not truly available to pay interest on a lasting basis, because assets must be replaced (p. 173). Treat EBITDA coverage as a best case, and use it together with a measure after capital spending.
+
+- **One ratio is never enough.** Early research found cash flow to total debt the best single predictor of bankruptcy, but multi-ratio models, starting with Altman's Z-score in 1968, predict better than any single ratio (p. 175).
+
+A pre-tax variant of return on capital in the book is (net income + taxes + interest) ÷ (total debt + total equity) (p. 291). For Example Co. this is 150 ÷ 1,000 = 15.0%. It differs from Damodaran's after-tax return on capital net of cash (11.7%) because it is before tax and does not subtract cash. When comparing returns, use the same definition for every firm.
+
+### 6.4 Liquidity and activity {.unnumbered}
+
+Damodaran's liquidity ratios (current and quick) and turnover ratios appear in the six-company tables above. The supplement below gives the fuller standard definitions from Fridson and Alvarez, including receivables and inventory turnover, and applies them to Example Co.
+
+> **Supplement, Fridson & Alvarez: 6.4 supplement: liquidity and activity ratios** — Fridson & Alvarez (2002), pp. 268–270, 291–294
+
+Damodaran's Session 6 and 6A slides give the liquidity and turnover ratios and the six-company tables above. The fuller definitions below come from Fridson and Alvarez and extend them. Where the Example Co. statements do not give a detail, an extra assumption is stated.
+
+#### Liquidity {.unnumbered}
+
+The **current ratio** compares claims payable within the operating cycle with assets that are cash or will become cash within it. The **quick ratio** (acid test) counts only cash, marketable securities and receivables. **Working capital** is current assets minus current liabilities. The book's example is Johnson & Johnson at the end of 2000 (pp. 268–270):
+
+| **Measure** | **Formula** | **Johnson & Johnson (2000, \$M)** | **Example Co. (\$)** |
+|---------------|---------------------------|----------------|---------------|
+| Current ratio | Current assets ÷ current liabilities | 15,450 ÷ 7,140 = 2.16 | 350 ÷ 100 = 3.5 |
+| Quick ratio | (Cash + securities + receivables) ÷ current liabilities | 10,208 ÷ 7,140 = 1.43 | (100 + 150†) ÷ 100 = 2.5 |
+| Working capital | Current assets – current liabilities | 8,310 | 250 |
+
+† Extra assumption for this exercise: of Example Co.'s 250 of receivables and inventory, 150 is receivables and 100 is inventory at year-end; a year earlier they were 140 and 90 (consistent with the 20 increase in Section 4).
+
+#### Activity (turnover) {.unnumbered}
+
+A turnover ratio relies on the idea that a firm needs a certain level of receivables and inventory to support its sales. A change often signals a change in asset quality (pp. 291–293):
+
+| **Ratio** | **Formula** | **Example Co.** |
+|-------------------|--------------------------------|---------------------|
+| Average days of receivables | (Average receivables ÷ annual sales) × 365 | (145 ÷ 1,000) × 365 = 52.9 days |
+| Receivables turnover | Annual sales ÷ average receivables | 1,000 ÷ 145 = 6.9× |
+| Inventory turnover | Annual **cost of goods sold** ÷ average inventory | 600 ÷ 95 = 6.3× (about 58 days) |
+
+- Falling receivables turnover can mean customers are paying slowly, or that the company is loosening credit to win sales. If the allowance for bad debts is not increased, equity is overstated (p. 292).
+
+- Falling inventory turnover can signal unsalable goods that are still carried at cost. The book prefers cost of goods sold in the numerator, because inventory is at historical cost while sales prices move with the market (p. 293).
+
+- These are the same relationships that the KnowledgeWare case (Section 2) revealed.
+
+### 6.5 Using ratios well {.unnumbered}
+
+- A ratio is only as good as the numbers behind it. Section 5 shows that leases and R&D can change ratios materially.
+
+- Compare against the firm's own history and against peers in the same sector. Balance sheets and income statements differ systematically by sector (Section 3).
+
+- Pair ratios with the life-cycle picture: a young firm's negative returns do not mean the same as a mature firm's.
+
+- Ratios built on reported earnings inherit any weakness in those earnings. Section 7 shows how to test their quality.
+
+### Check your understanding {.unnumbered}
+
+1.  Why is ROC usually preferred to ROA when comparing firms with different amounts of non-debt liabilities?
+
+2.  Example Co. raises margin by 1 percentage point (after-tax) without changing capital. What happens to ROC? (Answer: 11.5% × 1.11 = 12.8%.)
+
+3.  A firm doubles its debt and uses the proceeds to repurchase equity. What happens to debt-to-equity, ROE and interest coverage?
+
+4.  Why might two firms with the same debt-to-equity ratio have different financial risk?
+
+5.  Break Example Co.'s 14.0% ROE into return on sales, asset turnover and financial leverage. (Answer: 8.4% × 0.91 × 1.83 = 14.0%.)
+
+6.  If Example Co. cannot change its 8.4% margin, what asset turnover would give a return on assets of 9%? (Answer: 9% ÷ 8.4% = 1.07×.)
+
+7.  Conagra and Kraft have almost the same ROE. In what way do the two companies differ?
+
+8.  Example Co.'s days of receivables rise from 53 to 70 while sales stay flat. What are two possible explanations, and what else would you check?
+
+9.  Why does the book regard total debt to cash flow as a more reliable credit measure than debt to equity? What is its main limitation?
+
+#### CFA connection {.unnumbered}
+
+Maps to "Financial Analysis Techniques" (profitability, solvency; DuPont-style decomposition) and to "Non-Current Liabilities" (leverage and coverage ratios). With the Fridson & Alvarez supplement, the chapter now covers the full Du Pont ROE breakdown, liquidity and activity ratios, and credit coverage ratios. Valuation ratios and segment ratios in the CFA outline are still not covered.
+
+## Section 7. Quality of Earnings {.unnumbered}
+
+::: {.callout-note title="Source basis"}
+This section pulls together the warning signs scattered through Sections 2 to 6 and adds measures they do not cover. It draws on Richard Sloan's 1996 study of accruals and earnings persistence (*The Accounting Review*), Messod Beneish's 1999 earnings-manipulation model (*Financial Analysts Journal*), the Fridson & Alvarez material already cited in this chapter, and the SEC's rules on non-GAAP measures. Written in original wording. Example Co. figures are invented, and any variant of Example Co. is labeled as such. Check formulas and cutoffs against the original papers before using them in published work.
+:::
+
+### Learning objectives {.unnumbered}
+
+- Define earnings quality and apply four tests: cash-backed, persistent, faithfully measured and transparent.
+
+- Compute cash conversion and the accrual ratio, and explain why they matter.
+
+- Screen working capital for receivables, inventory, payables and deferred revenue that move out of line with sales.
+
+- Separate core from non-core earnings and reconcile a non-GAAP measure to GAAP.
+
+- Describe the Beneish model, compute its eight indicators and interpret an M-score with its limits in mind.
+
+- Carry out a structured forensic review of a 10-K and summarize it in a one-page memo.
+
+### 7.1 What "quality" means {.unnumbered}
+
+Earnings are **high quality** when they are a reliable guide to what the business will earn in the future. Net income is an accounting opinion (Section 5.7), so the question is how much weight that opinion deserves. Four tests organize the rest of the section:
+
+| **Test** | **Question** | **Where the tools are** |
+|-----------------|--------------------------------------|-----------------|
+| Cash-backed | Does profit show up as operating cash flow? | 7.2, 7.3 |
+| Persistent | Will this level of earnings repeat, or did one-offs and gains help? | 7.4, 7.5 |
+| Faithfully measured | Are estimates and policies reasonable, consistent and conservative? | 7.6, Sections 2 and 5 |
+| Transparent | Can an outsider see how the number was built and check it? | 7.5, 7.8 |
+
+No single number settles any of these. The method is the one the chapter has used throughout: compare with cash flow, with the firm's own history and with peers, and ask why when the pieces do not move together.
+
+### 7.2 Cash versus accrual earnings {.unnumbered}
+
+Section 2.1 explained that accrual accounting records revenue and expenses when they are earned or incurred, not when cash moves. The gap between net income and operating cash flow is therefore the accrual part of earnings, and it is where judgment sits.
+
+| **Measure** | **Formula** | **Read as** |
+|----------------|--------------------------|------------------------------|
+| Cash conversion | Cash flow from operations ÷ Net income | Cash generated per dollar of reported profit |
+| Accruals | Net income – Cash flow from operations | Profit not yet received in cash |
+| Accrual ratio | (Net income – Cash flow from operations) ÷ Total assets | Accruals scaled for size; higher means lower-quality earnings |
+
+Use **average** total assets when you have two balance sheets. Example Co. has only the year-end figure, so the example uses that.
+
+| **Example Co. (\$)** | **Calculation** | **Result** |
+|----------------------|-----------------|------------|
+| Cash conversion      | 114 ÷ 84        | 1.36×      |
+| Accruals             | 84 – 114        | \(30\)     |
+| Accrual ratio        | \(30\) ÷ 1,100  | -2.7%      |
+
+Example Co.'s cash flow is higher than its profit mainly because of the \$50 depreciation add-back (Section 4.2), so its earnings are backed by cash. That is the reassuring direction.
+
+Why it matters: Sloan (1996) found that earnings with a large accrual component were less persistent than earnings backed by cash flow. A persistently high accrual ratio is a warning. A single high year is not, because a fast-growing firm legitimately builds receivables and inventory ahead of sales. Read the **trend** over three to five years and compare with peers, since capital-intensive firms normally show cash flow above profit and asset-light firms do not.
+
+### 7.3 Working-capital screens {.unnumbered}
+
+Accrual earnings usually inflate through working capital: sales booked but not collected, costs deferred into inventory, or bills left unpaid to flatter cash flow. These pairs should move together. When they do not, find out why.
+
+| **Pair that should move together** | **Warning sign** | **Possible explanation to check** |
+|-------------------|------------------------|-----------------------------|
+| Receivables and revenue | Receivables grow much faster than revenue (DSO rises) | Looser credit terms, channel stuffing, early recognition |
+| Inventory and cost of goods sold | Inventory grows faster than cost of goods sold | Weak demand, obsolete stock, costs parked in inventory |
+| Payables and purchases | Days payable rise sharply | Suppliers stretched to lift operating cash flow |
+| Deferred revenue and billings | Deferred revenue falls while revenue grows | Revenue pulled forward from future periods |
+| Allowance for bad debts and receivables | Allowance shrinks as receivables grow | Under-reserving that props up profit |
+
+Example Co.'s average receivables are (140 + 150) ÷ 2 = 145, so days sales outstanding are 145 ÷ 1,000 × 365 = **about 53 days**, the figure used in Section 6.4. The KnowledgeWare case in Section 2.4 is what the first row looks like when it goes wrong: DSO climbed from 83 to 117 days while revenue fell.
+
+### 7.4 Persistence: core versus non-core earnings {.unnumbered}
+
+Investors value the earnings they expect to recur. Before projecting, remove or adjust items that will not repeat and challenge items labeled one-time that repeat every year (Section 2.7). Typical candidates are:
+
+- Gains and losses on asset or business sales, particularly those buried in operating expenses (the IBM case in Section 5.6).
+
+- Restructuring and impairment charges that appear year after year.
+
+- Tax effects, such as the negative effective tax rate that lifted Dr. Reddy's net income above its operating income (Section 2).
+
+- Non-operating and interest income (Section 2.6).
+
+- Currency and fair-value gains that reverse.
+
+**Example Co. variant (invented).** Suppose Example Co.'s \$84 of net income included a \$12 pre-tax gain on selling a building, taxed at 30%.
+
+| **Variant (\$)** | **Calculation** | **Result** |
+|------------------|-----------------|------------|
+| After-tax gain   | 12 × (1 – 0.30) | 8.4        |
+| Core net income  | 84 – 8.4        | 75.6       |
+| Core net margin  | 75.6 ÷ 1,000    | 7.56%      |
+
+The reported margin of 8.4% overstates what the operations earn. A forecast should start from \$75.6, not \$84.
+
+### 7.5 Non-GAAP measures {.unnumbered}
+
+Companies often report adjusted earnings in press releases and investor presentations. Section 2.8 covered pro-forma results from the early 2000s. The idea has not gone away, and the label is now "non-GAAP". SEC rules require a company to reconcile each non-GAAP measure to the nearest GAAP measure and not to give the non-GAAP number more prominence. The reconciliation is where an analyst starts.
+
+Ask five questions of every adjustment:
+
+1.  **What is excluded?** List each item from the reconciliation.
+
+2.  **Does it recur?** A charge excluded in every period is an ordinary cost.
+
+3.  **Is it a real cost?** Stock-based pay is excluded by many firms, yet it is a cost to shareholders (Section 5.3). Acquired-intangible amortization is a non-cash charge, but the acquisition price was real.
+
+4.  **Is it applied consistently?** Check whether gains are excluded as readily as losses and whether the definition changes between years.
+
+5.  **Is the tax effect shown?** Adjustments without a tax effect overstate adjusted profit.
+
+When an adjusted measure is far above GAAP net income and the gap keeps widening, treat that as a quality flag in itself.
+
+### 7.6 Accounting policies and estimates {.unnumbered}
+
+Earnings quality also depends on the choices behind the numbers. The following are worth checking each year, using the tests from Sections 2 and 5.
+
+- **Useful lives and depreciation.** A longer asset life lifts earnings without changing cash (Section 2.5). Compare depreciation to property, plant and equipment with peers.
+
+- **Capitalizing versus expensing.** Costs moved onto the balance sheet raise current profit and operating cash flow, but the cash was still spent. Look for assets growing faster than revenue (Section 5).
+
+- **Reserves and allowances.** Bad-debt, warranty and restructuring reserves are estimates. Reserves that are cut when earnings need a boost, or built up in good years for later use, smooth the profit line.
+
+- **Revenue recognition.** Read the revenue note for performance obligations, timing and any side agreements (Section 2.4).
+
+- **Changes.** Changes in policy, estimates or auditors, and late filings, deserve a question each.
+
+### 7.7 The Beneish model {.unnumbered}
+
+**Messod Beneish** is an accounting professor who, in a 1999 paper, built a statistical model to spot companies likely to be manipulating earnings. He compared firms later caught manipulating (shown by restatements and enforcement actions) with firms that were not, and found a small set of financial ratios that separated them. The model turns those ratios into a single score, the **M-score**. It is a screening tool: it tells an analyst where to look harder, not who is guilty.
+
+Section 5.6 lists the five indicators Fridson and Alvarez highlight. The full model uses eight indices, each comparing this year with last year. A value of 1.0 means no change.
+
+| **Index** | **What it compares** | **What a high value suggests** | **Coefficient** |
+|-------------|--------------------------|---------------------|-------------|
+| DSRI | Receivables-to-sales ratio, this year ÷ last year | Revenue booked ahead of cash | 0.920 |
+| GMI | Gross margin last year ÷ gross margin this year | Deteriorating margins create pressure to manipulate | 0.528 |
+| AQI | Share of assets that are not current assets or PP&E, this ÷ last | Costs capitalized into other assets | 0.404 |
+| SGI | Sales this year ÷ sales last year | Growth firms face more pressure to keep growing | 0.892 |
+| DEPI | Depreciation rate last year ÷ depreciation rate this year | Slower depreciation, which lifts profit | 0.115 |
+| SGAI | SG&A-to-sales ratio, this year ÷ last year | Falling efficiency, a possible pressure point | –0.172 |
+| TATA | Total accruals ÷ total assets | Profit not backed by cash | 4.679 |
+| LVGI | Debt-to-assets ratio, this year ÷ last year | Rising leverage, with covenant pressure | –0.327 |
+
+The score is:
+
+$$M = -4.84 + 0.920\,\text{DSRI} + 0.528\,\text{GMI} + 0.404\,\text{AQI} + 0.892\,\text{SGI} + 0.115\,\text{DEPI} - 0.172\,\text{SGAI} + 4.679\,\text{TATA} - 0.327\,\text{LVGI}$$
+
+Higher (less negative) scores signal a higher probability of manipulation. A cutoff of about **–1.78** is commonly cited, and scores above it are flagged for review. Many analysts measure TATA as (income from continuing operations – cash flow from operations) ÷ total assets, which links it to Section 7.2.
+
+**Worked example (illustrative).** Example Co. has one year of data, so only its accrual ratio can come from its own statements: TATA = –0.027. The other indices below are assumed values for the illustration.
+
+| **Index** | DSRI | GMI  | AQI  | SGI  | DEPI | SGAI | TATA   | LVGI |
+|-----------|------|------|------|------|------|------|--------|------|
+| Value     | 1.10 | 1.02 | 1.00 | 1.10 | 1.00 | 1.00 | –0.027 | 1.00 |
+
+M = –4.84 + 1.012 + 0.539 + 0.404 + 0.981 + 0.115 – 0.172 – 0.126 – 0.327 = **–2.41**, which is below –1.78, so the screen does not flag the firm.
+
+**Limits.** The model was estimated on a sample of US firms from earlier decades. It produces false positives, especially for fast-growing firms, whose high SGI and DSRI are often honest. It misses manipulation that does not touch these ratios. Banks and other financial firms do not fit its balance sheet structure. Treat a high score as a prompt to read the footnotes, not as a conclusion.
+
+### 7.8 A forensic review workflow {.unnumbered}
+
+The following steps turn the section into a procedure for a company's annual report (Form 10-K) and its earnings releases. They are the basis of the Week 2 forensic lab.
+
+| **Step** | **What to do** | **Where to look** | **Flag** |
+|---------------|-------------------------|-----------------|----------------|
+| 1 | Read the auditor's report and any internal-control findings | Auditor's report; critical audit matters | Adverse or qualified opinion; material weakness |
+| 2 | Compare net income with operating cash flow over three to five years | Income statement; cash flow statement | Persistent gap, rising accrual ratio |
+| 3 | Run the working-capital screens from 7.3 | Balance sheet; notes on receivables and inventory | Receivables or inventory outrunning sales or cost |
+| 4 | Read the revenue recognition and significant-estimates notes | Notes to the financial statements | Policy changes; unusual terms; large estimates |
+| 5 | Reconcile non-GAAP measures to GAAP | Earnings release (8-K); MD&A | Large and growing gap; recurring add-backs |
+| 6 | Check related-party, off-balance-sheet and lease/commitment notes | Notes; contractual obligations | Dependence on related parties; hidden obligations |
+| 7 | Search for restatements and non-reliance notices | Form 8-K (Item 4.02); restated prior-year figures | Any restatement of earlier results |
+| 8 | Compute the M-score and compare with the prior two years | Your own spreadsheet | Score above the cutoff or rising |
+
+**Deliverable.** A one-page memo that rates each step green, yellow or red, names the two most worrying findings with the numbers behind them, and states what additional information would settle the question. A student should be able to defend the memo using only the filings.
+
+### 7.9 Cases to research {.unnumbered}
+
+The cases earlier in the chapter date from 1994 to 2001. These later cases are well known and make good lab assignments. Pull the facts from SEC filings, court records and company statements, not from secondary summaries.
+
+| **Case** | **Period** | **Pattern to investigate** | **Section link** |
+|-------------|-------------|----------------------------------|-------------|
+| Enron | 2001 | Complex off-balance-sheet entities; earnings versus operating cash flow | 5.4, 7.2 |
+| WorldCom | 2002 | Operating line costs treated as capital expenditure | 5.5, 7.6 |
+| Luckin Coffee | 2020 | Fabricated sales; adjusted measures presented prominently | 7.5, 7.8 |
+| Wirecard | 2020 | Cash balances that could not be confirmed | 7.8 |
+
+::: {.callout-note title="Verify before class use"}
+The table names patterns, not facts. Confirm dates, amounts and findings against primary sources before assigning a case or quoting a figure.
+:::
+
+### 7.10 Bottom line {.unnumbered}
+
+- Earnings quality is judged on four tests: cash-backed, persistent, faithfully measured and transparent.
+
+- The cheapest first check is the gap between net income and operating cash flow, tracked over several years.
+
+- Pairs of numbers that should move together (receivables and sales, inventory and cost of goods sold) expose most manipulation.
+
+- Adjusted and non-GAAP numbers need the same skepticism as GAAP ones, and start from the reconciliation.
+
+- The Beneish score and accrual ratio are screens. They direct your reading, and the footnotes settle the question.
+
+### Check your understanding {.unnumbered}
+
+1.  Compute cash conversion and the accrual ratio for Example Co. What do they say about earnings quality? (Answer: 114 ÷ 84 = 1.36×; (84 – 114) ÷ 1,100 = –2.7%. Cash flow exceeds profit, mainly through depreciation, so earnings are cash-backed.)
+
+2.  A firm reports net income of \$100, operating cash flow of \$40 and total assets of \$1,000. Compute the accrual ratio and say what you would check next. (Answer: (100 – 40) ÷ 1,000 = 6.0%. Check the trend and peers, then receivables, inventory and capitalized costs.)
+
+3.  A company's receivables grow 40% while sales grow 10%. What is the DSRI, assuming nothing else changes? (Answer: 1.40 ÷ 1.10 = 1.27.)
+
+4.  Why might a high accrual ratio in one year not indicate manipulation? (Answer: a fast-growing firm builds receivables and inventory ahead of sales; the trend over several years and a comparison with peers are more informative.)
+
+5.  Example Co. had a \$12 pre-tax gain on a building sale inside its \$84 net income, taxed at 30%. What are core net income and core net margin? (Answer: 84 – 8.4 = 75.6; 7.56%.)
+
+6.  A company adds back stock-based pay and amortization of acquired intangibles to reach adjusted earnings. Which of the five questions in 7.5 apply to each add-back? What would you do?
+
+7.  Using the worked example in 7.7, what value of TATA would raise Example Co.'s M-score to the –1.78 cutoff? (Answer: about 0.109, or accruals of roughly 11% of total assets, instead of –0.027.)
+
+8.  List three steps of the forensic workflow that can be done using only the 10-K and three that need the earnings release or a spreadsheet.
+
+#### CFA connection {.unnumbered}
+
+Maps to "Financial Reporting Quality": conservative versus aggressive accounting, indicators of earnings quality, and warning signs. The accrual ratio and the Beneish model go beyond what the Level I reading requires, and non-GAAP reconciliation appears in the CFA material as part of disclosure quality. Check the current curriculum before relying on this mapping.
